@@ -1,23 +1,23 @@
 {
-  "version": "0.1.0-beta.13",
+  "version": "0.1.0-beta.14",
   "notes": "Bug Fixes or New Features",
-  "pub_date": "2024-03-12T17:18:54Z",
+  "pub_date": "2024-03-16T13:25:01Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna2p3RHQxN1NRR0hpWkYrWjQ4ZGxHVlIwNC9uaHBweW5tUVEvNFRqUUh1bHJVZ1hLdGxTQmkrY2lWcGlvd1FiSkF5aEsvbDh3SldYdEQ1RW5ncWEybWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEwMjYzNDUxCWZpbGU6dnJjLWdldC1ndWkuYXBwLnRhci5negpNMVdobWRRTE1ETlBlYzNXMy85L3lHbDVJU0FHRUlpMzZmaGloMy9iSEZQazJUWjhFOFZuQi9XZWl0eGNCdnprWUJhODJjTmt4V0NGbnZlRVZvUE5Cdz09Cg==",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.13/vrc-get-gui-0.1.0-beta.13-universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna2xTVVNEWWZ1blREMkY1MXF5RHU1c0xrYzh1SmhHNGVvTHBOMVFwTlZiczNlSktpaFhKdzdBL1Yvdmt6dFR0c3hocUdFRWZrbkNvWnArZWxSaEVjWGdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEwNTk1MTUwCWZpbGU6dnJjLWdldC1ndWkuYXBwLnRhci5negplVGN1aVkwWlRuVzBuUEtDaWYxTzNpb04xRjJRMDAyVkpiUHVONWd5M2Z5V1Q4YXZiL2sveWN6eVJEVTFwY2xzWlhRdkpRaUFHL2pyUVFEWWhCQTRCQT09Cg==",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.14/vrc-get-gui-0.1.0-beta.14-universal.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna2p3RHQxN1NRR0hpWkYrWjQ4ZGxHVlIwNC9uaHBweW5tUVEvNFRqUUh1bHJVZ1hLdGxTQmkrY2lWcGlvd1FiSkF5aEsvbDh3SldYdEQ1RW5ncWEybWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEwMjYzNDUxCWZpbGU6dnJjLWdldC1ndWkuYXBwLnRhci5negpNMVdobWRRTE1ETlBlYzNXMy85L3lHbDVJU0FHRUlpMzZmaGloMy9iSEZQazJUWjhFOFZuQi9XZWl0eGNCdnprWUJhODJjTmt4V0NGbnZlRVZvUE5Cdz09Cg==",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.13/vrc-get-gui-0.1.0-beta.13-universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna2xTVVNEWWZ1blREMkY1MXF5RHU1c0xrYzh1SmhHNGVvTHBOMVFwTlZiczNlSktpaFhKdzdBL1Yvdmt6dFR0c3hocUdFRWZrbkNvWnArZWxSaEVjWGdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEwNTk1MTUwCWZpbGU6dnJjLWdldC1ndWkuYXBwLnRhci5negplVGN1aVkwWlRuVzBuUEtDaWYxTzNpb04xRjJRMDAyVkpiUHVONWd5M2Z5V1Q4YXZiL2sveWN6eVJEVTFwY2xzWlhRdkpRaUFHL2pyUVFEWWhCQTRCQT09Cg==",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.14/vrc-get-gui-0.1.0-beta.14-universal.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3FXcXpPbE1NSlB3aW9JakxzWFQxbGhXd0dLSS9MNWsvOGhJcnVtREtEUm01SkNBZXQ4R0RGK3dkSG5ZYmxLNDJvOWdJM2E1SWUzeVhZUzFmcHhlOVFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEwMjYzNDg1CWZpbGU6dnJjLWdldC1ndWlfMC4xLjAtYmV0YS4xM19hbWQ2NC5BcHBJbWFnZS50YXIuZ3oKZ3MzcmxGUnpvWUh0d21Ma0pvcW9reDJJamtteHpTNWxaa3VObWpjRmNTb0tSY3lBdklRV2ZMZjl4ZjZYbHppZ2ZUUHlQTnI0VWd4SU5NZGR4cTVzRFE9PQo=",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.13/vrc-get-gui-0.1.0-beta.13-x86_64.AppImage.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3RMMW8wL2V4ZmUxTnQyRzMvSndQS1RVTE01d0l0RytlV3grbmlNZS9pWS9UYmVqcC9jTFViSUY2c3NjVThSamdMYmdRZVpTWFBTaVhmanBJUEVyQ2dZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEwNTk1MjUxCWZpbGU6dnJjLWdldC1ndWlfMC4xLjAtYmV0YS4xNF9hbWQ2NC5BcHBJbWFnZS50YXIuZ3oKSDFQSmJCUjd4dkVLcktaOTF0M1MrNjJyemFFNk10dG54M0l2Yld0VXpxRGI3bnpTZERMVC9rQ1U4WWg5b01uc1orUGlaYWRRcFRIVG5lVTUyVUQ1QWc9PQo=",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.14/vrc-get-gui-0.1.0-beta.14-x86_64.AppImage.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3VCYzFsQTg1dHhMazVwR3R2Z09WUUdoVU83bzlmNGd5Z1ZBdWd1VnFNbTJqWWtXZDFmTFBnTWxYVFJDNzlGcHh3MlhPOVdzYjJEMTk1OXNxWWE4K3c4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEwMjYzODQ4CWZpbGU6dnJjLWdldC1ndWlfMC4xLjAtYmV0YS4xM194NjQtc2V0dXAubnNpcy56aXAKNGVZeU5TZzRSQWtJbStEd2l4TnlRTnRVdFZmVGdiQzlLZXhpSll5SnlucGZsK0lJSXhzZTZXaU9XZk4yZGE1M0NOczg3S2ErQmtLRyt1QVE3L2o3QlE9PQo=",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.13/vrc-get-gui-0.1.0-beta.13-x86_64-setup.nsis.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3NtZW1qVTg0VC9Mc09xNnNsOE1iWWYwS1NuRmY5eTh1Vzk0L0FUTmFmZklhSkcvRWVQWW1uRTlpUXgvMFBrcWtZd2cxVU9kUDN0SXJBdHpLM1dKMVFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEwNTk1NDE1CWZpbGU6dnJjLWdldC1ndWlfMC4xLjAtYmV0YS4xNF94NjQtc2V0dXAubnNpcy56aXAKSWNvOEpSaEN2MVNXWEM0QWE1bGF4NVA3QXlBblZ4a3ZGNmcvVS9CMGV5VmpVM3lDME9rMXlidnF5Z2tKT2NLcHpqYjUyUEdEb0MwbWVGWVk2THBHQmc9PQo=",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.14/vrc-get-gui-0.1.0-beta.14-x86_64-setup.nsis.zip"
     }
   }
 }
