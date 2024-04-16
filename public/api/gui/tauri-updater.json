@@ -1,23 +1,23 @@
 {
-  "version": "0.1.0-beta.20",
+  "version": "0.1.0-beta.21",
   "notes": "Bug Fixes or New Features",
-  "pub_date": "2024-04-13T17:50:25Z",
+  "pub_date": "2024-04-16T09:17:20Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna2dSNlJRRGhuSEdBOFgxaktac0JESEJidUFnUnVOOVRKVGdYa1JDVitLbmhwNzgreHhUL1ovU0pMUFkwVHdyQmRIczFEVUt0Y3c0NFRVWWxINC8vckFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzMDMwMjk2CWZpbGU6QUxDT00uYXBwLnRhci5negpjbTYxb3o3Z0NGK0NiM05kRGE4Y2tyd3M2ZVZLMWpBa1QxVy92WGRXVnEwWElsd0x4VUVDWGF2cW9RTnZNdGY4RUoyUDkzcDJNYngwRzBCbmZuZDVBdz09Cg==",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.20/ALCOM-0.1.0-beta.20-universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna25DWHlyN3Y0bGxPR0ZBa3d3bnlSdXJjckZFd0k4YnRoblB5cjAwRXNsWHhlR1JDWUdoNWd4dTRiZnNBZlNhUkFsVExCUmtuQ2VPRXBsbzhFa0k4bndnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzMjU4NzYzCWZpbGU6QUxDT00uYXBwLnRhci5negpjb2l1S3ROUDBaNlkrQzBPb3RLeGRmcGs4SFF5akc5NzJVWWpuQ1FMZWpVaVVoVXZ2KzcxTUVRamlFbDh6bzRKbDN6TXRNZk1lbURGWjRrZHBHTUdCdz09Cg==",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.21/ALCOM-0.1.0-beta.21-universal.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna2dSNlJRRGhuSEdBOFgxaktac0JESEJidUFnUnVOOVRKVGdYa1JDVitLbmhwNzgreHhUL1ovU0pMUFkwVHdyQmRIczFEVUt0Y3c0NFRVWWxINC8vckFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzMDMwMjk2CWZpbGU6QUxDT00uYXBwLnRhci5negpjbTYxb3o3Z0NGK0NiM05kRGE4Y2tyd3M2ZVZLMWpBa1QxVy92WGRXVnEwWElsd0x4VUVDWGF2cW9RTnZNdGY4RUoyUDkzcDJNYngwRzBCbmZuZDVBdz09Cg==",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.20/ALCOM-0.1.0-beta.20-universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna25DWHlyN3Y0bGxPR0ZBa3d3bnlSdXJjckZFd0k4YnRoblB5cjAwRXNsWHhlR1JDWUdoNWd4dTRiZnNBZlNhUkFsVExCUmtuQ2VPRXBsbzhFa0k4bndnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzMjU4NzYzCWZpbGU6QUxDT00uYXBwLnRhci5negpjb2l1S3ROUDBaNlkrQzBPb3RLeGRmcGs4SFF5akc5NzJVWWpuQ1FMZWpVaVVoVXZ2KzcxTUVRamlFbDh6bzRKbDN6TXRNZk1lbURGWjRrZHBHTUdCdz09Cg==",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.21/ALCOM-0.1.0-beta.21-universal.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3ZkN2tLcFFUanluOUU4VVhtNjdPRUNrbXpzNUxDSHhiRGhXaDdsY2lvRXdvdnZwRStDaXZhb2tOQ1RBNEZya09ubER5NjBJR0dzTGIzMzhVOWw1bGdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzMDMwMzI3CWZpbGU6YWxjb21fMC4xLjAtYmV0YS4yMF9hbWQ2NC5BcHBJbWFnZS50YXIuZ3oKaHl2TXlZdlp2bGdWbVFJZmxCSjQ2YkRQbTdwck5OVlFZajZQUTRoc1NsMjFhTHdVTEhVak5RV0pNbGdTVUcrc1JxQmZmUGRBQjBBZ2pYYVcvMlRiQmc9PQo=",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.20/alcom-0.1.0-beta.20-x86_64.AppImage.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna2wvaVlHWHByOXZKdlNZZWs0UXNVNHAvMmtqWlRYdGVUMTFWT3VqbUdZTTFKMGpOUDluNCtwVnFUckpEcHJhSDZFcG1VZG1WNXI0VmZEVDlVUXg2M0FzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzMjU4ODMxCWZpbGU6YWxjb21fMC4xLjAtYmV0YS4yMV9hbWQ2NC5BcHBJbWFnZS50YXIuZ3oKY3ExNzJVZGIzd2dPRFBuRk9zYlk5QWJFelRzQWtRNGJLZ3RDZllMcnk2Yll4TnhWMXRYUTdJTnlRSTdXN2xrWXA4UUp3dVVkczBwblNVZFBabFdaQXc9PQo=",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.21/alcom-0.1.0-beta.21-x86_64.AppImage.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3NpK1ljOFNlY2QrUHpsLzVtaU5OSDRRZ3hVaWpPM2FxT3ErS0kxMUpoSG55Z1NrUzd1SXdsc2ZtNkRQaWNHTUtyNHBTUWRaaDlRTjgva0F2TnhLZWc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzMDMwNTM1CWZpbGU6QUxDT01fMC4xLjAtYmV0YS4yMF94NjQtc2V0dXAubnNpcy56aXAKb0txODlWQTI2MVNjU29RTkNkbElTTkhXblFVMnRKNHY3UUdHU05BQVNrMXhjQlZ4dFBPdUV4OUw5SHRFTWcvNFpabUUwUEpSVW85WittdWdMamtPRFE9PQo=",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.20/ALCOM-0.1.0-beta.20-x86_64-setup.nsis.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna2pRaUdQYkhDMVMyODVLRm54eVl4YkdSd1hWLy85UzJXUWYrbWdhdXRqTGNGSGh2VjFaRHpWR2hvTDFwbmdLa0k2S0dHVFB0dW5MWDRIQUFQSzFrcEFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzEzMjU4OTUwCWZpbGU6QUxDT01fMC4xLjAtYmV0YS4yMV94NjQtc2V0dXAubnNpcy56aXAKOU8wWWlDcmRRdDArdjM0T2xNUy9yNm5lbVlTakdqQ2RZaU5JTEk1NXkrWG9xM2k4enZuYjRCcEE2TVFybmFBRHFjZXN6OTZNYmtQN2hvR3pQOVZFRGc9PQo=",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.0-beta.21/ALCOM-0.1.0-beta.21-x86_64-setup.nsis.zip"
     }
   }
 }
