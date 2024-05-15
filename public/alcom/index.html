@@ -41,6 +41,7 @@
         <ul>
             <li>macOS .dmg: <button class="download-link-macos">Download v<span class="version-name"></span></button></li>
             <li>Windows setup.exe: <button class="download-link-windows">Download v<span class="version-name"></span></button></li>
+            <li>Windows standalone.exe: <button class="download-link-windows-standalone">Download v<span class="version-name"></span></button></li>
             <li>Linux AppImage: <button class="download-link-linux">Download v<span class="version-name"></span></button></li>
         </ul>
     </details>
@@ -101,11 +102,13 @@
 
       const macLink = `https://github.com/vrc-get/vrc-get/releases/download/gui-v${version}/ALCOM-${version}-universal.dmg`;
       const windowsLink = `https://github.com/vrc-get/vrc-get/releases/download/gui-v${version}/ALCOM-${version}-x86_64-setup.exe`;
+      const windowsStandaloneLink = `https://github.com/vrc-get/vrc-get/releases/download/gui-v${version}/ALCOM-${version}-x86_64.exe`;
       const linuxLink = `https://github.com/vrc-get/vrc-get/releases/download/gui-v${version}/alcom-${version}-x86_64.AppImage`;
 
       document.querySelectorAll('.version-name').forEach((el) => el.textContent = version);
       document.querySelector('.download-link-macos').addEventListener('click', () => window.location.href = macLink);
       document.querySelector('.download-link-windows').addEventListener('click', () => window.location.href = windowsLink);
+      document.querySelector('.download-link-windows-standalone').addEventListener('click', () => window.location.href = windowsStandaloneLink);
       document.querySelector('.download-link-linux').addEventListener('click', () => window.location.href = linuxLink);
 
       switch (detectPlatform()) {
