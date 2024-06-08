@@ -40,7 +40,7 @@
         <summary>他のOS</summary>
         <ul>
             <li>macOS .dmg: <button class="download-link-macos">Download v<span class="version-name"></span></button></li>
-            <li>Windows setup.exe: <button class="download-link-windows">Download v<span class="version-name"></span></button></li>
+            <li>Windows setup.exe.zip: <button class="download-link-windows">Download v<span class="version-name"></span></button></li>
             <li>Windows standalone.exe: <button class="download-link-windows-standalone">Download v<span class="version-name"></span></button></li>
             <li>Linux AppImage: <button class="download-link-linux">Download v<span class="version-name"></span></button></li>
         </ul>
@@ -101,7 +101,7 @@
       const version = data.version;
 
       const macLink = `https://github.com/vrc-get/vrc-get/releases/download/gui-v${version}/ALCOM-${version}-universal.dmg`;
-      const windowsLink = `https://github.com/vrc-get/vrc-get/releases/download/gui-v${version}/ALCOM-${version}-x86_64-setup.exe`;
+      const windowsLink = `https://github.com/vrc-get/vrc-get/releases/download/gui-v${version}/ALCOM-${version}-x86_64-setup.nsis.zip`;
       const windowsStandaloneLink = `https://github.com/vrc-get/vrc-get/releases/download/gui-v${version}/ALCOM-${version}-x86_64.exe`;
       const linuxLink = `https://github.com/vrc-get/vrc-get/releases/download/gui-v${version}/alcom-${version}-x86_64.AppImage`;
 
@@ -118,7 +118,7 @@
           break;
         default:
         case 'Windows':
-          document.querySelectorAll('.platform').forEach((el) => el.textContent = 'Windows setup.exe');
+          document.querySelectorAll('.platform').forEach((el) => el.textContent = 'Windows setup.exe.zip');
           document.querySelectorAll('.download-link').forEach((el) => el.addEventListener('click', () => window.location.href = windowsLink));
           break;
         case 'Linux':
