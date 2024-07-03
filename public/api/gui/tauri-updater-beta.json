@@ -1,0 +1,23 @@
+{
+  "version": "0.1.10-beta.2",
+  "notes": "This release includes the following features!:\n- Receive Beta releases of ALCOM!",
+  "pub_date": "2024-07-03T22:46:53Z",
+  "platforms": {
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3JNQS9ONWpyYVY0S1FxMzdFaUNBMlROS3FYNmtUOEo1b2NJYUVsTHk5RXM3TEVhV1l0SUJWakpGM3BKckkxWVVBM0hUWHFmTjhMMWRONUNKbHRRQmdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzIwMDQ2NTU0CWZpbGU6QUxDT00uYXBwLnRhci5negoxQ21yVzNMbzcxUjVVNmdlMTdqY1FPYjJXa1U1U2J0WWpKRTVUVkdWZG5iQjc2akpzcW5WSklXUWlmY0JlbG1TYUNKVFVNTEFtbGRjejZ4TW5oRXpEdz09Cg==",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.10-beta.2/ALCOM-0.1.10-beta.2-universal.app.tar.gz"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3JNQS9ONWpyYVY0S1FxMzdFaUNBMlROS3FYNmtUOEo1b2NJYUVsTHk5RXM3TEVhV1l0SUJWakpGM3BKckkxWVVBM0hUWHFmTjhMMWRONUNKbHRRQmdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzIwMDQ2NTU0CWZpbGU6QUxDT00uYXBwLnRhci5negoxQ21yVzNMbzcxUjVVNmdlMTdqY1FPYjJXa1U1U2J0WWpKRTVUVkdWZG5iQjc2akpzcW5WSklXUWlmY0JlbG1TYUNKVFVNTEFtbGRjejZ4TW5oRXpEdz09Cg==",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.10-beta.2/ALCOM-0.1.10-beta.2-universal.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna2ovS0xzbG9sTWowaFFLOVNhODZYTUxla3NOTUFHUXhpWDFYLzZlVFhiamYxOVNRMGJNUlRtSFdxOVhEdXJBaS9zRmo0N0toS2lSOGovRHBReUFFR0FZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzIwMDQ2NTczCWZpbGU6YWxjb21fMC4xLjEwLWJldGEuMl9hbWQ2NC5BcHBJbWFnZS50YXIuZ3oKS0RLTXZBeGYxUXNuVFY5SFFqWkJjOUlBMkhJQXc5Skw1VjhZV21xMjdYOEhUUEtwRi9YNHZua0pzWHNLKzU3QU9OeVNmUmtlM1k4MGhvVkxaY29pQnc9PQo=",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.10-beta.2/alcom-0.1.10-beta.2-x86_64.AppImage.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3J1M0xGeFlpc0hnK1hzQSs0NkZQRFEzMDVFdEpoaTBuNWtkZ0tEV09KclVtczhPSUxZMG5ubmZ1RmcwK0V1eHBpRFVUQ0lzZHVlVWoxYTc5MGp3UXdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzIwMDQ2NzgzCWZpbGU6QUxDT01fMC4xLjEwLWJldGEuMl94NjQtc2V0dXAubnNpcy56aXAKaS95ei9sVjEwcVBpc3BETHNJYTJGYmJYUDlwS3IvRHRVRHNqNERGQVprVkNvYWVCS25kdzdES0d3NlBCNFl4V3hoYlFOSHFENXQ1RDRJZEkvRW0vQlE9PQo=",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.10-beta.2/ALCOM-0.1.10-beta.2-x86_64-setup.nsis.zip"
+    }
+  }
+}
