@@ -1,0 +1,7 @@
+.color-link {
+    color: var(--vf-color-link-default) !important;
+}
+
+#navigation {
+    margin-bottom: 1.5rem;
+}
