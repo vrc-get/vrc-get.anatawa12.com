@@ -1,0 +1,12 @@
+{
+    "name": "vrc-get.anatawa12.com",
+    "version": "2.0.0",
+    "author": "anatawa12 <anatawa12@github.com>, Fox_score <foxscore@github.com>",
+    "devDependencies": {
+        "static-server": "^2.2.1",
+        "nodemon": "^2.0.20"
+    },
+    "scripts": {
+        "start": "nodemon --watch public --exec 'static-server -p 8080 public'"
+    }
+}
