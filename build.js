@@ -5,6 +5,7 @@ const chalk = require('chalk');
 const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
+const { exit } = require('process');
 
 // Configuration
 const config = {
@@ -81,11 +82,13 @@ async function build() {
         const htmlContent = template(resources);
 
         const relativePath = path.relative(config.templatesDir, templateFile);
-        const outputPath = path.join(config.outputDir, locale, relativePath);
+        let outputPath = path.join(config.outputDir, locale, relativePath);
         fs.mkdirSync(path.dirname(outputPath), { recursive: true });
         fs.writeFileSync(outputPath, htmlContent);
         if (locale === config.defaultLanguage) {
-            fs.writeFileSync(path.join(config.outputDir, relativePath), htmlContent);
+            let outputPath = path.join(config.outputDir, relativePath);
+            fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+            fs.writeFileSync(outputPath, htmlContent);
         }
         log(`Built: ${outputPath} (locale: ${locale})`);
       }
@@ -95,6 +98,7 @@ async function build() {
   } catch (error) {
     log(`Build failed: ${error.message}`, 'error');
     console.error(chalk.red(error.stack));
+    exit(1);
   }
 }
 
