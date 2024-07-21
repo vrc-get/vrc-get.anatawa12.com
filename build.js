@@ -53,7 +53,7 @@ async function build() {
     Handlebars.registerHelper('localizeLink', function(link) {
         const resources = this; // Access current context's data
         const currentLocale = resources.locale.code; // Get locale code directly
-        return path.join(currentLocale);
+        return '/' + path.join(currentLocale, link);
       });
 
     // Find & copy non-HTML files (excluding patterns)
