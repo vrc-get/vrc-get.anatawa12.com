@@ -3,10 +3,17 @@
     "version": "2.0.0",
     "author": "anatawa12 <anatawa12@github.com>, Fox_score <foxscore@github.com>",
     "devDependencies": {
-        "static-server": "^2.2.1",
-        "nodemon": "^2.0.20"
+        "nodemon": "^3.1.4",
+        "static-server": "^3.0.0"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "glob": "^10.3.10",
+        "handlebars": "^4.7.7",
+        "i18next": "^23.4.8"
     },
     "scripts": {
-        "start": "nodemon --watch public --exec 'static-server -p 8080 public'"
+        "start": "nodemon",
+        "build": "node build.js"
     }
 }
