@@ -4,7 +4,7 @@
 - [X] Setup DevContainer
 - [ ] CLI Page
 - [X] ALCOM Page
-- [ ] Disable downloads for Android & iOS
+- [X] Disable downloads for Android & iOS
 - [ ] Automatic localization redirect
 - [ ] Japanese Translations
 - [ ] German Translations

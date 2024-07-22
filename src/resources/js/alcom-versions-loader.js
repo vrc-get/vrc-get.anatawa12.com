@@ -1,16 +1,25 @@
 function detectPlatform() {
-    const platform = window.navigator?.userAgentData?.platform || window.navigator.platform;
+    const platform = window.navigator?.userAgentData?.platform || window.navigator.platform || 'Unknown';
+    const lowerCasePlatfrom = platform.toLowerCase();
+    console.log(platform);
 
-    if (platform.toLowerCase().indexOf('mac') !== -1) {
+    if (lowerCasePlatfrom.indexOf('mac') !== -1) {
         return 'macOS';
-    } else if (platform.toLowerCase().indexOf('win') !== -1) {
+    } else if (lowerCasePlatfrom.indexOf('win') !== -1) {
         return 'Windows';
     } else if (/Linux/.test(platform)) {
         return 'Linux';
+    } else if (lowerCasePlatfrom == 'android') {
+        return 'Android';
+    } else if (lowerCasePlatfrom == 'ios' || platform == 'ipad' || platform == 'ipod') {
+        return 'iOS';
     } else {
-        return 'Windows';
+        console.log('Unsupported platform: ' + platform);
+        return 'Unsupported';
     }
 }
+
+let _mainButtonLink;
 
 async function init() {
     await waitUntilLocaleIsLoaded();
@@ -40,26 +49,41 @@ async function init() {
         const mainButtonDropdown = document.getElementById('btn-download-main-dropdown');
         const mainButtonContainer = document.getElementById('btn-download-main-container');
 
-        let link;
-        let icon;
+        function updateMainButton(link, icon) {
+            mainButtonIcon.classList.add(`ri-${icon}`);
+            mainButtonVersion.innerText = version;
+            _mainButtonLink = link;
+        }
+        async function invalidateDownloadButton() {
+            mainButton.setAttribute('disabled', 'disabled');
+            mainButtonDropdown.setAttribute('disabled', 'disabled');
+            await waitUntilLocaleIsLoaded();
+            document.getElementById('btn-download-main-text').innerText = S.downloads.unsuportedOS;
+        }
         switch (detectPlatform()) {
             case 'macOS':
-                link = macLink;
-                icon = 'apple';
+                updateMainButton(macLink, 'apple-line');
                 break;
-            default:
             case 'Windows':
-                link = windowsLink;
-                icon = 'windows';
+                updateMainButton(windowsLink, 'windows-line');
                 break;
             case 'Linux':
-                link = linuxLink;
-                icon = 'ubuntu';
+                updateMainButton(linuxLink, 'ubuntu-line');
+                break;
+            case 'Android':
+                updateMainButton(null, 'android-line');
+                await invalidateDownloadButton();
+                break;
+            case 'iOS':
+                updateMainButton(null, 'apple-line');
+                await invalidateDownloadButton();
+                break;
+            default:
+                // ToDo: Add disabled button for unsupported devices (with tooltip)
+                updateMainButton(null, 'question-mark');
+                await invalidateDownloadButton();
                 break;
         }
-        mainButtonIcon.classList.add(`ri-${icon}-line`);
-        mainButtonVersion.innerText = version;
-        mainButton.href = link;
 
         loadingButton.setAttribute('hidden', null);
         mainButton.removeAttribute('hidden');

@@ -67,11 +67,13 @@
 
             <div class="p-segmented-control inline-block" id="btn-download-main-container">
                 <div class="p-segmented-control__list">
-                    <a class="p-segmented-control__button p-button--positive has-icon" id="btn-download-main" hidden>
+                    <button onclick="window.location.href = _mainButtonLink"
+                        class="p-segmented-control__button p-button--positive has-icon p-tooltip" id="btn-download-main" hidden>
                         <i class="p-icon is-light" id="btn-download-main-platform"></i>
-                        <span>{{common.download}} <code id="btn-download-main-version"
+                        <span id="btn-download-main-text">{{common.download}} <code id="btn-download-main-version"
                                 class="no-background">0.0.0</code></span>
-                    </a>
+                        <span class="p-tooltip__message" role="tooltip" id="unsupported-platform-tooltip">This software is not supported on your platform.</span>
+                    </button>
                     <span class="p-contextual-menu--left">
                         <button
                             class="p-segmented-control__button p-button--positive has-icon p-contextual-menu__toggle u-no-margin--bottom"

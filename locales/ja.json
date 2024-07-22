@@ -27,7 +27,8 @@
         "macOS": "macOS",
         "linux": "Linux",
         "windowsSetup": "Windows セットアップ",
-        "windowsStandalone": "Windows スタンドアロン"
+        "windowsStandalone": "Windows スタンドアロン",
+        "unsuportedOS": "非対応のOS"
     },
     "home": {
         "productPage": "製品ページ ",

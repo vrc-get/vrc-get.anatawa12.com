@@ -27,7 +27,8 @@
         "macOS": "macOS",
         "linux": "Linux",
         "windowsSetup": "Windows Setup",
-        "windowsStandalone": "Windows Standalone"
+        "windowsStandalone": "Windows Standalone",
+        "unsuportedOS": "OS nicht unterstützt"
     },
     "home": {
         "productPage": "Produktseite",
