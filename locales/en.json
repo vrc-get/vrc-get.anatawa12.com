@@ -1,0 +1,49 @@
+{
+    "locale": {
+        "code": "en",
+        "displayName": "English",
+        "nativeDisplayName": "English",
+        "emoji": "🇺🇸"
+    },
+    "common": {
+        "loading": "Loading",
+        "download": "Download",
+        "allVersions": "All Versions",
+        "sourceCode": "Source Code",
+        "faq": "FAQ",
+        "error": "Error",
+        "contributors": {
+            "title": "Contributors",
+            "cache": "Results are cached for 15 minutes",
+            "contactingGithub": "Contacting GitHub"
+        }
+    },
+    "errors": {
+        "noErrorMessage": "No error message has been provided.",
+        "failedToLoadLatestVersion": "Failed to load the latest version. Please try again later.",
+        "githubApiTimeout": "Too many unauthenticated API requests have been sent to Github from your IP address. Please try again later."
+    },
+    "downloads": {
+        "macOS": "macOS",
+        "linux": "Linux",
+        "windowsSetup": "Windows Setup",
+        "windowsStandalone": "Windows Standalone"
+    },
+    "alcom": {
+        "hero": "A fast open-source alternative of VRChat Creator Companion.",
+        "faq": {
+            "fullName": {
+                "question": "What's the full name of ALCOM?",
+                "answer": "ALCOM is ALCOM, not an abbreviation of some other full name."
+            },
+            "nameOrigin": {
+                "question": "Where the word ALCOM came from?",
+                "answer": "ALCOM is originally came from <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion. However, <code>alternative companion</code> is not the name of this tool, one of explanation."
+            },
+            "vrcGetRelationship": {
+                "question": "What's the relationship with vrc-get-gui or vrc-get?",
+                "answer": "vrc-get is the open source vpm client created by us and ALCOM is based on vrc-get. ALCOM is developed as a GUI frontend of vrc-get, so it was previously called vrc-get-gui."
+            }
+        }
+    }
+}

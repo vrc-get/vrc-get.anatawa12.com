@@ -3,10 +3,11 @@
 - [X] Landing Page
 - [X] Setup DevContainer
 - [ ] CLI Page
-- [ ] ALCOM Page
+- [X] ALCOM Page
 - [ ] Automatic localization redirect
 - [ ] Japanese Translations
 - [ ] German Translations
+- [ ] Figure out what the third Unity versions is that the VRChat SDK supports
 
 ## Optionals (check back with @anatawa12)
 

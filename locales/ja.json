@@ -1,0 +1,49 @@
+{
+    "locale": {
+        "code": "ja",
+        "displayName": "Japanese",
+        "nativeDisplayName": "日本語",
+        "emoji": "🇯🇵"
+    },
+    "common": {
+        "loading": "ロード中",
+        "download": "ダウンロード",
+        "allVersions": "すべてのバージョン",
+        "sourceCode": "ソースコード",
+        "faq": "よくある質問",
+        "error": "エラー",
+        "contributors": {
+            "title": "コントリビューター",
+            "cache": "結果は15分間キャッシュされます",
+            "contactingGithub": "GitHubに接続しています"
+        }
+    },
+    "errors": {
+        "noErrorMessage": "エラーメッセージが提供されていません。",
+        "failedToLoadLatestVersion": "最新版の取得に失敗しました。後でもう一度お試しください。",
+        "githubApiTimeout": "あなたのIPアドレスからGitHubへの未認証APIリクエストが多すぎます。後ほどお試しください。"
+    },
+    "downloads": {
+        "macOS": "macOS",
+        "linux": "Linux",
+        "windowsSetup": "Windows セットアップ",
+        "windowsStandalone": "Windows スタンドアロン"
+    },
+    "alcom": {
+        "hero": "アルコムは高速なオープンソースの VRChat Creator Companion の代替ツールです。",
+        "faq": {
+            "fullName": {
+                "question": "アルコムの正式名称は何でしょうか？",
+                "answer": "ALCOM は ALCOM であり、他の正式名称の略語ではありません。"
+            },
+            "nameOrigin": {
+                "question": "アルコムという言葉の由来は何ですか？",
+                "answer": "アルコムはもともと <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion から来ています。ただし、<code>alternative companion</code> はこのツールの名前ではなく、説明です。"
+            },
+            "vrcGetRelationship": {
+                "question": "vrc-get-gui や vrc-get との関係は何ですか？",
+                "answer": "vrc-get は私たちが作成したオープンソースの vpm クライアントであり、ALCOM は vrc-get を本に作られています。ALCOM は vrc-get の GUI フロントエンドとして開発されているため、以前は vrc-get-gui と呼ばれていました。"
+            }
+        }
+    }
+}
