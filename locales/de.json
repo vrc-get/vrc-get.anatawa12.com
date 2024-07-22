@@ -1,0 +1,54 @@
+{
+    "locale": {
+        "code": "de",
+        "displayName": "Deutsch",
+        "nativeDisplayName": "Deutsch",
+        "emoji": "🇩🇪"
+    },
+    "common": {
+        "loading": "Wird geladen",
+        "download": "Herunterladen",
+        "allVersions": "Alle Versionen",
+        "sourceCode": "Quellcode",
+        "faq": "FAQ",
+        "error": "Fehler",
+        "contributors": {
+            "title": "Mitwirkende",
+            "cache": "Ergebnisse sind 15 Minuten zwischengespeichert",
+            "contactingGithub": "Kontaktiere GitHub"
+        }
+    },
+    "errors": {
+        "noErrorMessage": "Es wurde keine Fehlermeldung angegeben.",
+        "failedToLoadLatestVersion": "Die neueste Version konnte nicht geladen werden. Bitte versuchen Sie es später erneut.",
+        "githubApiTimeout": "Zu viele nicht authentifizierte API-Anfragen von Ihrer IP-Adresse an GitHub. Bitte versuchen Sie es später erneut."
+    },
+    "downloads": {
+        "macOS": "macOS",
+        "linux": "Linux",
+        "windowsSetup": "Windows Setup",
+        "windowsStandalone": "Windows Standalone"
+    },
+    "home": {
+        "productPage": "Produktseite",
+        "alcomDescription": "Eine schnelle und quelloffene Alternative zum VRChat Creator Companion",
+        "cliDescription": "Eine schnelle und quelloffene Alternative zum VRChat Package Manager"
+    },
+    "alcom": {
+        "hero": "Eine schnelle Open-Source-Alternative zum VRChat Creator Companion.",
+        "faq": {
+            "fullName": {
+                "question": "Wie heißt ALCOM ausgeschrieben?",
+                "answer": "ALCOM ist einfach ALCOM, keine Abkürzung."
+            },
+            "nameOrigin": {
+                "question": "Woher kommt das Wort ALCOM?",
+                "answer": "ALCOM kommt ursprünglich von <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion, ist aber mehr als nur eine Alternative."
+            },
+            "vrcGetRelationship": {
+                "question": "Was ist die Beziehung zu vrc-get-gui oder vrc-get?",
+                "answer": "vrc-get ist unser Open-Source vpm-Client, auf dem ALCOM basiert. ALCOM ist ein grafisches Frontend für vrc-get und hieß früher vrc-get-gui."
+            }
+        }
+    }
+}

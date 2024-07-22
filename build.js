@@ -123,7 +123,6 @@ async function build() {
     let metaObj = {};
     for (const locale of locales) {
       const resources = i18next.getResourceBundle(locale, 'translation');
-      console.log(resources)
       metaObj[resources.locale.code] = resources.locale;
     }
     const metaStr = JSON.stringify(metaObj, null, "\t");
