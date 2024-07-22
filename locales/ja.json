@@ -29,6 +29,11 @@
         "windowsSetup": "Windows セットアップ",
         "windowsStandalone": "Windows スタンドアロン"
     },
+    "home": {
+        "productPage": "製品ページ ",
+        "alcomDescription": "アルコムは高速なオープンソースの VRChat Creator Companion の代替ツールです。",
+        "cliDescription": "アルコムは高速なオープンソースの VRChat Package Manager の代替ツールです。"
+    },
     "alcom": {
         "hero": "アルコムは高速なオープンソースの VRChat Creator Companion の代替ツールです。",
         "faq": {

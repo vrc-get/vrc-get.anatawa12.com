@@ -29,6 +29,11 @@
         "windowsSetup": "Windows Setup",
         "windowsStandalone": "Windows Standalone"
     },
+    "home": {
+        "productPage": "Product Page",
+        "alcomDescription": "A fast and open-source VRChat Creator Companion alternative",
+        "cliDescription": "A fast and open-source VRChat Package Manager alternative"
+    },
     "alcom": {
         "hero": "A fast open-source alternative of VRChat Creator Companion.",
         "faq": {
