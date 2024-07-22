@@ -50,6 +50,7 @@ async function makeWall() {
             element.classList.add('contributor-icon');
             element.setAttribute('aria-describedby', `contributor-tooltip-${contributor.id}`)
             element.href = contributor.html_url;
+            element.target = '_blank';
             contributorsWall.appendChild(element);
 
             let tooltip = document.createElement('span');
