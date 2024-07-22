@@ -1,5 +1,15 @@
 {
-    "updateContentCommand": "yarn install",
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"installYarnUsingApt": true,
+			"version": "lts",
+			"nvmVersion": "latest"
+		}
+	},
+	"updateContentCommand": "yarn install",
     "postAttachCommand": "yarn start",
     "forwardPorts": [
         8080
@@ -9,5 +19,12 @@
             "label": "Website",
             "onAutoForward": "notify"
         }
-    }
+    },
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.vscode-github-actions"
+			]
+		}
+	}
 }
