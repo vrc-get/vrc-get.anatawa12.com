@@ -41,7 +41,7 @@ function _redirectToLocale(newLocale) {
         endpoint = endpoint.slice(3);
     }
     endpoint = '/' + newLocale + endpoint;
-    window.location.href = endpoint;
+    window.location.replace(endpoint);
 }
 
 async function _checkIfWeShouldRedirect() {
