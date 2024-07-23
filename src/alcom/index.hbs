@@ -1,0 +1,139 @@
+{{#> page
+    title="ALCOM"
+    icon="/resources/alcom.svg"
+    with="social, before-header, scripts"
+}}
+
+{{#*inline "social"}}
+<meta property="og:title" content="ALCOM - fast open-source VCC" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vrc-get.anatawa12.com{{localizeLink /alcom}}" />
+<meta property="og:image" content="https://vrc-get.anatawa12.com/resources/alcom.svg" />
+<meta property="og:site_name" content="ALCOM" />
+<meta property="og:description" content="Download page of ALCOM" />
+{{/inline}}
+
+{{#*inline "before-header"}}
+<div class="p-notification--negative u-no-margin--bottom" id="err-failedToLoadLatestVersion" hidden>
+    <div class="p-notification__content">
+        <h5 class="p-notification__title">{{common.error}}</h5>
+        <p class="p-notification__message">{{errors.failedToLoadLatestVersion}}</p>
+    </div>
+</div>
+{{/inline}}
+
+{{#*inline "scripts"}}
+<script src="/resources/js/alcom-versions-loader.js" defer></script>
+{{/inline}}
+
+{{#*inline "content"}}<div class="p-media-object--large">
+    <img src="/resources/alcom.svg" class="p-media-object__image" alt="">
+    <div class="p-media-object__details">
+        <h1 class="p-media-object__title">ALCOM</h1>
+        <p class="p-media-object__content">{{alcom.hero}}</p>
+        <ul class="p-media-object__meta-list">
+        </ul>
+    </div>
+</div>
+
+<a disabled="" class="p-button--positive is-processing has-icon" id="btn-download-loading">
+    <i class="p-icon--spinner u-animation--spin is-light"></i>
+    <span>{{common.loading}}</span>
+</a>
+
+<button disabled="" class="p-button--negative has-icon" id="btn-download-failed" hidden>
+    <i class="p-icon--close is-light"></i>
+    <span>{{common.error}}</span>
+</button>
+
+<div class="p-segmented-control inline-block" id="btn-download-main-container">
+    <div class="p-segmented-control__list">
+        <button onclick="window.location.href = _mainButtonLink"
+            class="p-segmented-control__button p-button--positive has-icon p-tooltip" id="btn-download-main"
+            hidden>
+            <i class="p-icon is-light" id="btn-download-main-platform"></i>
+            <span id="btn-download-main-text">{{common.download}} <code id="btn-download-main-version"
+                    class="no-background">0.0.0</code></span>
+            <span class="p-tooltip__message" role="tooltip" id="unsupported-platform-tooltip">This software
+                is not supported on your platform.</span>
+        </button>
+        <span class="p-contextual-menu--left">
+            <button
+                class="p-segmented-control__button p-button--positive has-icon p-contextual-menu__toggle u-no-margin--bottom"
+                aria-controls="menu-3" aria-expanded="false" aria-haspopup="true"
+                id="btn-download-main-dropdown" hidden>
+                <i class="ri-arrow-down-s-line"></i>
+            </button>
+            <span class="p-contextual-menu__dropdown" id="menu-3" aria-hidden="true">
+                <span class="p-contextual-menu__group">
+                    <a class="p-contextual-menu__link" id="btn-download-windowsSetup">
+                        <i class="p-icon ri-windows-line me-1"></i>
+                        {{downloads.windowsSetup}} <code class="ms-1">.zip</code>
+                    </a>
+                    <a class="p-contextual-menu__link" id="btn-download-windowsStandalone">
+                        <i class="p-icon ri-windows-line me-1"></i>
+                        {{downloads.windowsStandalone}} <code class="ms-1">.exe</code>
+                    </a>
+                    <a class="p-contextual-menu__link" id="btn-download-macOS">
+                        <i class="p-icon ri-apple-line me-1"></i>
+                        {{downloads.macOS}} <code class="ms-1">.dmg</code>
+                    </a>
+                    <a class="p-contextual-menu__link" id="btn-download-linux">
+                        <i class="p-icon ri-ubuntu-line me-1"></i>
+                        {{downloads.linux}} <code class="ms-1">AppImage</code>
+                    </a>
+                </span>
+            </span>
+        </span>
+
+    </div>
+</div>
+
+<a href="https://github.com/vrc-get/vrc-get/releases?q=gui-v0" class="p-button has-icon">
+    <i class="p-icon ri-history-line"></i>
+    <span>{{common.allVersions}}</span>
+</a>
+
+<a href="https://github.com/vrc-get/vrc-get/tree/master/vrc-get-gui" class="p-button has-icon">
+    <i class="p-icon ri-github-line"></i>
+    <span>{{common.sourceCode}}</span>
+</a>
+
+
+<h2>{{common.faq}}</h2>
+<aside class="p-accordion">
+    <ul class="p-accordion__list">
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab1" aria-controls="tab1-section"
+                    aria-expanded="false">{{alcom.faq.fullName.question}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab1-section" aria-hidden="true" aria-labelledby="tab1">
+                <p>{{safe alcom.faq.fullName.answer}}</p>
+            </section>
+        </li>
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab2" aria-controls="tab2-section"
+                    aria-expanded="false">{{alcom.faq.nameOrigin.question}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab2-section" aria-hidden="true" aria-labelledby="tab2">
+                <p>{{safe alcom.faq.nameOrigin.answer}}</p>
+            </section>
+        </li>
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab3" aria-controls="tab3-section"
+                    aria-expanded="false">{{alcom.faq.vrcGetRelationship.question}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab3-section" aria-hidden="true" aria-labelledby="tab3">
+                <p>{{safe alcom.faq.vrcGetRelationship.answer}}</p>
+            </section>
+        </li>
+    </ul>
+</aside>
+
+{{> contributors}}
+{{/inline}}
+
+{{/page}}
