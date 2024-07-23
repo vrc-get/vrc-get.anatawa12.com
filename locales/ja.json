@@ -6,6 +6,7 @@
         "emoji": "🇯🇵"
     },
     "common": {
+        "documentation": "ドキュメント",
         "loading": "ロード中",
         "download": "ダウンロード",
         "allVersions": "すべてのバージョン",

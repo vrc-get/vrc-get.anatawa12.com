@@ -2,24 +2,30 @@
 <html lang="{{locale.code}}">
 
 <head>
-    <title>vrc-get</title>
+    <title>{{title}}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{#if icon}}
+    <link rel="icon" type="application/svg" href="{{icon}}">
+    {{/if}}
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.14.0.min.css" />
     <link rel="stylesheet" href="/resources/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
     <!-- Social -->
-    <meta property="og:title" content="vrc-get - fast open-source VPM">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vrc-get.anatawa12.com/">
+    {{#if (contains with "social")}}
+    {{> social}}
+    {{/if}}
     <!-- Scripts -->
     <script src="/resources/js/localization.js" defer></script>
 </head>
 
 <body>
+    {{#if (contains with "before-header")}}
+    {{> before-header}}
+    {{/if}}
 
-    <header id="navigation" class="p-navigation is-dark mb-3">
+    <header id="navigation" class="p-navigation is-dark mb-2">
         <div class="p-navigation__row--25-75">
             <div class="p-navigation__banner">
                 <div class="p-navigation__tagged-logo">
@@ -29,10 +35,12 @@
                 </div>
                 <ul class="p-navigation__items u-align--right">
                     <li class="p-navigation__item">
-                        <button class="p-navigation__link text-right" aria-controls="locale-selector-dropdown-menu-mobile">
+                        <button class="p-navigation__link text-right"
+                            aria-controls="locale-selector-dropdown-menu-mobile">
                             <i class="ri-global-line"></i>
                         </button>
-                        <ul class="p-navigation__dropdown--right" id="locale-selector-dropdown-menu-mobile" aria-hidden="true">
+                        <ul class="p-navigation__dropdown--right" id="locale-selector-dropdown-menu-mobile"
+                            aria-hidden="true">
                             {{#each __locales}}
                             <li class="cursor-pointer">
                                 <span onclick="setCustomLocale('{{code}}')" class="p-navigation__dropdown-item">
@@ -67,53 +75,14 @@
 
     <div class="row--25-75">
         <div class="col">
-
-            <div class="p-card u-no-padding">
-                <div class="p-card__inner">
-                    <div class="p-media-object--large u-no-margin--bottom">
-                        <img src="/resources/alcom.svg" class="p-media-object__image" alt="">
-                        <div class="p-media-object__details">
-                            <h1 class="p-media-object__title">ALCOM</h1>
-                            <p class="p-media-object__content">{{home.alcomDescription}}</p>
-                            <ul class="p-media-object__meta-list">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <hr class="u-no-margin--bottom">
-                <div class="p-card__inner">
-                    <a href="{{localizeLink '/alcom'}}" class="p-button has-icon u-no-margin--bottom">
-                        <i class="p-icon--external-link"></i>
-                        <span>{{home.productPage}}</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="p-card u-no-padding">
-                <div class="p-card__inner">
-                    <div class="p-media-object--large u-no-margin--bottom">
-                        <img src="/resources/vrc-get.svg" class="p-media-object__image" alt="">
-                        <div class="p-media-object__details">
-                            <h1 class="p-media-object__title">VRC-GET</h1>
-                            <p class="p-media-object__content">{{home.cliDescription}}</p>
-                            <ul class="p-media-object__meta-list">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <hr class="u-no-margin--bottom">
-                <div class="p-card__inner">
-                    <a href="{{localizeLink '/cli'}}" class="p-button has-icon u-no-margin--bottom">
-                        <i class="p-icon--external-link"></i>
-                        <span>{{home.productPage}}</span>
-                    </a>
-                </div>
-            </div>
-
+            {{> content}}
         </div>
     </div>
 
     <script src="/resources/js/common.js" defer></script>
+    {{#if (contains with "scripts")}}
+    {{> scripts}}
+    {{/if}}
 
 </body>
 

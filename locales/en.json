@@ -6,6 +6,7 @@
         "emoji": "🇺🇸"
     },
     "common": {
+        "documentation": "Documentation",
         "loading": "Loading",
         "download": "Download",
         "allVersions": "All Versions",

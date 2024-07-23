@@ -12,8 +12,9 @@ const fs = require('fs');
 const config = {
   localesDir: './locales',
   templatesDir: './src',
+  componentsDir: './components',
   outputDir: './dist',
-  excludePatterns: ['**/*.html', '**/locales/'],
+  excludePatterns: ['**/*.html', '**/*.hbs'],
   defaultLanguage: 'en',
   safeTags: [
     'b', 'i',
@@ -96,6 +97,25 @@ async function build() {
       return new Handlebars.SafeString(sanitized);
     });
 
+    // Register the contains helper
+    Handlebars.registerHelper('contains', function(arrayStr, value, options) {
+      const array = (arrayStr ?? '').split(',').map(s => s.trim());
+      if (array && array.indexOf(value) !== -1) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    // Register components
+    const componentFiles = fs.readdirSync(config.componentsDir)
+      .filter(file => file.endsWith('.hbs'))
+      .map(file => file.replace('.hbs', ''));
+    componentFiles.forEach(componentFile => {
+      const raw = fs.readFileSync(path.join(config.componentsDir, componentFile + '.hbs'), 'utf-8');
+      Handlebars.registerPartial(componentFile, raw);
+    });
+
     // Remove previous instance of the output directory
     if (fs.existsSync(config.outputDir))
       fs.rmSync(config.outputDir, { recursive: true, force: true })
@@ -132,7 +152,7 @@ async function build() {
 
     // Find HTML templates & generate localized pages
     const templateFiles = glob
-      .sync(path.join(config.templatesDir, '**/*.html'))
+      .sync(path.join(config.templatesDir, '**/*.{html,hbs}'))
       .filter(filePath => !path.basename(filePath).startsWith('_'));
 
     for (const templateFile of templateFiles) {
@@ -144,6 +164,9 @@ async function build() {
 
         const relativePath = path.relative(config.templatesDir, templateFile);
         let outputPath = path.join(config.outputDir, locale, relativePath);
+        if (outputPath.endsWith('.hbs')) {
+          outputPath = outputPath.replace(/\.hbs$/, '.html');
+        }
         fs.mkdirSync(path.dirname(outputPath), { recursive: true });
         fs.writeFileSync(outputPath, htmlContent);
         if (locale === config.defaultLanguage) {

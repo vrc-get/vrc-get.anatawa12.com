@@ -1,6 +1,6 @@
 {
-    "watch": ["src", "locales", "build.js"],
+    "watch": ["src", "locales", "components", "build.js"],
     "exec": "npm run build && static-server -p 8080 dist",
-    "ext": "html,css,js,json,svg"
+    "ext": "html,css,js,json,svg,hbs"
   }
   

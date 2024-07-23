@@ -3,6 +3,7 @@
 - [X] Landing Page
 - [X] Setup DevContainer
 - [ ] CLI Page
+- [ ] CLI Documentation
 - [X] ALCOM Page
 - [X] Disable downloads for Android & iOS
 - [X] Automatic localization redirect
