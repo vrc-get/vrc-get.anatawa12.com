@@ -5,7 +5,8 @@
 - [ ] CLI Page
 - [X] ALCOM Page
 - [X] Disable downloads for Android & iOS
-- [ ] Automatic localization redirect
+- [X] Automatic localization redirect
+- [ ] Store a copy of the Remix Icons ccs and font files in the repository
 - [ ] Japanese Translations
 - [ ] German Translations
 - [ ] Figure out what the third Unity versions is that the VRChat SDK supports
