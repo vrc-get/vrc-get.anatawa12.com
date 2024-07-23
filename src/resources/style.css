@@ -52,3 +52,8 @@
 .text-right {
     text-align: end;
 }
+
+ul.p-navigation__items,
+ul.p-navigation__items li {
+    list-style-type: none !important;
+}
