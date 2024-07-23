@@ -38,7 +38,41 @@
                         <span class="p-navigation__logo-title">vrc-get</span>
                     </a>
                 </div>
+                <ul class="p-navigation__items u-align--right">
+                    <li class="p-navigation__item">
+                        <button class="p-navigation__link text-right" aria-controls="locale-selector-dropdown-menu-mobile">
+                            <i class="ri-global-line"></i>
+                        </button>
+                        <ul class="p-navigation__dropdown--right" id="locale-selector-dropdown-menu-mobile" aria-hidden="true">
+                            {{#each __locales}}
+                            <li class="cursor-pointer">
+                                <span onclick="setCustomLocale('{{code}}')" class="p-navigation__dropdown-item">
+                                    {{nativeDisplayName}}&ensp;{{emoji}}
+                                </span>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                </ul>
             </div>
+            <nav class="p-navigation__nav">
+                <ul class="p-navigation__items u-align--right">
+                    <li class="p-navigation__item--dropdown-toggle">
+                        <button class="p-navigation__link" aria-controls="locale-selector-dropdown-menu">
+                            <i class="ri-global-line"></i>
+                        </button>
+                        <ul class="p-navigation__dropdown--right" id="locale-selector-dropdown-menu" aria-hidden="true">
+                            {{#each __locales}}
+                            <li class="cursor-pointer">
+                                <span onclick="setCustomLocale('{{code}}')" class="p-navigation__dropdown-item">
+                                    {{nativeDisplayName}}&ensp;{{emoji}}
+                                </span>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -68,11 +102,13 @@
             <div class="p-segmented-control inline-block" id="btn-download-main-container">
                 <div class="p-segmented-control__list">
                     <button onclick="window.location.href = _mainButtonLink"
-                        class="p-segmented-control__button p-button--positive has-icon p-tooltip" id="btn-download-main" hidden>
+                        class="p-segmented-control__button p-button--positive has-icon p-tooltip" id="btn-download-main"
+                        hidden>
                         <i class="p-icon is-light" id="btn-download-main-platform"></i>
                         <span id="btn-download-main-text">{{common.download}} <code id="btn-download-main-version"
                                 class="no-background">0.0.0</code></span>
-                        <span class="p-tooltip__message" role="tooltip" id="unsupported-platform-tooltip">This software is not supported on your platform.</span>
+                        <span class="p-tooltip__message" role="tooltip" id="unsupported-platform-tooltip">This software
+                            is not supported on your platform.</span>
                     </button>
                     <span class="p-contextual-menu--left">
                         <button

@@ -1,7 +1,6 @@
 function detectPlatform() {
     const platform = window.navigator?.userAgentData?.platform || window.navigator.platform || 'Unknown';
     const lowerCasePlatfrom = platform.toLowerCase();
-    console.log(platform);
 
     if (lowerCasePlatfrom.indexOf('mac') !== -1) {
         return 'macOS';

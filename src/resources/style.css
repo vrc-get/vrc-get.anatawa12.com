@@ -44,3 +44,11 @@
 .hidden {
     display: none;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-right {
+    text-align: end;
+}

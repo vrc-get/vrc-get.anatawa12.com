@@ -22,22 +22,77 @@ document.addEventListener('DOMContentLoaded', () => {
 //endregion
 
 //region Dropdown buttons
-document.addEventListener('click', function(event) {
-    const toggleButton = document.querySelector('.p-contextual-menu__toggle');
-    const dropdownMenu = document.querySelector('.p-contextual-menu__dropdown');
-    const isClickInsideMenu = dropdownMenu.contains(event.target) || toggleButton.contains(event.target);
+// ToDo: Add support for multiple dropdown
+const contextToggle = document.querySelector('.p-contextual-menu__toggle');
+const dropdownMenu = document.querySelector('.p-contextual-menu__dropdown');
+if (contextToggle && dropdownMenu) {
+    document.addEventListener('click', function (event) {
+        const isClickInsideMenu = dropdownMenu.contains(event.target) || contextToggle.contains(event.target);
 
-    if (!isClickInsideMenu) {
-        dropdownMenu.setAttribute('aria-hidden', 'true');
-        toggleButton.setAttribute('aria-expanded', 'false'); 
+        if (!isClickInsideMenu) {
+            dropdownMenu.setAttribute('aria-hidden', 'true');
+            contextToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    contextToggle.addEventListener('click', function (event) {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+        dropdownMenu.setAttribute('aria-hidden', isExpanded);
+        this.setAttribute('aria-expanded', !isExpanded);
+    });
+}
+//endregion
+
+//region Nav dropdown
+function toggleDropdown(toggle, open) {
+    var parentElement = toggle.parentNode;
+    var dropdown = document.getElementById(toggle.getAttribute('aria-controls'));
+
+    if (open) {
+        parentElement.classList.add('is-active');
+        dropdown.style.display = 'block';
+    } else {
+        parentElement.classList.remove('is-active');
+        dropdown.style.display = 'none';
     }
-});
+}
 
-document.querySelector('.p-contextual-menu__toggle').addEventListener('click', function(event) {
-    const dropdownMenu = document.querySelector('.p-contextual-menu__dropdown');
-    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-    
-    dropdownMenu.setAttribute('aria-hidden', isExpanded);
-    this.setAttribute('aria-expanded', !isExpanded);
-});
+function closeAllDropdowns(toggles) {
+    toggles.forEach(function (toggle) {
+        toggleDropdown(toggle, false);
+    });
+}
+
+function handleClickOutside(toggles, containerClasses) {
+    document.addEventListener('click', function (event) {
+        var target = event.target;
+
+        if (!containerClasses.some(container => target.closest(container))) {
+            closeAllDropdowns(toggles);
+        }
+    });
+}
+
+function initNavDropdowns(containerClasses) {
+    // var toggles = document.querySelectorAll(containerClass + ' [aria-controls]');
+    var toggles = [];
+    for (const container of containerClasses) {
+        toggles.push(...document.querySelectorAll(container + ' [aria-controls]'));
+    }
+
+    handleClickOutside(toggles, containerClasses);
+
+    toggles.forEach(function (toggle) {
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const shouldOpen = !toggle.parentNode.classList.contains('is-active');
+            closeAllDropdowns(toggles);
+            toggleDropdown(toggle, shouldOpen);
+        });
+    });
+}
+
+initNavDropdowns([ '.p-navigation__item', '.p-navigation__item--dropdown-toggle' ]);
 //endregion

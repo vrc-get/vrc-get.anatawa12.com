@@ -8,12 +8,13 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.14.0.min.css" />
     <link rel="stylesheet" href="/resources/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
     <!-- Social -->
     <meta property="og:title" content="vrc-get - fast open-source VPM">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vrc-get.anatawa12.com/">
     <!-- Scripts -->
-     <script src="/resources/js/localization.js" defer></script>
+    <script src="/resources/js/localization.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +27,41 @@
                         <span class="p-navigation__logo-title">vrc-get</span>
                     </a>
                 </div>
+                <ul class="p-navigation__items u-align--right">
+                    <li class="p-navigation__item">
+                        <button class="p-navigation__link text-right" aria-controls="locale-selector-dropdown-menu-mobile">
+                            <i class="ri-global-line"></i>
+                        </button>
+                        <ul class="p-navigation__dropdown--right" id="locale-selector-dropdown-menu-mobile" aria-hidden="true">
+                            {{#each __locales}}
+                            <li class="cursor-pointer">
+                                <span onclick="setCustomLocale('{{code}}')" class="p-navigation__dropdown-item">
+                                    {{nativeDisplayName}}&ensp;{{emoji}}
+                                </span>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                </ul>
             </div>
+            <nav class="p-navigation__nav">
+                <ul class="p-navigation__items u-align--right">
+                    <li class="p-navigation__item--dropdown-toggle">
+                        <button class="p-navigation__link" aria-controls="locale-selector-dropdown-menu">
+                            <i class="ri-global-line"></i>
+                        </button>
+                        <ul class="p-navigation__dropdown--right" id="locale-selector-dropdown-menu" aria-hidden="true">
+                            {{#each __locales}}
+                            <li class="cursor-pointer">
+                                <span onclick="setCustomLocale('{{code}}')" class="p-navigation__dropdown-item">
+                                    {{nativeDisplayName}}&ensp;{{emoji}}
+                                </span>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -74,7 +109,7 @@
                     </a>
                 </div>
             </div>
-            
+
         </div>
     </div>
 

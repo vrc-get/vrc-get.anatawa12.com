@@ -42,7 +42,8 @@ async function build() {
     // Load locales (using async/await for i18next.init)
     const locales = fs.readdirSync(config.localesDir)
       .filter(file => file.endsWith('.json'))
-      .map(file => file.replace('.json', ''));
+      .map(file => file.replace('.json', ''))
+      .sort();
 
     const resources = {};
     locales.forEach(locale => {
@@ -114,19 +115,20 @@ async function build() {
       log(`Copied: ${relativePath}`);
     });
 
-    // Copy the localization directory
-    const outputPath = path.join(config.outputDir, 'resources', 'locales');
-    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-    fs.cpSync(config.localesDir, outputPath, { recursive: true });
-
-    // Generate the meta.gen.json file for localization
-    let metaObj = {};
+    // Update the locales
+    let localesList = {};
     for (const locale of locales) {
       const resources = i18next.getResourceBundle(locale, 'translation');
-      metaObj[resources.locale.code] = resources.locale;
+      localesList[resources.locale.code] = resources.locale;
     }
-    const metaStr = JSON.stringify(metaObj, null, "\t");
-    fs.writeFileSync(path.join(config.outputDir, 'resources', 'locales.json'), metaStr);
+    const outputPath = path.join(config.outputDir, 'resources', 'locales');
+    fs.mkdirSync(outputPath, { recursive: true });
+    for (const locale of locales) {
+      const resources = i18next.getResourceBundle(locale, 'translation');
+      resources.__locales = localesList;
+      const raw = JSON.stringify(resources, null, "\t");
+      fs.writeFileSync(path.join(outputPath, locale + '.json'), raw);
+    }
 
     // Find HTML templates & generate localized pages
     const templateFiles = glob
