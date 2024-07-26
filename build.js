@@ -170,7 +170,10 @@ async function build() {
         fs.mkdirSync(path.dirname(outputPath), { recursive: true });
         fs.writeFileSync(outputPath, htmlContent);
         if (locale === config.defaultLanguage) {
-          let outputPath = path.join(config.outputDir, relativePath);
+          outputPath = path.join(config.outputDir, relativePath);
+          if (outputPath.endsWith('.hbs')) {
+            outputPath = outputPath.replace(/\.hbs$/, '.html');
+          }
           fs.mkdirSync(path.dirname(outputPath), { recursive: true });
           fs.writeFileSync(outputPath, htmlContent);
         }
