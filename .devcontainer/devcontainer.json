@@ -10,7 +10,6 @@
 		}
 	},
 	"updateContentCommand": "yarn install",
-    "postAttachCommand": "yarn start",
     "forwardPorts": [
         8080
     ],
