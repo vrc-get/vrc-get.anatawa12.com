@@ -1,36 +1,33 @@
-const Handlebars = require('handlebars');
-const minimatch = require('minimatch');
-const { exit } = require('process');
-const i18next = require('i18next');
-const parse5 = require('parse5');
-const chalk = require('chalk');
-const glob = require('glob');
-const path = require('path');
-const fs = require('fs');
+const Handlebars = require("handlebars");
+const minimatch = require("minimatch");
+const { exit } = require("process");
+const i18next = require("i18next");
+const parse5 = require("parse5");
+const chalk = require("chalk");
+const glob = require("glob");
+const path = require("path");
+const fs = require("fs");
 
 // Configuration
 const config = {
-  localesDir: './locales',
-  templatesDir: './src',
-  componentsDir: './components',
-  outputDir: './dist',
-  excludePatterns: ['**/*.html', '**/*.hbs'],
-  defaultLanguage: 'en',
-  safeTags: [
-    'b', 'i',
-    'br',
-    'code'
-  ],
-  safeAttributes: []
+  localesDir: "./locales",
+  templatesDir: "./src",
+  componentsDir: "./components",
+  outputDir: "./dist",
+  excludePatterns: ["**/*.html", "**/*.hbs"],
+  defaultLanguage: "en",
+  safeTags: ["b", "i", "br", "code"],
+  safeAttributes: [],
 };
 
 // Logger function
-const log = (message, type = 'info') => {
-  const prefix = {
-    info: chalk.blue('INFO'),
-    warn: chalk.yellow('WARN'),
-    error: chalk.red('ERROR')
-  }[type] || chalk.gray('LOG');
+const log = (message, type = "info") => {
+  const prefix =
+    {
+      info: chalk.blue("INFO"),
+      warn: chalk.yellow("WARN"),
+      error: chalk.red("ERROR"),
+    }[type] || chalk.gray("LOG");
 
   console.log(`[${prefix}] ${message}`);
 };
@@ -38,18 +35,21 @@ const log = (message, type = 'info') => {
 // Build function
 async function build() {
   try {
-    log('Starting build...');
+    log("Starting build...");
 
     // Load locales (using async/await for i18next.init)
-    const locales = fs.readdirSync(config.localesDir)
-      .filter(file => file.endsWith('.json'))
-      .map(file => file.replace('.json', ''))
+    const locales = fs
+      .readdirSync(config.localesDir)
+      .filter((file) => file.endsWith(".json"))
+      .map((file) => file.replace(".json", ""))
       .sort();
 
     const resources = {};
-    locales.forEach(locale => {
+    locales.forEach((locale) => {
       resources[locale] = {
-        translation: require('./' + path.join(config.localesDir, `${locale}.json`))
+        translation: require(
+          "./" + path.join(config.localesDir, `${locale}.json`),
+        ),
       };
     });
     log(locales);
@@ -58,22 +58,15 @@ async function build() {
       resources,
     });
 
-    // Register the link localizer
-    Handlebars.registerHelper('localizeLink', function (link) {
-      const resources = this; // Access current context's data
-      const currentLocale = resources.locale.code; // Get locale code directly
-      return '/' + path.join(currentLocale, link);
-    });
-
     // Register the safe-html helper
-    Handlebars.registerHelper('safe', function (key) {
+    Handlebars.registerHelper("safe", function (key) {
       const translatedString = i18next.t(key);
 
       // Recursive sanitization function
       function sanitize(node) {
-        if (node.type === 'tag') {
+        if (node.type === "tag") {
           if (!config.safeTags.includes(node.name.toLowerCase())) {
-            return '';
+            return "";
           }
 
           // Sanitize attributes
@@ -98,8 +91,8 @@ async function build() {
     });
 
     // Register the contains helper
-    Handlebars.registerHelper('contains', function(arrayStr, value, options) {
-      const array = (arrayStr ?? '').split(',').map(s => s.trim());
+    Handlebars.registerHelper("contains", function (arrayStr, value, options) {
+      const array = (arrayStr ?? "").split(",").map((s) => s.trim());
       if (array && array.indexOf(value) !== -1) {
         return true;
       } else {
@@ -108,26 +101,34 @@ async function build() {
     });
 
     // Register components
-    const componentFiles = fs.readdirSync(config.componentsDir)
-      .filter(file => file.endsWith('.hbs'))
-      .map(file => file.replace('.hbs', ''));
-    componentFiles.forEach(componentFile => {
-      const raw = fs.readFileSync(path.join(config.componentsDir, componentFile + '.hbs'), 'utf-8');
+    const componentFiles = fs
+      .readdirSync(config.componentsDir)
+      .filter((file) => file.endsWith(".hbs"))
+      .map((file) => file.replace(".hbs", ""));
+    componentFiles.forEach((componentFile) => {
+      const raw = fs.readFileSync(
+        path.join(config.componentsDir, componentFile + ".hbs"),
+        "utf-8",
+      );
       Handlebars.registerPartial(componentFile, raw);
     });
 
     // Remove previous instance of the output directory
     if (fs.existsSync(config.outputDir))
-      fs.rmSync(config.outputDir, { recursive: true, force: true })
+      fs.rmSync(config.outputDir, { recursive: true, force: true });
 
     // Find & copy non-HTML files (excluding patterns)
-    const nonHtmlFiles = glob.sync(path.join(config.templatesDir, '**/*'), { nodir: true })
-      .filter(file => !config.excludePatterns.some(pattern => {
-        const regex = new RegExp(pattern.replace(/\*\*/g, '.*'));
-        return regex.test(file);
-      }));
+    const nonHtmlFiles = glob
+      .sync(path.join(config.templatesDir, "**/*"), { nodir: true })
+      .filter(
+        (file) =>
+          !config.excludePatterns.some((pattern) => {
+            const regex = new RegExp(pattern.replace(/\*\*/g, ".*"));
+            return regex.test(file);
+          }),
+      );
 
-    nonHtmlFiles.forEach(file => {
+    nonHtmlFiles.forEach((file) => {
       const relativePath = path.relative(config.templatesDir, file);
       const outputPath = path.join(config.outputDir, relativePath);
       fs.mkdirSync(path.dirname(outputPath), { recursive: true });
@@ -138,41 +139,43 @@ async function build() {
     // Update the locales
     let localesList = {};
     for (const locale of locales) {
-      const resources = i18next.getResourceBundle(locale, 'translation');
+      const resources = i18next.getResourceBundle(locale, "translation");
       localesList[resources.locale.code] = resources.locale;
     }
-    const outputPath = path.join(config.outputDir, 'resources', 'locales');
+    const outputPath = path.join(config.outputDir, "resources", "locales");
     fs.mkdirSync(outputPath, { recursive: true });
     for (const locale of locales) {
-      const resources = i18next.getResourceBundle(locale, 'translation');
+      const resources = i18next.getResourceBundle(locale, "translation");
       resources.__locales = localesList;
       const raw = JSON.stringify(resources, null, "\t");
-      fs.writeFileSync(path.join(outputPath, locale + '.json'), raw);
+      fs.writeFileSync(path.join(outputPath, locale + ".json"), raw);
     }
 
     // Find HTML templates & generate localized pages
     const templateFiles = glob
-      .sync(path.join(config.templatesDir, '**/*.{html,hbs}'))
-      .filter(filePath => !path.basename(filePath).startsWith('_'));
+      .sync(path.join(config.templatesDir, "**/*.{html,hbs}"))
+      .filter((filePath) => !path.basename(filePath).startsWith("_"));
 
     for (const templateFile of templateFiles) {
-      const template = Handlebars.compile(fs.readFileSync(templateFile, 'utf8'));
+      const template = Handlebars.compile(
+        fs.readFileSync(templateFile, "utf8"),
+      );
 
       for (const locale of locales) {
-        const resources = i18next.getResourceBundle(locale, 'translation');
+        const resources = i18next.getResourceBundle(locale, "translation");
         const htmlContent = template(resources);
 
         const relativePath = path.relative(config.templatesDir, templateFile);
         let outputPath = path.join(config.outputDir, locale, relativePath);
-        if (outputPath.endsWith('.hbs')) {
-          outputPath = outputPath.replace(/\.hbs$/, '.html');
+        if (outputPath.endsWith(".hbs")) {
+          outputPath = outputPath.replace(/\.hbs$/, ".html");
         }
         fs.mkdirSync(path.dirname(outputPath), { recursive: true });
         fs.writeFileSync(outputPath, htmlContent);
         if (locale === config.defaultLanguage) {
           outputPath = path.join(config.outputDir, relativePath);
-          if (outputPath.endsWith('.hbs')) {
-            outputPath = outputPath.replace(/\.hbs$/, '.html');
+          if (outputPath.endsWith(".hbs")) {
+            outputPath = outputPath.replace(/\.hbs$/, ".html");
           }
           fs.mkdirSync(path.dirname(outputPath), { recursive: true });
           fs.writeFileSync(outputPath, htmlContent);
@@ -181,9 +184,9 @@ async function build() {
       }
     }
 
-    log('Build complete!', 'success');
+    log("Build complete!", "success");
   } catch (error) {
-    log(`Build failed: ${error.message}`, 'error');
+    log(`Build failed: ${error.message}`, "error");
     console.error(chalk.red(error.stack));
     exit(1);
   }

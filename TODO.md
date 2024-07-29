@@ -11,6 +11,7 @@
 - [ ] Japanese Translations
 - [ ] German Translations
 - [ ] Figure out what the third Unity versions is that the VRChat SDK supports
+- [ ] Add custom 404 page (dist/.github/404.html)
 
 ## Optionals (check back with @anatawa12)
 
