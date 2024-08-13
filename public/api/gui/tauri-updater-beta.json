@@ -1,6 +1,6 @@
 {
   "version": "0.1.14",
-  "notes": "",
+  "notes": "Migrated to Tauri v2 and many bugfixes!\nThis is Release Candidate for ALCOM v1.0.0 release!",
   "pub_date": "2024-08-13T12:25:42Z",
   "platforms": {
     "darwin-x86_64": {
