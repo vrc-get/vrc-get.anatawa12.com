@@ -54,8 +54,11 @@ async function init() {
             _mainButtonLink = link;
         }
         async function invalidateDownloadButton() {
-            mainButton.setAttribute('disabled', 'disabled');
-            mainButtonDropdown.setAttribute('disabled', 'disabled');
+            // mainButton.setAttribute('disabled', 'disabled');
+            // mainButtonDropdown.setAttribute('disabled', 'disabled');
+            mainButton.onclick = () => {
+                // ToDo: Show modal
+            }
             await waitUntilLocaleIsLoaded();
             document.getElementById('btn-download-main-text').innerText = S.downloads.unsuportedOS;
         }
