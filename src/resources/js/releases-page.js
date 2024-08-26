@@ -72,7 +72,7 @@ async function buildReleasesPage(withGui) {
             container.appendChild(linkContainer);
 
             const link = document.createElement('a');
-            link.setAttribute('href', d.browser_download_url);
+            link.setAttribute('href', d.link);
             link.innerText = window.S.common.download;
             linkContainer.appendChild(link);
         });
