@@ -11,7 +11,7 @@ const fs = require("fs");
 // Configuration
 const config = {
   localesDir: "./locales",
-  templatesDir: "./src",
+  templatesDir: "./public",
   componentsDir: "./components",
   outputDir: "./dist",
   excludePatterns: ["**/*.html", "**/*.hbs"],
