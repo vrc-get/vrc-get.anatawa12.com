@@ -4,12 +4,11 @@
 	"features": {
 		"ghcr.io/devcontainers/features/node:1": {
 			"nodeGypDependencies": true,
-			"installYarnUsingApt": true,
 			"version": "lts",
 			"nvmVersion": "latest"
 		}
 	},
-	"updateContentCommand": "yarn install",
+	"updateContentCommand": "npm install",
     "forwardPorts": [
         8080
     ],
