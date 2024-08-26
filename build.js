@@ -1,12 +1,22 @@
 const Handlebars = require("handlebars");
 const minimatch = require("minimatch");
-const { exit } = require("process");
+const { exit, env } = require("process");
 const i18next = require("i18next");
 const parse5 = require("parse5");
 const chalk = require("chalk");
 const glob = require("glob");
 const path = require("path");
 const fs = require("fs");
+
+const file_releases = 'tmp/releases.json';
+const file_contributors = 'tmp/contributors.json';
+
+class Release {
+  name = '';
+  displayName = '';
+  downloads = [];
+  isGui = false;
+}
 
 // Configuration
 const config = {
@@ -32,8 +42,78 @@ const log = (message, type = "info") => {
   console.log(`[${prefix}] ${message}`);
 };
 
+function doesTmpFileNeedUpdate(filePath) {
+  try {
+    if (!fs.existsSync(filePath))
+      return true;
+    const stats = fs.statSync(filePath);
+    const now = new Date();
+    const fileTime = new Date(stats.mtime);
+    const differenceInMinutes = (now.getTime() - fileTime.getTime()) / (1000 * 60);
+    return differenceInMinutes > 30;
+  } catch (err) {
+    console.error('Error checking file age:', err);
+    return false;
+  }
+}
+
+async function updateGitHubData() {
+  let options = { headers: {} };
+  if (process.env.GITHUB_TOKEN !== undefined) {
+    options.headers.Authorization = `Bearer: ${process.env.GITHUB_TOKEN}`;
+  }
+
+  if (doesTmpFileNeedUpdate(file_releases)) {
+    console.log('Updating releases...');
+    let releases = [];
+    let page = 1;
+    while (true) {
+      const response = await fetch(`https://api.github.com/repos/vrc-get/vrc-get/releases?per_page=100&page=${page}`, options);
+      if (!response.ok) {
+        throw new Error(`GitHub API returned status ${response.status}: ${await response.text()}`);
+      }
+      const json = await response.json();
+      releases = releases.concat(json);
+      if (json.length != 100) break;
+      page = page + 1;
+    }
+
+    releases = releases.sort((a, b) => b.id - a.id);
+    let items = [];
+    releases.forEach(r => {
+      const release = new Release();
+      release.name = r.tag_name;
+      release.isGui = r.tag_name.startsWith('gui-');
+      release.displayName = r.tag_name.substring(release.isGui ? 5 : 1);
+      release.downloads = [];
+      r.assets.forEach(a => {
+        if ( ! release.isGui && a.name.endsWith('.d')) return;
+        release.downloads.push({
+          name: a.name,
+          link: a.browser_download_url,
+          sie: a.size,
+        });
+      });
+      // items[`${r.id}`] = release;
+      items.push(release);
+    });
+
+    fs.writeFileSync(file_releases, JSON.stringify(items));
+  }
+
+  if (doesTmpFileNeedUpdate(file_contributors)) {
+    console.log('Updating contributors...');
+    const response = await fetch(`https://api.github.com/repos/vrc-get/vrc-get/contributors`, options);
+    let contributors = await response.json();
+    contributors = contributors.sort((a, b) => b.contributions - a.contributions);
+    fs.writeFileSync(file_contributors, JSON.stringify(contributors));
+  }
+}
+
 // Build function
 async function build() {
+  await updateGitHubData();
+
   try {
     log("Starting build...");
 
@@ -56,6 +136,11 @@ async function build() {
     await i18next.init({
       lng: config.defaultLanguage,
       resources,
+    });
+
+    // Register the not helper
+    Handlebars.registerHelper('not', function(value) {
+      return !value;
     });
 
     // Register the safe-html helper
@@ -155,6 +240,8 @@ async function build() {
     const templateFiles = glob
       .sync(path.join(config.templatesDir, "**/*.{html,hbs}"))
       .filter((filePath) => !path.basename(filePath).startsWith("_"));
+    const contributors = JSON.parse(fs.readFileSync(file_contributors));
+    const releases = JSON.parse(fs.readFileSync(file_releases));
 
     for (const templateFile of templateFiles) {
       const template = Handlebars.compile(
@@ -163,6 +250,8 @@ async function build() {
 
       for (const locale of locales) {
         const resources = i18next.getResourceBundle(locale, "translation");
+        resources.__releases = releases;
+        resources.__contributors = contributors;
         const htmlContent = template(resources);
 
         const relativePath = path.relative(config.templatesDir, templateFile);
@@ -192,4 +281,4 @@ async function build() {
   }
 }
 
-build(); // Execute the build function
+build();

@@ -1,7 +1,7 @@
 {
     "locale": {
         "code": "de",
-        "displayName": "Deutsch",
+        "displayName": "German",
         "nativeDisplayName": "Deutsch",
         "emoji": "🇩🇪"
     },
@@ -9,6 +9,7 @@
         "documentation": "Dokumentation",
         "loading": "Wird geladen",
         "download": "Herunterladen",
+        "releases": "Versionen",
         "allVersions": "Alle Versionen",
         "sourceCode": "Quellcode",
         "faq": "FAQ",

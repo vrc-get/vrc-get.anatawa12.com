@@ -1,18 +1,16 @@
 <h2 class="inline-block u-no-margin--bottom me-1">{{common.contributors.title}}</h2>
-<span class="inline-block hidden" id="contributors-cache">{{common.contributors.cache}}</span>
 <div class="p-logo-section mt-2">
     <div class="p-logo-section__items" id="contributors">
-        <div class="p-logo-section__item" id="contributors-placeholder">
-            <i class="p-icon--spinner u-animation--spin me-1"></i>
-            <span class="u-no-margin--bottom">{{common.contributors.contactingGithub}}</span>
-        </div>
-        <div class="p-notification--negative" id="contributors-error" hidden>
-            <div class="p-notification__content">
-                <h5 class="p-notification__title">{{common.error}}</h5>
-                <p class="p-notification__message" id="contributors-error-msg">{{errors.noErrorMessage}}</p>
-            </div>
-        </div>
+        {{#each __contributors}}
+        <a
+            class="p-logo-section__item p-tooltip--btm-center contributor-icon"
+            aria-describedby="contributor-tooltip-{{id}}"
+            href="{{html_url}}"
+            target="_blank"
+        >
+            <span class="p-tooltip__message" role="tooltip" id="contributor-tooltip-{{id}}">{{login}}</span>
+            <img class="contributor-icon" src="{{avatar_url}}" alt="{{login}}" />
+        </a>
+        {{/each}}
     </div>
 </div>
-
-<script src="/resources/js/contributers-wall.js" defer></script>
