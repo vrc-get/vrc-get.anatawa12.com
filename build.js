@@ -63,6 +63,10 @@ async function updateGitHubData() {
     options.headers.Authorization = `Bearer: ${process.env.GITHUB_TOKEN}`;
   }
 
+  if (!fs.existsSync('tmp')) {
+    fs.mkdirSync('tmp');
+  }
+
   if (doesTmpFileNeedUpdate(file_releases)) {
     console.log('Updating releases...');
     let releases = [];
