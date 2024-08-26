@@ -13,7 +13,6 @@
 
 ## Optionals (check back with @anatawa12)
 
-- [ ] API endpoint (`/src/api/unity.json`) for unity versions *(most recent and supported)*
 - [ ] API endpoint (`/src/api/messages.json`) for system messages *(array of objects with message & type)*
 
 ### Messages API Endpoint
