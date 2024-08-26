@@ -14,16 +14,11 @@
         "sourceCode": "Source Code",
         "faq": "FAQ",
         "error": "Error",
-        "contributors": {
-            "title": "Contributors",
-            "cache": "Results are cached for 30 minutes",
-            "contactingGithub": "Contacting GitHub"
-        }
+        "contributors": "Contributors"
     },
     "errors": {
         "noErrorMessage": "No error message has been provided.",
-        "failedToLoadLatestVersion": "Failed to load the latest version. Please try again later.",
-        "githubApiTimeout": "Too many unauthenticated API requests have been sent to Github from your IP address. Please try again later."
+        "failedToLoadLatestVersion": "Failed to load the latest version. Please try again later."
     },
     "downloads": {
         "macOS": "macOS",

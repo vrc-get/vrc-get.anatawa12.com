@@ -14,16 +14,11 @@
         "sourceCode": "ソースコード",
         "faq": "よくある質問",
         "error": "エラー",
-        "contributors": {
-            "title": "コントリビューター",
-            "cache": "結果は30分間キャッシュされます",
-            "contactingGithub": "GitHubに接続しています"
-        }
+        "contributors": "コントリビューター"
     },
     "errors": {
         "noErrorMessage": "エラーメッセージが提供されていません。",
-        "failedToLoadLatestVersion": "最新版の取得に失敗しました。後でもう一度お試しください。",
-        "githubApiTimeout": "あなたのIPアドレスからGitHubへの未認証APIリクエストが多すぎます。後ほどお試しください。"
+        "failedToLoadLatestVersion": "最新版の取得に失敗しました。後でもう一度お試しください。"
     },
     "downloads": {
         "macOS": "macOS",

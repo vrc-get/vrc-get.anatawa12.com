@@ -14,16 +14,11 @@
         "sourceCode": "Quellcode",
         "faq": "FAQ",
         "error": "Fehler",
-        "contributors": {
-            "title": "Mitwirkende",
-            "cache": "Ergebnisse werden für 30 Minuten zwischengespeichert",
-            "contactingGithub": "Kontaktiere GitHub"
-        }
+        "contributors": "Mitwirkende"
     },
     "errors": {
         "noErrorMessage": "Es wurde keine Fehlermeldung angegeben.",
-        "failedToLoadLatestVersion": "Die neueste Version konnte nicht geladen werden. Bitte versuchen Sie es später erneut.",
-        "githubApiTimeout": "Zu viele nicht authentifizierte API-Anfragen von Ihrer IP-Adresse an GitHub. Bitte versuchen Sie es später erneut."
+        "failedToLoadLatestVersion": "Die neueste Version konnte nicht geladen werden. Bitte versuchen Sie es später erneut."
     },
     "downloads": {
         "macOS": "macOS",
