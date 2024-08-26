@@ -54,6 +54,45 @@
         }
     },
     "cli": {
-        "hero": "アルコムは高速なオープンソースの VRChat Package Manager の代替ツールです。"
+        "hero": "アルコムは高速なオープンソースの VRChat Package Manager の代替ツールです。",
+        "installation": {
+            "title": "インストール",
+            "os": {
+                "windows": "Windows",
+                "mac": "macOS",
+                "arch": "Arch Linux",
+                "universal": "ユニバーサル"
+            },
+            "using": {
+                "homebrew": {
+                    "title": "Homebrew を使用して",
+                    "content": "Homebrew を使用している場合は、vrc-get を簡単にインストールできます。<a href=\"https://brew.sh\">Homebrew</a> を参照してください。"
+                },
+                "macPorts": {
+                    "title": "MacPorts を使用して",
+                    "content": "MacPorts を使用している場合は、MacPorts で vrc-get を簡単にインストールできます。<a href=\"https://macports.org/\">MacPorts</a> を参照してください。"
+                },
+                "winget": {
+                    "title": "winget を使用して",
+                    "content": "最新の Windows を使用している場合は、<a href=\"https://learn.microsoft.com/windows/package-manager/\">winget</a> で vrc-get をインストールできます。"
+                },
+                "scoop": {
+                    "title": "scoop を使用して",
+                    "content": "scoop を使用している場合は、scoop バケットから vrc-get をインストールできます。<a href=\"https://scoop.sh/\">scoop</a> を参照してください。"
+                },
+                "aur": {
+                    "title": "AUR から PKGBUILD を使用して",
+                    "content": "Arch Linux を使用している場合は、Arch ユーザーリポジトリから vrc-get をインストールできます。お気に入りの AUR ヘルパーを使用してください。"
+                },
+                "cargoBinstall": {
+                    "title": "cargo binstall を使用して",
+                    "content": "cargo binstall を使用している場合は、cargo binstall でのインストールは vrc-get をインストールする簡単で高速な方法です。cargo binstall は GitHub からプリビルドされた vrc-get をダウンロードしてインストールします。<a href=\"https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall\">cargo binstall</a> を参照してください。"
+                },
+                "cargo": {
+                    "title": "cargo を使用して",
+                    "content": "cargo を使用している場合は、cargo でのインストールは vrc-get をインストールする簡単な方法です。<a href=\"https://github.com/rust-lang/cargo/\">cargo</a> を参照してください。"
+                }
+            }
+        }
     }
 }

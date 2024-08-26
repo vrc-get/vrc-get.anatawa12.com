@@ -56,6 +56,45 @@
         }
     },
     "cli": {
-        "hero": "A fast and open-source VRChat Package Manager alternative"
+        "hero": "A fast and open-source VRChat Package Manager alternative",
+        "installation": {
+            "title": "Installation",
+            "os": {
+                "windows": "Windows",
+                "mac": "macOS",
+                "arch": "Arch Linux",
+                "universal": "Universal"
+            },
+            "using": {
+                "homebrew": {
+                    "title": "Using homebrew",
+                    "content": "If you're using <a href=\"https://brew.sh\">Homebrew</a>, you can easily install vrc-get."
+                },
+                "macPorts": {
+                    "title": "Using MacPorts",
+                    "content": "If you're using <a href=\"https://macports.org/\">MacPorts</a>, you can easily install vrc-get with MacPorts."
+                },
+                "winget": {
+                    "title": "Using winget",
+                    "content": "If you're using modern Windows, you can install vrc-get with <a href=\"https://learn.microsoft.com/windows/package-manager/\">winget</a>."
+                },
+                "scoop": {
+                    "title": "Using scoop",
+                    "content": "If you're using <a href=\"https://scoop.sh/\">scoop</a>, you can install vrc-get from a scoop bucket."
+                },
+                "aur": {
+                    "title": "Using PKGBUILD from AUR",
+                    "content": "If you're using Arch Linux, you can install vrc-get from Arch User Repository. Please use your favorite AUR helpers."
+                },
+                "cargoBinstall": {
+                    "title": "Using cargo binstall",
+                    "content": "If you have <a href=\"https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall\">cargo binstall</a>, installing with cargo binstall is an easy & fast way to install vrc-get. Cargo binstall will download & install prebuilt vrc-get from GitHub."
+                },
+                "cargo": {
+                    "title": "Using cargo",
+                    "content": "If you have <a href=\"https://github.com/rust-lang/cargo/\">cargo</a>, installing with cargo is an easy way to install vrc-get."
+                }
+            }
+        }
     }
 }

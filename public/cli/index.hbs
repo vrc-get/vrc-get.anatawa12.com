@@ -24,14 +24,6 @@ with="social"
 </div>
 
 <div>
-    <!--
-    TODO: Docs page
-    <a href="/{{locale.code}}/cli/docs" class="p-button has-icon">
-        <i class="p-icon ri-book-open-line"></i>
-        <span>{{common.documentation}}</span>
-    </a>
-    -->
-
     <a href="/{{locale.code}}/cli/releases" class="p-button has-icon">
         <i class="p-icon ri-history-line"></i>
         <span>{{common.allVersions}}</span>
@@ -43,9 +35,84 @@ with="social"
     </a>
 </div>
 
-<!--
-    TODO: Put content here
--->
+<h2>{{cli.installation.title}}</h2>
+<aside class="p-accordion">
+    <ul class="p-accordion__list">
+
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab1" aria-controls="tab1-section"
+                    aria-expanded="false">{{cli.installation.os.windows}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab1-section" aria-hidden="true" aria-labelledby="tab1">
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.winget.title}}</h4>
+                <p>{{safe cli.installation.using.winget.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>winget install anatawa12.vrc-get</code></pre>
+                </div>
+                
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.scoop.title}}</h4>
+                <p>{{safe cli.installation.using.scoop.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>scoop bucket add xrtools "https://github.com/babo4d/scoop-xrtools"<br/>scoop install vrc-get</code></pre>
+                </div>
+            </section>
+        </li>
+
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab2" aria-controls="tab2-section"
+                    aria-expanded="false">{{cli.installation.os.mac}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab2-section" aria-hidden="true" aria-labelledby="tab1">
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.homebrew.title}}</h4>
+                <p>{{safe cli.installation.using.homebrew.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>brew install vrc-get</code></pre>
+                </div>
+                
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.macPorts.title}}</h4>
+                <p>{{safe cli.installation.using.macPorts.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>sudo port install vrc-get</code></pre>
+                </div>
+            </section>
+        </li>
+
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab3" aria-controls="tab3-section"
+                    aria-expanded="false">{{cli.installation.os.arch}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab3-section" aria-hidden="true" aria-labelledby="tab1">
+                <p>{{safe cli.installation.using.aur.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>yay -S vrc-get</code></pre>
+                </div>
+            </section>
+        </li>
+
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab4" aria-controls="tab4-section"
+                    aria-expanded="false">{{cli.installation.os.universal}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab4-section" aria-hidden="true" aria-labelledby="tab1">
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.cargoBinstall.title}}</h4>
+                <p>{{safe cli.installation.using.cargoBinstall.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>cargo binstall vrc-get</code></pre>
+                </div>
+                
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.cargo.title}}</h4>
+                <p>{{safe cli.installation.using.cargo.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>cargo install vrc-get</code></pre>
+                </div>
+            </section>
+        </li>
+    </ul>
+</aside>
 
 {{> contributors}}
 {{/inline}}
