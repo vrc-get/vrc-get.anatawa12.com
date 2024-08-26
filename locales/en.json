@@ -9,19 +9,21 @@
         "documentation": "Documentation",
         "loading": "Loading",
         "download": "Download",
+        "releases": "Releases",
         "allVersions": "All Versions",
         "sourceCode": "Source Code",
         "faq": "FAQ",
         "error": "Error",
         "contributors": {
             "title": "Contributors",
-            "cache": "Results are cached for 15 minutes",
+            "cache": "Results are cached for 30 minutes",
             "contactingGithub": "Contacting GitHub"
         }
     },
     "errors": {
         "noErrorMessage": "No error message has been provided.",
         "failedToLoadLatestVersion": "Failed to load the latest version. Please try again later.",
+        "failedToLoadReleases": "Failed to load the releases from GitHub. Please try again later.",
         "githubApiTimeout": "Too many unauthenticated API requests have been sent to Github from your IP address. Please try again later."
     },
     "downloads": {
@@ -52,5 +54,8 @@
                 "answer": "vrc-get is the open source vpm client created by us and ALCOM is based on vrc-get. ALCOM is developed as a GUI frontend of vrc-get, so it was previously called vrc-get-gui."
             }
         }
+    },
+    "cli": {
+        "hero": "A fast and open-source VRChat Package Manager alternative"
     }
 }

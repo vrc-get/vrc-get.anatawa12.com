@@ -15,7 +15,7 @@
         "error": "Fehler",
         "contributors": {
             "title": "Mitwirkende",
-            "cache": "Ergebnisse werden für 15 Minuten zwischengespeichert",
+            "cache": "Ergebnisse werden für 30 Minuten zwischengespeichert",
             "contactingGithub": "Kontaktiere GitHub"
         }
     },
@@ -52,5 +52,8 @@
                 "answer": "vrc-get ist unser Open-Source vpm-Client, auf dem ALCOM basiert. ALCOM ist ein grafisches Frontend für vrc-get und hieß früher vrc-get-gui."
             }
         }
+    },
+    "cli": {
+        "hero": "Eine schnelle und quelloffene Alternative zum VRChat Package Manager"
     }
 }

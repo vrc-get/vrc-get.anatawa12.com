@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //endregion
 
 //region Dropdown buttons
-// ToDo: Add support for multiple dropdown
 const contextToggle = document.querySelector('.p-contextual-menu__toggle');
 const dropdownMenu = document.querySelector('.p-contextual-menu__dropdown');
 if (contextToggle && dropdownMenu) {

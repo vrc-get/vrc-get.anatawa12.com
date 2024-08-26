@@ -1,75 +1,51 @@
 {{#> page
-    title="vpm-get cli"
-    icon=""
-    with="social"
+title="vrc-get cli"
+icon=""
+with="social"
 }}
 
 {{#*inline "social"}}
-<meta property="og:title" content="vpm-get - fast open-source VPM" />
+<meta property="og:title" content="vrc-get - fast open-source VPM" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://vrc-get.anatawa12.com/{{locale.code}}/cli" />
 <meta property="og:site_name" content="ALCOM" />
 <meta property="og:description" content="Download page of ALCOM" />
 {{/inline}}
 
-{{#*inline "content"}}<div class="p-media-object--large">
-    <img src="/resources/alcom.svg" class="p-media-object__image" alt="">
+{{#*inline "content"}}
+<div class="p-media-object--large">
+    <img src="/resources/vrc-get.svg" class="p-media-object__image" alt="">
     <div class="p-media-object__details">
-        <h1 class="p-media-object__title">ALCOM</h1>
-        <p class="p-media-object__content">{{alcom.hero}}</p>
+        <h1 class="p-media-object__title">vrc-get</h1>
+        <p class="p-media-object__content">{{cli.hero}}</p>
         <ul class="p-media-object__meta-list">
         </ul>
     </div>
 </div>
 
-<a href="/{{locale.code}}/cli/docs" class="p-button has-icon">
-    <i class="p-icon ri-book-open-line"></i>
-    <span>{{common.documentation}}</span>
-</a>
+<div>
+    <!--
+    TODO: Docs page
+    <a href="/{{locale.code}}/cli/docs" class="p-button has-icon">
+        <i class="p-icon ri-book-open-line"></i>
+        <span>{{common.documentation}}</span>
+    </a>
+    -->
 
-<a href="https://github.com/vrc-get/vrc-get/releases?q=gui-v0" class="p-button has-icon">
-    <i class="p-icon ri-history-line"></i>
-    <span>{{common.allVersions}}</span>
-</a>
+    <a href="/{{locale.code}}/cli/releases" class="p-button has-icon">
+        <i class="p-icon ri-history-line"></i>
+        <span>{{common.allVersions}}</span>
+    </a>
 
-<a href="https://github.com/vrc-get/vrc-get/tree/master/vrc-get-gui" class="p-button has-icon">
-    <i class="p-icon ri-github-line"></i>
-    <span>{{common.sourceCode}}</span>
-</a>
+    <a href="https://github.com/vrc-get/vrc-get" class="p-button has-icon">
+        <i class="p-icon ri-github-line"></i>
+        <span>{{common.sourceCode}}</span>
+    </a>
+</div>
 
-
-<h2>{{common.faq}}</h2>
-<aside class="p-accordion">
-    <ul class="p-accordion__list">
-        <li class="p-accordion__group">
-            <h4 role="heading" aria-level="3" class="p-accordion__heading">
-                <button type="button" class="p-accordion__tab" id="tab1" aria-controls="tab1-section"
-                    aria-expanded="false">{{alcom.faq.fullName.question}}</button>
-            </h4>
-            <section class="p-accordion__panel" id="tab1-section" aria-hidden="true" aria-labelledby="tab1">
-                <p>{{safe alcom.faq.fullName.answer}}</p>
-            </section>
-        </li>
-        <li class="p-accordion__group">
-            <h4 role="heading" aria-level="3" class="p-accordion__heading">
-                <button type="button" class="p-accordion__tab" id="tab2" aria-controls="tab2-section"
-                    aria-expanded="false">{{alcom.faq.nameOrigin.question}}</button>
-            </h4>
-            <section class="p-accordion__panel" id="tab2-section" aria-hidden="true" aria-labelledby="tab2">
-                <p>{{safe alcom.faq.nameOrigin.answer}}</p>
-            </section>
-        </li>
-        <li class="p-accordion__group">
-            <h4 role="heading" aria-level="3" class="p-accordion__heading">
-                <button type="button" class="p-accordion__tab" id="tab3" aria-controls="tab3-section"
-                    aria-expanded="false">{{alcom.faq.vrcGetRelationship.question}}</button>
-            </h4>
-            <section class="p-accordion__panel" id="tab3-section" aria-hidden="true" aria-labelledby="tab3">
-                <p>{{safe alcom.faq.vrcGetRelationship.answer}}</p>
-            </section>
-        </li>
-    </ul>
-</aside>
+<!--
+    TODO: Put content here
+-->
 
 {{> contributors}}
 {{/inline}}

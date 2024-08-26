@@ -15,7 +15,7 @@
         "error": "エラー",
         "contributors": {
             "title": "コントリビューター",
-            "cache": "結果は15分間キャッシュされます",
+            "cache": "結果は30分間キャッシュされます",
             "contactingGithub": "GitHubに接続しています"
         }
     },
@@ -52,5 +52,8 @@
                 "answer": "vrc-get は私たちが作成したオープンソースの vpm クライアントであり、ALCOM は vrc-get を本に作られています。ALCOM は vrc-get の GUI フロントエンドとして開発されているため、以前は vrc-get-gui と呼ばれていました。"
             }
         }
+    },
+    "cli": {
+        "hero": "アルコムは高速なオープンソースの VRChat Package Manager の代替ツールです。"
     }
 }

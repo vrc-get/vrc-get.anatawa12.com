@@ -78,7 +78,6 @@ async function init() {
                 await invalidateDownloadButton();
                 break;
             default:
-                // ToDo: Add disabled button for unsupported devices (with tooltip)
                 updateMainButton(null, 'question-mark');
                 await invalidateDownloadButton();
                 break;

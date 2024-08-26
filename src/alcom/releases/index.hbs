@@ -1,0 +1,107 @@
+{{#> page
+title="Releases - ALCOM"
+icon="/resources/alcom.svg"
+with="social, scripts"
+}}
+
+{{#*inline "social"}}
+<meta property="og:title" content="ALCOM - fast open-source VCC" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vrc-get.anatawa12.com/{{locale.code}}/alcom/releases" />
+<meta property="og:image" content="https://vrc-get.anatawa12.com/resources/alcom.svg" />
+<meta property="og:site_name" content="ALCOM" />
+<meta property="og:description" content="Version list of ALCOM" />
+{{/inline}}
+
+{{#*inline "scripts"}}
+<script src="/resources/js/github-releases.js"></script>
+<script src="/resources/js/releases-page.js"></script>
+<script>
+    buildReleasesPage(true);
+</script>
+{{/inline}}
+
+{{#*inline "content"}}
+
+<br />
+
+<div>
+    <a class="p-button has-icon" href="/{{locale.code}}/alcom">
+        <i class="p-icon--chevron-left"></i>
+        <span>ALCOM</span>
+    </a>
+</div>
+
+<div class="p-notification--negative u-no-margin--bottom" id="err-failedToLoadReleases" hidden>
+    <div class="p-notification__content">
+        <h5 class="p-notification__title">{{common.error}}</h5>
+        <p class="p-notification__message">{{errors.failedToLoadReleases}}</p>
+    </div>
+</div>
+
+<h2 class="inline-block u-no-margin--bottom me-1">{{common.releases}}</h2>
+<span class="inline-block hidden" id="releases-cache">{{common.contributors.cache}}</span>
+
+<div class="p-logo-section__item mt-2" id="releases-spinner">
+    <i class="p-icon--spinner u-animation--spin me-1"></i>
+    <span class="u-no-margin--bottom">{{common.contributors.contactingGithub}}</span>
+</div>
+
+<aside class="p-accordion mt-2" hidden>
+    <ul class="p-accordion__list" id="releases-list">
+        <!--
+        <li class="p-accordion__group" id="release-template">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab1" aria-controls="tab1-section"
+                    aria-expanded="false" data-tag="label">1.2.3</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab1-section" aria-hidden="true" aria-labelledby="tab1">
+                <div class="flex">
+                    <div class="flex-grow">
+                        <code>ALCOM-0.1.14-x86_64-setup.exe</code>
+                    </div>
+                    <div class="flex-shrink">
+                        <a href="https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.14/ALCOM-0.1.14-x86_64-setup.exe" class="p-button--primary">Download</a>
+                    </div>
+                </div>
+                <hr class="is-muted my-1">
+                
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="grow"><code>ALCOM-0.1.14-x86_64-setup.exe</code></td>
+                            <td><a href="https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.14/ALCOM-0.1.14-x86_64-setup.exe" class="p-button--primary">Download</a></td>
+                        </tr>
+                        <tr>
+                            <td class="grow"><a href="https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.14/ALCOM-0.1.14-x86_64-setup.exe" class="p-button"><i class="p-icon--chevron-down"></i></a></td>
+                            <td><code>alcom-0.1.14-x86_64.AppImage</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </li>
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab2" aria-controls="tab2-section"
+                    aria-expanded="false">{{alcom.faq.nameOrigin.question}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab2-section" aria-hidden="true" aria-labelledby="tab2">
+                <p>{{safe alcom.faq.nameOrigin.answer}}</p>
+            </section>
+        </li>
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab3" aria-controls="tab3-section"
+                    aria-expanded="false">{{alcom.faq.vrcGetRelationship.question}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab3-section" aria-hidden="true" aria-labelledby="tab3">
+                <p>{{safe alcom.faq.vrcGetRelationship.answer}}</p>
+            </section>
+        </li>
+        -->
+    </ul>
+</aside>
+
+{{/inline}}
+
+{{/page}}

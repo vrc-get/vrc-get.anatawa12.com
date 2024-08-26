@@ -2,16 +2,14 @@
 
 - [X] Landing Page
 - [X] Setup DevContainer
-- [ ] CLI Page
+- [X] CLI Page
 - [ ] CLI Documentation
 - [X] ALCOM Page
 - [X] Disable downloads for Android & iOS
 - [X] Automatic localization redirect
-- [ ] Store a copy of the Remix Icons ccs and font files in the repository
 - [ ] Japanese Translations
 - [ ] German Translations
 - [ ] Figure out what the third Unity versions is that the VRChat SDK supports
-- [ ] Add custom 404 page (dist/.github/404.html)
 
 ## Optionals (check back with @anatawa12)
 

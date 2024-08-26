@@ -1,21 +1,21 @@
-async function getContributors(owner, repo) {
-    const cacheKey = `${owner}/${repo}`;
+async function getContributors() {
+    const cacheKey = 'vrc-get/contributors';
     const cachedResult = JSON.parse(localStorage.getItem(cacheKey));
 
     // Check if cached result exists and is not expired
-    if (cachedResult && Date.now() - cachedResult.timestamp < 900000) { // 15 minutes = 900 seconds = 900,000 milliseconds
+    if (cachedResult && Date.now() - cachedResult.timestamp < 1800000) { // 30 minutes = 1800 seconds = 1,800,000 milliseconds
         console.info('Got contributers from cache instead of API.')
         return cachedResult.data;
     }
 
     // If not cached or expired, fetch from GitHub
     try {
-        const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contributors`);
+        const response = await fetch(`https://api.github.com/repos/vrc-get/vrc-get/contributors`);
         const contributors = await response.json();
 
         if (response.status == 403) {
             await waitUntilLocaleIsLoaded();
-            throw new Error(window.S.errors.githitApiTimeout);
+            throw new Error(window.S.errors.githubApiTimeout);
         }
 
         if (!response.ok) {
