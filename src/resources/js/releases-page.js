@@ -3,7 +3,7 @@ async function buildReleasesPage(withGui) {
     const releases = await loadReleases();
     await waitUntilLocaleIsLoaded();
     releases.forEach(r => {
-        if (r.isGui == withGui) return;
+        if (r.isGui != withGui) return;
 
         const item = document.createElement('li');
         item.classList.add('accordion__group');
