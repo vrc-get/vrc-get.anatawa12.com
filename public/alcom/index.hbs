@@ -46,10 +46,10 @@
     <span>{{common.error}}</span>
 </button>
 
-<div class="p-segmented-control inline-block" id="btn-download-main-container">
+<div class="p-segmented-control inline-block max-width--xs" id="btn-download-main-container">
     <div class="p-segmented-control__list">
         <button onclick="window.location.href = _mainButtonLink"
-            class="p-segmented-control__button p-button--positive has-icon p-tooltip" id="btn-download-main"
+            class="p-segmented-control__button p-button--positive has-icon p-tooltip max-width--xs" id="btn-download-main"
             hidden>
             <i class="p-icon is-light" id="btn-download-main-platform"></i>
             <span id="btn-download-main-text">{{common.download}} <code id="btn-download-main-version"
@@ -57,7 +57,7 @@
             <span class="p-tooltip__message" role="tooltip" id="unsupported-platform-tooltip">This software
                 is not supported on your platform.</span>
         </button>
-        <span class="p-contextual-menu--left">
+        <span class="p-contextual-menu">
             <button
                 class="p-segmented-control__button p-button--positive has-icon p-contextual-menu__toggle u-no-margin--bottom"
                 aria-controls="menu-3" aria-expanded="false" aria-haspopup="true"
@@ -89,12 +89,12 @@
     </div>
 </div>
 
-<a href="/{{locale.code}}/alcom/releases" class="p-button has-icon">
+<a href="/{{locale.code}}/alcom/releases" class="p-button has-icon max-width--xs">
     <i class="p-icon ri-history-line"></i>
     <span>{{common.allVersions}}</span>
 </a>
 
-<a href="https://github.com/vrc-get/vrc-get/tree/master/vrc-get-gui" class="p-button has-icon">
+<a href="https://github.com/vrc-get/vrc-get/tree/master/vrc-get-gui" class="p-button has-icon max-width--xs">
     <i class="p-icon ri-github-line"></i>
     <span>{{common.sourceCode}}</span>
 </a>

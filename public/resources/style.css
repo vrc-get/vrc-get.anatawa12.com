@@ -77,3 +77,8 @@ ul.p-navigation__items li {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
+@media only screen and (max-width: 576px) {
+    .max-width--xs {
+        width: 100%;
+    }
+}
