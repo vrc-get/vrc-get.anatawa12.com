@@ -17,7 +17,6 @@
         "contributors": "コントリビューター"
     },
     "errors": {
-        "noErrorMessage": "エラーメッセージが提供されていません。",
         "failedToLoadLatestVersion": "最新版の取得に失敗しました。後でもう一度お試しください。"
     },
     "downloads": {
@@ -29,11 +28,11 @@
     },
     "home": {
         "productPage": "製品ページ ",
-        "alcomDescription": "アルコムは高速なオープンソースの VRChat Creator Companion の代替ツールです。",
-        "cliDescription": "アルコムは高速なオープンソースの VRChat Package Manager の代替ツールです。"
+        "alcomDescription": "アルコムは高速なオープンソースの VRChat Creator Companion の代替ツールです",
+        "cliDescription": "アルコムは高速なオープンソースの VRChat Package Manager の代替ツールです"
     },
     "alcom": {
-        "hero": "アルコムは高速なオープンソースの VRChat Creator Companion の代替ツールです。",
+        "hero": "アルコムは高速なオープンソースの VRChat Creator Companion の代替ツールです",
         "faq": {
             "fullName": {
                 "question": "アルコムの正式名称は何でしょうか？",
@@ -50,7 +49,7 @@
         }
     },
     "cli": {
-        "hero": "アルコムは高速なオープンソースの VRChat Package Manager の代替ツールです。",
+        "hero": "アルコムは高速なオープンソースの VRChat Package Manager の代替ツールです",
         "installation": {
             "title": "インストール",
             "os": {

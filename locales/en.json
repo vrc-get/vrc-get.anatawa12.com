@@ -17,7 +17,6 @@
         "contributors": "Contributors"
     },
     "errors": {
-        "noErrorMessage": "No error message has been provided.",
         "failedToLoadLatestVersion": "Failed to load the latest version. Please try again later."
     },
     "downloads": {
@@ -33,19 +32,19 @@
         "cliDescription": "A fast and open-source VRChat Package Manager alternative"
     },
     "alcom": {
-        "hero": "A fast open-source alternative of VRChat Creator Companion.",
+        "hero": "A fast open-source alternative of VRChat Creator Companion",
         "faq": {
             "fullName": {
-                "question": "What's the full name of ALCOM?",
-                "answer": "ALCOM is ALCOM, not an abbreviation of some other full name."
+                "question": "What does ALCOM stand for?",
+                "answer": "ALCOM is the complete name of the application, not an acronym."
             },
             "nameOrigin": {
-                "question": "Where the word ALCOM came from?",
-                "answer": "ALCOM is originally came from <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion. However, <code>alternative companion</code> is not the name of this tool, one of explanation."
+                "question": "Where did the word ALCOM come from?",
+                "answer": "ALCOM was originally derived from the term <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion.<br/>However, <code>alternative companion</code> isn't the name of this tool; it's a description of its purpose."
             },
             "vrcGetRelationship": {
-                "question": "What's the relationship with vrc-get-gui or vrc-get?",
-                "answer": "vrc-get is the open source vpm client created by us and ALCOM is based on vrc-get. ALCOM is developed as a GUI frontend of vrc-get, so it was previously called vrc-get-gui."
+                "question": "What's the relationship with vrc-get-gui and vrc-get?",
+                "answer": "ALCOM is a graphical user interface designed for managing VRChat packages. It's built on top of the open-source command-line tool <a href=\"/cli\">vrc-get</a>. Previously known as <code>vrc-get-gui</code>, ALCOM offers a more user-friendly way to install, update, and manage VRChat assets."
             }
         }
     },
@@ -70,7 +69,7 @@
                 },
                 "winget": {
                     "title": "Using winget",
-                    "content": "If you're using modern Windows, you can install vrc-get with <a href=\"https://learn.microsoft.com/windows/package-manager/\">winget</a>."
+                    "content": "If you're using modern versions of Windows 10 or 11, you can install vrc-get with <a href=\"https://learn.microsoft.com/windows/package-manager/\">winget</a>."
                 },
                 "scoop": {
                     "title": "Using scoop",

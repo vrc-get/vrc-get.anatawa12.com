@@ -17,15 +17,14 @@
         "contributors": "Mitwirkende"
     },
     "errors": {
-        "noErrorMessage": "Es wurde keine Fehlermeldung angegeben.",
-        "failedToLoadLatestVersion": "Die neueste Version konnte nicht geladen werden. Bitte versuchen Sie es später erneut."
+        "failedToLoadLatestVersion": "Fehler beim Laden der neuesten Version. Bitte versuchen Sie es später erneut."
     },
     "downloads": {
         "macOS": "macOS",
         "linux": "Linux",
         "windowsSetup": "Windows Setup",
         "windowsStandalone": "Windows Standalone",
-        "unsuportedOS": "OS nicht unterstützt"
+        "unsuportedOS": "Nicht unterstütztes Betriebssystem"
     },
     "home": {
         "productPage": "Produktseite",
@@ -33,19 +32,19 @@
         "cliDescription": "Eine schnelle und quelloffene Alternative zum VRChat Package Manager"
     },
     "alcom": {
-        "hero": "Eine schnelle Open-Source-Alternative zum VRChat Creator Companion.",
+        "hero": "Eine schnelle und quelloffene Alternative zum VRChat Creator Companion",
         "faq": {
             "fullName": {
-                "question": "Wie heißt ALCOM ausgeschrieben?",
-                "answer": "ALCOM ist einfach ALCOM, keine Abkürzung."
+                "question": "Wofür steht ALCOM?",
+                "answer": "ALCOM ist der vollständige Name der Anwendung und kein Akronym."
             },
             "nameOrigin": {
-                "question": "Woher kommt das Wort ALCOM?",
-                "answer": "ALCOM kommt ursprünglich von <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion, ist aber mehr als nur eine Alternative."
+                "question": "Woher kommt der Name ALCOM?",
+                "answer": "ALCOM leitet sich ursprünglich vom Begriff <b>A</b>lternative (VRChat Creator) <b>COM</b>panion ab.<br/>Allerdings ist <code>alternative companion</code> nicht der Name dieses Tools, sondern eine Beschreibung seines Zwecks."
             },
             "vrcGetRelationship": {
-                "question": "Was ist die Beziehung zu vrc-get-gui oder vrc-get?",
-                "answer": "vrc-get ist unser Open-Source vpm-Client, auf dem ALCOM basiert. ALCOM ist ein grafisches Frontend für vrc-get und hieß früher vrc-get-gui."
+                "question": "Wie ist die Beziehung zu vrc-get-gui und vrc-get?",
+                "answer": "ALCOM ist eine grafische Benutzeroberfläche zur Verwaltung von VRChat-Paketen. Sie basiert auf dem quelloffenen Befehlszeilenwerkzeug <a href=\"/cli\">vrc-get</a>. Früher bekannt als <code>vrc-get-gui</code> bietet ALCOM eine benutzerfreundlichere Möglichkeit zum Installieren, Aktualisieren, und Verwalten von VRChat-Assets."
             }
         }
     },
@@ -57,35 +56,35 @@
                 "windows": "Windows",
                 "mac": "macOS",
                 "arch": "Arch Linux",
-                "universal": "Universell"
+                "universal": "Universal"
             },
             "using": {
                 "homebrew": {
-                    "title": "Mit Homebrew",
-                    "content": "Wenn Sie Homebrew verwenden, können Sie vrc-get einfach installieren. Weitere Informationen finden Sie unter <a href=\"https://brew.sh\">Homebrew</a>."
+                    "title": "Verwenden von Homebrew",
+                    "content": "Wenn Sie <a href=\"https://brew.sh\">Homebrew</a> verwenden, können Sie vrc-get einfach mit brew installieren."
                 },
                 "macPorts": {
-                    "title": "Mit MacPorts",
-                    "content": "Wenn Sie MacPorts verwenden, können Sie vrc-get einfach mit MacPorts installieren. Weitere Informationen finden Sie unter <a href=\"https://macports.org/\">MacPorts</a>."
+                    "title": "Verwenden von MacPorts",
+                    "content": "Wenn Sie <a href=\"https://macports.org/\">MacPorts</a> verwenden, können Sie vrc-get einfach mit port installieren."
                 },
                 "winget": {
-                    "title": "Mit winget",
-                    "content": "Wenn Sie moderne Windows verwenden, können Sie vrc-get mit <a href=\"https://learn.microsoft.com/windows/package-manager/\">winget</a> installieren."
+                    "title": "Verwenden von winget",
+                    "content": "Wenn Sie neuere Versionen von Windows 10 oder 11 verwenden, können Sie vrc-get mit <a href=\"https://learn.microsoft.com/windows/package-manager/\">winget</a> installieren."
                 },
                 "scoop": {
-                    "title": "Mit scoop",
-                    "content": "Wenn Sie scoop verwenden, können Sie vrc-get aus einem scoop bucket installieren. Weitere Informationen finden Sie unter <a href=\"https://scoop.sh/\">scoop</a>."
+                    "title": "Verwenden von scoop",
+                    "content": "Wenn Sie <a href=\"https://scoop.sh/\">scoop</a> verwenden, können Sie vrc-get aus einem Scoop-Bucket installieren."
                 },
                 "aur": {
-                    "title": "Mit PKGBUILD von AUR",
-                    "content": "Wenn Sie Arch Linux verwenden, können Sie vrc-get aus dem Arch User Repository installieren. Bitte verwenden Sie Ihre bevorzugten AUR-Helfer."
+                    "title": "Verwenden von PKGBUILD aus AUR",
+                    "content": "Wenn Sie Arch Linux verwenden, können Sie vrc-get aus dem Arch User Repository installieren. Bitte verwenden Sie Ihren bevorzugten AUR-Helfer."
                 },
                 "cargoBinstall": {
-                    "title": "Mit cargo binstall",
-                    "content": "Wenn Sie <a href=\"https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall\">cargo binstall</a> haben, ist die Installation mit cargo binstall eine einfache und schnelle Möglichkeit, vrc-get zu installieren. Cargo binstall lädt vrc-get vorgefertigt von GitHub herunter und installiert es."
+                    "title": "Verwenden von cargo binstall",
+                    "content": "Wenn Sie <a href=\"https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall\">cargo binstall</a> haben, ist die Installation mit cargo binstall eine einfache und schnelle Möglichkeit, vrc-get zu installieren. Cargo binstall lädt vorab kompiliertes vrc-get von GitHub herunter und installiert es."
                 },
                 "cargo": {
-                    "title": "Mit cargo",
+                    "title": "Verwenden von cargo",
                     "content": "Wenn Sie <a href=\"https://github.com/rust-lang/cargo/\">cargo</a> haben, ist die Installation mit cargo eine einfache Möglichkeit, vrc-get zu installieren."
                 }
             }
