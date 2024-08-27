@@ -40,10 +40,10 @@
             },
             "nameOrigin": {
                 "question": "Woher kommt der Name ALCOM?",
-                "answer": "ALCOM leitet sich ursprünglich vom Begriff <b>A</b>lternative (VRChat Creator) <b>COM</b>panion ab.<br/>Allerdings ist <code>alternative companion</code> nicht der Name dieses Tools, sondern eine Beschreibung seines Zwecks."
+                "answer": "ALCOM leitet sich ursprünglich vom Begriff <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion ab.<br/>Allerdings ist <code>alternative companion</code> nicht der Name dieses Tools, sondern eine Beschreibung seines Zwecks."
             },
             "vrcGetRelationship": {
-                "question": "Wie ist die Beziehung zu vrc-get-gui und vrc-get?",
+                "question": "Was hat es mit vrc-get-gui und vrc-get zu tun?",
                 "answer": "ALCOM ist eine grafische Benutzeroberfläche zur Verwaltung von VRChat-Paketen. Sie basiert auf dem quelloffenen Befehlszeilenwerkzeug <a href=\"/cli\">vrc-get</a>. Früher bekannt als <code>vrc-get-gui</code> bietet ALCOM eine benutzerfreundlichere Möglichkeit zum Installieren, Aktualisieren, und Verwalten von VRChat-Assets."
             }
         }
