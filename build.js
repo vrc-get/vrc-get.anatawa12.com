@@ -1,5 +1,5 @@
 const Handlebars = require("handlebars");
-const minimatch = require("minimatch");
+const core = require('@actions/core');
 const { exit, env } = require("process");
 const i18next = require("i18next");
 const parse5 = require("parse5");
@@ -32,35 +32,52 @@ const config = {
 
 // Logger function
 const log = (message, type = "info") => {
-  const prefix =
-    {
-      info: chalk.blue("INFO"),
-      warn: chalk.yellow("WARN"),
-      error: chalk.red("ERROR"),
-    }[type] || chalk.gray("LOG");
+  if (process.env.GITHUB_ACTIONS !== undefined) {
+    switch (type) {
+      case 'error':
+        core.error(message);
+        break;
+      case 'warning':
+        core.warning(message);
+        break;
+      case 'debug':
+        core.debug(message);
+        break;
+      case 'info':
+      default:
+        core.info(message);
+        break;
+    }
+  } else {
+    const prefix =
+      {
+        info: chalk.blue("INFO"),
+        warn: chalk.yellow("WARN"),
+        error: chalk.red("ERROR"),
+      }[type] || chalk.gray("LOG");
 
-  console.log(`[${prefix}] ${message}`);
+    console.log(`[${prefix}] ${message}`);
+  }
 };
 
 function doesTmpFileNeedUpdate(filePath) {
-  try {
-    if (!fs.existsSync(filePath))
-      return true;
-    const stats = fs.statSync(filePath);
-    const now = new Date();
-    const fileTime = new Date(stats.mtime);
-    const differenceInMinutes = (now.getTime() - fileTime.getTime()) / (1000 * 60);
-    return differenceInMinutes > 30;
-  } catch (err) {
-    console.error('Error checking file age:', err);
-    return false;
-  }
+  if (!fs.existsSync(filePath))
+    return true;
+  const stats = fs.statSync(filePath);
+  const now = new Date();
+  const fileTime = new Date(stats.mtime);
+  const differenceInMinutes = (now.getTime() - fileTime.getTime()) / (1000 * 60);
+  return differenceInMinutes > 30;
 }
 
 async function updateGitHubData() {
   let options = { headers: {} };
   if (process.env.GITHUB_TOKEN !== undefined) {
     options.headers.Authorization = `Bearer: ${process.env.GITHUB_TOKEN}`;
+  } else if (process.env.GITHUB_ACTIONS !== undefined) {
+    core.warning('Not authenticated! This will most likely result in a 403 from GitHub API calls. Generate a Personal Access Token and add it as a secret to this workflow under the "GITHUB_TOKEN" environment variable.')
+  } else {
+    core.info('GitHub API calls will be made without authentication. You may experience 403 errors.')
   }
 
   if (!fs.existsSync('tmp')) {
@@ -68,7 +85,7 @@ async function updateGitHubData() {
   }
 
   if (doesTmpFileNeedUpdate(file_releases)) {
-    console.log('Updating releases...');
+    log('Updating releases...');
     let releases = [];
     let page = 1;
     while (true) {
@@ -91,7 +108,7 @@ async function updateGitHubData() {
       release.displayName = r.tag_name.substring(release.isGui ? 5 : 1);
       release.downloads = [];
       r.assets.forEach(a => {
-        if ( ! release.isGui && a.name.endsWith('.d')) return;
+        if (!release.isGui && a.name.endsWith('.d')) return;
         release.downloads.push({
           name: a.name,
           link: a.browser_download_url,
@@ -106,7 +123,7 @@ async function updateGitHubData() {
   }
 
   if (doesTmpFileNeedUpdate(file_contributors)) {
-    console.log('Updating contributors...');
+    log('Updating contributors...');
     const response = await fetch(`https://api.github.com/repos/vrc-get/vrc-get/contributors`, options);
     let contributors = await response.json();
     contributors = contributors.sort((a, b) => b.contributions - a.contributions);
@@ -143,7 +160,7 @@ async function build() {
     });
 
     // Register the not helper
-    Handlebars.registerHelper('not', function(value) {
+    Handlebars.registerHelper('not', function (value) {
       return !value;
     });
 
@@ -277,10 +294,10 @@ async function build() {
       }
     }
 
-    log("Build complete!", "success");
+    log("Build complete!");
   } catch (error) {
     log(`Build failed: ${error.message}`, "error");
-    console.error(chalk.red(error.stack));
+    log(error.stack, "error");
     exit(1);
   }
 }
