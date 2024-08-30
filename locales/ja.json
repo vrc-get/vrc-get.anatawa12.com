@@ -16,9 +16,6 @@
         "error": "エラー",
         "contributors": "コントリビューター"
     },
-    "errors": {
-        "failedToLoadLatestVersion": "最新版の取得に失敗しました。後でもう一度お試しください。"
-    },
     "downloads": {
         "macOS": "macOS",
         "linux": "Linux",

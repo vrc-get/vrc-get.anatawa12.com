@@ -20,6 +20,9 @@
 .mb-3 {
     margin-bottom: 1.5rem;
 }
+.mt-1 {
+    margin-top: 0.5rem;
+}
 .mt-2 {
     margin-top: 1rem;
 }
@@ -76,6 +79,10 @@ ul.p-navigation__items li {
 .my-1 {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.max-width {
+    width: 100%;
 }
 @media only screen and (max-width: 576px) {
     .max-width--xs {

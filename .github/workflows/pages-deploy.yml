@@ -36,7 +36,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

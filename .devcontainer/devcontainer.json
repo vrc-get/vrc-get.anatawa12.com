@@ -10,10 +10,10 @@
 	},
 	"updateContentCommand": "npm install",
     "forwardPorts": [
-        8080
+        8058
     ],
     "portsAttributes": {
-        "8080": {
+        "8058": {
             "label": "Website",
             "onAutoForward": "notify"
         }

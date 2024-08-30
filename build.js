@@ -52,13 +52,28 @@ const log = (message, type = "info") => {
     const prefix =
       {
         info: chalk.blue("INFO"),
-        warn: chalk.yellow("WARN"),
+        warning: chalk.yellow("WARN"),
         error: chalk.red("ERROR"),
       }[type] || chalk.gray("LOG");
 
     console.log(`[${prefix}] ${message}`);
   }
 };
+
+function copyMissing(from, to, toName, keySoFar = '') {
+  for (const key in from) {
+    if (!(key in to)) {
+      log(`Key ${keySoFar}${key} is missing from ${toName}`, 'warning')
+      to[key] = from[key];
+      continue;
+    }
+
+    if (typeof from[key] === 'object') {
+      to[key] = copyMissing(from[key], to[key], toName, `${keySoFar}${key}.`);
+    }
+  }
+  return to;
+}
 
 function doesTmpFileNeedUpdate(filePath) {
   if (!fs.existsSync(filePath))
@@ -80,9 +95,7 @@ async function updateGitHubData() {
     core.info('GitHub API calls will be made without authentication. You may experience 403 errors.')
   }
 
-  if (!fs.existsSync('tmp')) {
-    fs.mkdirSync('tmp');
-  }
+  fs.mkdirSync('tmp', { recursive: true });
 
   if (doesTmpFileNeedUpdate(file_releases)) {
     log('Updating releases...');
@@ -146,11 +159,17 @@ async function build() {
       .sort();
 
     const resources = {};
+    let defaultLocale = require("./" + path.join(config.localesDir, `${config.defaultLanguage}.json`));
     locales.forEach((locale) => {
+      const localePath = "./" + path.join(config.localesDir, `${locale}.json`);
+      let json = require(localePath);
+
+      if (locale !== config.defaultLanguage) {
+        json = copyMissing(defaultLocale, json, localePath);
+      }
+
       resources[locale] = {
-        translation: require(
-          "./" + path.join(config.localesDir, `${locale}.json`),
-        ),
+        translation: json,
       };
     });
     log(locales);
@@ -252,7 +271,9 @@ async function build() {
     fs.mkdirSync(outputPath, { recursive: true });
     for (const locale of locales) {
       const resources = i18next.getResourceBundle(locale, "translation");
-      resources.__locales = localesList;
+      resources.data = {
+        locales: localesList
+      };
       const raw = JSON.stringify(resources, null, "\t");
       fs.writeFileSync(path.join(outputPath, locale + ".json"), raw);
     }
@@ -271,8 +292,13 @@ async function build() {
 
       for (const locale of locales) {
         const resources = i18next.getResourceBundle(locale, "translation");
-        resources.__releases = releases;
-        resources.__contributors = contributors;
+        resources.data.releases = releases;
+        resources.data.contributors = contributors;
+        resources.data.latestAlcomVersion = JSON.parse(
+          fs.readFileSync(
+            './' + path.join(config.templatesDir, 'api', 'gui', 'tauri-updater.json')
+          )
+        ).version;
         const htmlContent = template(resources);
 
         const relativePath = path.relative(config.templatesDir, templateFile);

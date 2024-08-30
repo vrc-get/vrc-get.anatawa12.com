@@ -16,9 +16,6 @@
         "error": "Fehler",
         "contributors": "Mitwirkende"
     },
-    "errors": {
-        "failedToLoadLatestVersion": "Fehler beim Laden der neuesten Version. Bitte versuchen Sie es später erneut."
-    },
     "downloads": {
         "macOS": "macOS",
         "linux": "Linux",
