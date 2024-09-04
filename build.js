@@ -254,7 +254,7 @@ async function build() {
 
     // Find & copy non-HTML files (excluding patterns)
     const nonHtmlFiles = glob
-      .sync(path.join(config.templatesDir, "**/*"), { nodir: true })
+      .sync(`${config.templatesDir}/**/*`, { nodir: true })
       .filter(
         (file) =>
           !config.excludePatterns.some((pattern) => {
