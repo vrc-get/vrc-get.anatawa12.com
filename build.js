@@ -290,7 +290,7 @@ async function build() {
 
     // Find HTML templates & generate localized pages
     const templateFiles = glob
-      .sync(path.join(config.templatesDir, "**/*.{html,hbs}"))
+      .sync(`${config.templatesDir}/**/*.{html,hbs}`)
       .filter((filePath) => !path.basename(filePath).startsWith("_"));
     const contributors = JSON.parse(fs.readFileSync(file_contributors));
     const releases = JSON.parse(fs.readFileSync(file_releases));
