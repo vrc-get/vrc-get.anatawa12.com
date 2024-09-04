@@ -23,6 +23,11 @@
         "windowsStandalone": "Windows Standalone",
         "unsuportedOS": "Nicht unterstütztes Betriebssystem"
     },
+    "releases": {
+        "viewOnGitHub": "Auf GitHub ansehen",
+        "assets": "Assets",
+        "noChangelogMessage": "Kein Changelog"
+    },
     "home": {
         "productPage": "Produktseite",
         "alcomDescription": "Eine schnelle und quelloffene Alternative zum VRChat Creator Companion",

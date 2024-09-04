@@ -1,10 +1,27 @@
 const locale = document.documentElement.lang;
 
+async function waitUntilLocaleIsLoaded() {
+    while (!window.S) {
+        await new Promise(resolve => setTimeout(resolve, 10));
+    }
+    return window.S;
+}
+
 async function setCustomLocale(newLocale) {
     await waitUntilLocaleIsLoaded();
-    if (!(window.S.__locales[newLocale])) throw `Unsupported locale: ${newLocale}`;
+    if (!(window.S.data.locales[newLocale])) throw `Unsupported locale: ${newLocale}`;
     document.cookie = `customLocale=${newLocale}; path=/;`;
     _redirectToLocale(newLocale);
+}
+
+async function _loadLocaleData() {
+    const jsonFilePath = `/resources/locales/${locale}.json`;
+    const response = await fetch(jsonFilePath);
+    if (!response.ok) {
+        throw new Error(`Failed to load locale data: ${response.status}`);
+    }
+    window.S = await response.json();
+    Object.freeze(window.S);
 }
 
 function _getCustomLocaleCookie() {
@@ -34,7 +51,7 @@ async function _checkIfWeShouldRedirect() {
     if (customLocale !== null) {
         if (customLocale != locale) {
             await waitUntilLocaleIsLoaded();
-            if (window.S.__locales[customLocale]) {
+            if (window.S.data.locales[customLocale]) {
                 _redirectToLocale(customLocale);
                 return;
             } else {
@@ -43,11 +60,12 @@ async function _checkIfWeShouldRedirect() {
         }
     } else if (browserLocale != locale) {
         await waitUntilLocaleIsLoaded();
-        if (window.S.__locales[browserLocale]) {
+        if (window.S.data.locales[browserLocale]) {
             _redirectToLocale(browserLocale);
             return;
         }
     }
 }
 
+_loadLocaleData();
 _checkIfWeShouldRedirect();

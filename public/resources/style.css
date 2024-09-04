@@ -11,6 +11,9 @@
 .me-2 {
     margin-right: 1rem;
 }
+.mb-0 {
+    margin-bottom: 0;
+}
 .mb-1 {
     margin-bottom: 0.5rem;
 }
@@ -25,6 +28,18 @@
 }
 .mt-2 {
     margin-top: 1rem;
+}
+.pt-0 {
+    padding-top: 0;
+}
+.pt-1 {
+    padding-top: 0.5rem;
+}
+.pb-0 {
+    padding-bottom: 0;
+}
+.pb-1 {
+    padding-bottom: 0.5rem;
 }
 .top-1 {
     top: 0.25rem;

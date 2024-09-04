@@ -23,10 +23,15 @@
         "windowsStandalone": "Windows Standalone",
         "unsuportedOS": "Unsupported OS"
     },
+    "releases": {
+        "viewOnGitHub": "View on GitHub",
+        "assets": "Assets",
+        "noChangelogMessage": "No changelog"
+    },
     "home": {
         "productPage": "Product Page",
         "alcomDescription": "A fast and open-source VRChat Creator Companion alternative",
-        "cliDescription": "A fast and open-source VRChat Package Manager alternative"
+        "cliDescription": "A fast and open-source command line client of the VRChat Package Manager"
     },
     "alcom": {
         "hero": "A fast open-source alternative of VRChat Creator Companion",
@@ -46,7 +51,7 @@
         }
     },
     "cli": {
-        "hero": "A fast and open-source VRChat Package Manager alternative",
+        "hero": "A fast and open-source command line client of the VRChat Package Manager",
         "installation": {
             "title": "Installation",
             "os": {

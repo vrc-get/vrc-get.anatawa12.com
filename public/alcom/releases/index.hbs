@@ -35,17 +35,34 @@ with="social"
                     aria-expanded="false">{{displayName}}</button>
             </h4>
             <section class="p-accordion__panel" id="section-{{id}}" aria-hidden="true" aria-labelledby="header-{{id}}">
-                {{#each downloads}}
-                <hr class="is-muted mb-1" />
-                <div class="flex mb-1">
-                    <div class="flex-grow">
-                        <code>{{name}}</code>
+                <div class="p-card u-no-padding mt-1">
+                    <div class="p-card__inner">
+                        {{renderMarkdown body}}
                     </div>
-                    <div class="flex-shrink">
-                        <a class="color-link" href="{{link}}">{{../../common.download}}</a>
+                    <hr class="u-no-margin--bottom">
+                    <div class="p-card__inner">
+                        <a class="p-button has-icon mb-0" href="{{html_url}}">
+                            <i class="p-icon--external-link"></i>
+                            <span>{{../releases.viewOnGitHub}}</span>
+                        </a>
                     </div>
                 </div>
-                {{/each}}
+                <div class="p-card pt-1 pb-1">
+                    <h4>{{../releases.assets}}</h4>
+                    {{#each assets}}
+                    {{#if (not @first)}}
+                    <hr class="is-muted mb-1" />
+                    {{/if}}
+                    <div class="flex mb-1">
+                        <div class="flex-grow">
+                            <code>{{name}}</code>
+                        </div>
+                        <div class="flex-shrink">
+                            <a class="color-link" href="{{browser_download_url}}">{{../../common.download}}</a>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
             </section>
         </li>
         {{/if}}

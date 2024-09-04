@@ -19,9 +19,11 @@ with="social, scripts"
         switch (PLATFORMS.current) {
             case PLATFORMS.windows:
                 document.getElementById('tab-windows').click();
+                document.getElementById('tab-universal').click();
                 break;
             case PLATFORMS.macOS:
                 document.getElementById('tab-macOS').click();
+                document.getElementById('tab-universal').click();
                 break;
             case PLATFORMS.linux:
                 document.getElementById('tab-arch').click();

@@ -23,6 +23,11 @@
         "windowsStandalone": "Windows スタンドアロン",
         "unsuportedOS": "非対応のOS"
     },
+    "releases": {
+        "viewOnGitHub": "GitHub で見る",
+        "assets": "アセット",
+        "noChangelogMessage": "変更ログはありません"
+    },
     "home": {
         "productPage": "製品ページ ",
         "alcomDescription": "アルコムは高速なオープンソースの VRChat Creator Companion の代替ツールです",

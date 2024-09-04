@@ -7,9 +7,13 @@ const chalk = require("chalk");
 const glob = require("glob");
 const path = require("path");
 const fs = require("fs");
+const showdown = require("showdown");
+const converter = new showdown.Converter();
 
 const file_releases = 'tmp/releases.json';
 const file_contributors = 'tmp/contributors.json';
+
+let currentResource;
 
 class Release {
   name = '';
@@ -59,6 +63,13 @@ const log = (message, type = "info") => {
     console.log(`[${prefix}] ${message}`);
   }
 };
+
+function trimEndNewline(str) {
+  if (str.endsWith('\n')) {
+    return str.slice(0, -1);
+  }
+  return str;
+}
 
 function copyMissing(from, to, toName, keySoFar = '') {
   for (const key in from) {
@@ -112,24 +123,12 @@ async function updateGitHubData() {
       page = page + 1;
     }
 
-    releases = releases.sort((a, b) => b.id - a.id);
     let items = [];
+    releases = releases.sort((a, b) => b.id - a.id);
     releases.forEach(r => {
-      const release = new Release();
-      release.name = r.tag_name;
-      release.isGui = r.tag_name.startsWith('gui-');
-      release.displayName = r.tag_name.substring(release.isGui ? 5 : 1);
-      release.downloads = [];
-      r.assets.forEach(a => {
-        if (!release.isGui && a.name.endsWith('.d')) return;
-        release.downloads.push({
-          name: a.name,
-          link: a.browser_download_url,
-          sie: a.size,
-        });
-      });
-      // items[`${r.id}`] = release;
-      items.push(release);
+      r.isGui = r.tag_name.startsWith('gui-');
+      r.displayName = r.tag_name.substring(r.isGui ? 5 : 1);
+      items.push(r);
     });
 
     fs.writeFileSync(file_releases, JSON.stringify(items));
@@ -215,6 +214,17 @@ async function build() {
       return new Handlebars.SafeString(sanitized);
     });
 
+    Handlebars.registerHelper("renderMarkdown", function(key) {
+      let markdown = i18next.t(key);
+      if (markdown === undefined || markdown === '') {
+        markdown = `*${currentResource.releases.noChangelogMessage}*`;
+      } else {
+        markdown = trimEndNewline(markdown);
+      }
+      const html = converter.makeHtml(markdown);
+      return new Handlebars.SafeString(html);
+    })
+
     // Register the contains helper
     Handlebars.registerHelper("contains", function (arrayStr, value, options) {
       const array = (arrayStr ?? "").split(",").map((s) => s.trim());
@@ -292,6 +302,7 @@ async function build() {
 
       for (const locale of locales) {
         const resources = i18next.getResourceBundle(locale, "translation");
+        currentResource = resources;
         resources.data.releases = releases;
         resources.data.contributors = contributors;
         resources.data.latestAlcomVersion = JSON.parse(
