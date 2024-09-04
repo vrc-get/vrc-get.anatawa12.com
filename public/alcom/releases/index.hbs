@@ -1,0 +1,76 @@
+{{#> page
+title="Releases - ALCOM"
+icon="/resources/alcom.svg"
+with="social"
+}}
+
+{{#*inline "social"}}
+<meta property="og:title" content="ALCOM - {{common.download}}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vrc-get.anatawa12.com/{{locale.code}}/alcom/releases" />
+<meta property="og:image" content="https://vrc-get.anatawa12.com/resources/alcom.svg" />
+<meta property="og:site_name" content="ALCOM" />
+<meta property="og:description" content="{{home.alcomDescription}}" />
+{{/inline}}
+
+{{#*inline "content"}}
+
+<br />
+
+<div>
+    <a class="p-button has-icon" href="/{{locale.code}}/alcom">
+        <i class="p-icon--chevron-left"></i>
+        <span>ALCOM</span>
+    </a>
+</div>
+
+<h2 class="inline-block u-no-margin--bottom me-1">{{common.releases}}</h2>
+<aside class="p-accordion mt-2">
+    <ul class="p-accordion__list" id="releases-list">
+        {{#each data.releases}}
+        {{#if isGui}}
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="header-{{id}}" aria-controls="section-{{id}}"
+                    aria-expanded="false">{{displayName}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="section-{{id}}" aria-hidden="true" aria-labelledby="header-{{id}}">
+                <div class="p-card u-no-padding mt-1">
+                    <div class="p-card__inner">
+                        {{renderMarkdown body}}
+                    </div>
+                    <hr class="u-no-margin--bottom">
+                    <div class="p-card__inner pt-1 pb-1">
+                        <h4>{{../releases.assets}}</h4>
+                        {{#each assets}}
+                        {{#if (not @first)}}
+                        <hr class="is-muted mb-1" />
+                        {{/if}}
+                        <div class="flex mb-1">
+                            <div class="flex-grow">
+                                <code>{{name}}</code>
+                            </div>
+                            <div class="flex-shrink">
+                                <a class="color-link" href="{{browser_download_url}}">{{../../common.download}}</a>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <hr class="u-no-margin--bottom">
+                    <div class="p-card__inner">
+                        <a class="p-button has-icon mb-0" href="{{html_url}}">
+                            <i class="p-icon--external-link"></i>
+                            <span>{{../releases.viewOnGitHub}}</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </li>
+        {{/if}}
+        {{/each}}
+    </ul>
+</aside>
+
+{{/inline}}
+
+{{/page}}

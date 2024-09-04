@@ -1,0 +1,23 @@
+{
+    "name": "vrc-get.anatawa12.com",
+    "version": "2.0.0",
+    "author": "anatawa12 <anatawa12@github.com>, Fox_score <foxscore@github.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "nodemon": "^3.1.4",
+        "static-server": "^3.0.0"
+    },
+    "dependencies": {
+        "@actions/core": "^1.10.1",
+        "chalk": "^4.1.2",
+        "glob": "^10.3.10",
+        "handlebars": "^4.7.7",
+        "i18next": "^23.4.8",
+        "parse5": "^7.1.2",
+        "showdown": "^2.1.0"
+    },
+    "scripts": {
+        "start": "nodemon",
+        "build": "node build.js"
+    }
+}

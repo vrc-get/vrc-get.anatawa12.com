@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="{{locale.code}}">
+
+<head>
+    <title>{{title}}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {{#if icon}}
+    <link rel="icon" type="application/svg" href="{{icon}}">
+    {{/if}}
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.14.0.min.css" />
+    <link rel="stylesheet" href="/resources/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
+    <!-- Social -->
+    {{#if (contains with "social")}}
+    {{> social}}
+    {{/if}}
+</head>
+
+<body>
+    {{#if (contains with "before-header")}}
+    {{> before-header}}
+    {{/if}}
+
+    <header id="navigation" class="p-navigation is-dark mb-2">
+        <div class="p-navigation__row--25-75">
+            <div class="p-navigation__banner">
+                <div class="p-navigation__tagged-logo">
+                    <a class="p-navigation__link u-no-padding--left" href="/{{locale.code}}/">
+                        <span class="p-navigation__logo-title">vrc-get</span>
+                    </a>
+                </div>
+                <ul class="p-navigation__items u-align--right">
+                    <li class="p-navigation__item">
+                        <button class="p-navigation__link text-right"
+                            aria-controls="locale-selector-dropdown-menu-mobile">
+                            <i class="ri-global-line"></i>
+                        </button>
+                        <ul class="p-navigation__dropdown--right" id="locale-selector-dropdown-menu-mobile"
+                            aria-hidden="true">
+                            {{#each data.locales}}
+                            <li class="cursor-pointer">
+                                <span onclick="setCustomLocale('{{code}}')" class="p-navigation__dropdown-item">
+                                    {{nativeDisplayName}}&ensp;{{emoji}}
+                                </span>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <nav class="p-navigation__nav">
+                <ul class="p-navigation__items u-align--right">
+                    <li class="p-navigation__item--dropdown-toggle">
+                        <button class="p-navigation__link" aria-controls="locale-selector-dropdown-menu">
+                            <i class="ri-global-line"></i>
+                        </button>
+                        <ul class="p-navigation__dropdown--right" id="locale-selector-dropdown-menu" aria-hidden="true">
+                            {{#each data.locales}}
+                            <li class="cursor-pointer">
+                                <span onclick="setCustomLocale('{{code}}')" class="p-navigation__dropdown-item">
+                                    {{nativeDisplayName}}&ensp;{{emoji}}
+                                </span>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="row--25-75">
+        <div class="col">
+            {{> content}}
+        </div>
+    </div>
+
+    <script src="/resources/js/localization.js" defer></script>
+    <script src="/resources/js/common.js"></script>
+    {{#if (contains with "scripts")}}
+    {{> scripts}}
+    {{/if}}
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{
+	"name": "Ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {
+			"nodeGypDependencies": true,
+			"version": "lts",
+			"nvmVersion": "latest"
+		}
+	},
+	"updateContentCommand": "npm install",
+    "forwardPorts": [
+        8058
+    ],
+    "portsAttributes": {
+        "8058": {
+            "label": "Website",
+            "onAutoForward": "notify"
+        }
+    },
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.vscode-github-actions",
+				"aaron-bond.better-comments"
+			]
+		}
+	}
+}

@@ -1,0 +1,150 @@
+{{#> page
+title="vrc-get cli"
+icon=""
+with="social, scripts"
+}}
+
+{{#*inline "social"}}
+<meta property="og:title" content="vrc-get" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://vrc-get.anatawa12.com/{{locale.code}}/cli" />
+<meta property="og:site_name" content="ALCOM" />
+<meta property="og:description" content="{{home.cliDescription}}" />
+{{/inline}}
+
+{{#*inline "scripts"}}
+<script src="/resources/js/platform.js"></script>
+<script>
+    window.addEventListener('load', function () {
+        switch (PLATFORMS.current) {
+            case PLATFORMS.windows:
+                document.getElementById('tab-windows').click();
+                document.getElementById('tab-universal').click();
+                break;
+            case PLATFORMS.macOS:
+                document.getElementById('tab-macOS').click();
+                document.getElementById('tab-universal').click();
+                break;
+            case PLATFORMS.linux:
+                document.getElementById('tab-arch').click();
+                document.getElementById('tab-universal').click();
+                break;
+            case PLATFORMS.android:
+            case PLATFORMS.iOS:
+                break;
+            default:
+                document.getElementById('tab-universal').click();
+                break;
+        }
+    });
+</script>
+{{/inline}}
+
+{{#*inline "content"}}
+<div class="p-media-object--large mb-2">
+    <div class="p-media-object__details">
+        <h1 class="p-media-object__title">vrc-get</h1>
+        <p class="p-media-object__content">{{cli.hero}}</p>
+        <ul class="p-media-object__meta-list">
+        </ul>
+    </div>
+</div>
+
+<div>
+    <a href="/{{locale.code}}/cli/releases" class="p-button has-icon max-width--xs">
+        <i class="p-icon ri-history-line"></i>
+        <span>{{common.allVersions}}</span>
+    </a>
+
+    <a href="https://github.com/vrc-get/vrc-get" class="p-button has-icon max-width--xs">
+        <i class="p-icon ri-github-line"></i>
+        <span>{{common.sourceCode}}</span>
+    </a>
+</div>
+
+<h2>{{cli.installation.title}}</h2>
+<aside class="p-accordion">
+    <ul class="p-accordion__list">
+
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab-windows" aria-controls="tab-windows-section"
+                    aria-expanded="false">{{cli.installation.os.windows}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab-windows-section" aria-hidden="true"
+                aria-labelledby="tab-windows">
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.winget.title}}</h4>
+                <p>{{safe cli.installation.using.winget.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>winget install anatawa12.vrc-get</code></pre>
+                </div>
+
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.scoop.title}}</h4>
+                <p>{{safe cli.installation.using.scoop.content}}</p>
+                <div class="p-code-snippet">
+                    <pre
+                        class="p-code-snippet__block--icon"><code>scoop bucket add xrtools "https://github.com/babo4d/scoop-xrtools"<br/>scoop install vrc-get</code></pre>
+                </div>
+            </section>
+        </li>
+
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab-macOS" aria-controls="tab-macOS-section"
+                    aria-expanded="false">{{cli.installation.os.mac}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab-macOS-section" aria-hidden="true" aria-labelledby="tab-macOS">
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.homebrew.title}}</h4>
+                <p>{{safe cli.installation.using.homebrew.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>brew install vrc-get</code></pre>
+                </div>
+
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.macPorts.title}}</h4>
+                <p>{{safe cli.installation.using.macPorts.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>sudo port install vrc-get</code></pre>
+                </div>
+            </section>
+        </li>
+
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab-arch" aria-controls="tab-arch-section"
+                    aria-expanded="false">{{cli.installation.os.arch}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab-arch-section" aria-hidden="true" aria-labelledby="tab-arch">
+                <p>{{safe cli.installation.using.aur.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>yay -S vrc-get</code></pre>
+                </div>
+            </section>
+        </li>
+
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab-universal" aria-controls="tab-universal-section"
+                    aria-expanded="false">{{cli.installation.os.universal}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab-universal-section" aria-hidden="true"
+                aria-labelledby="tab-universal">
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.cargoBinstall.title}}</h4>
+                <p>{{safe cli.installation.using.cargoBinstall.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>cargo binstall vrc-get</code></pre>
+                </div>
+
+                <h4 class="u-no-margin--bottom">{{cli.installation.using.cargo.title}}</h4>
+                <p>{{safe cli.installation.using.cargo.content}}</p>
+                <div class="p-code-snippet">
+                    <pre class="p-code-snippet__block--icon"><code>cargo install vrc-get</code></pre>
+                </div>
+            </section>
+        </li>
+    </ul>
+</aside>
+
+{{> contributors}}
+{{/inline}}
+
+{{/page}}

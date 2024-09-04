@@ -1,0 +1,95 @@
+{
+    "locale": {
+        "code": "ja",
+        "displayName": "Japanese",
+        "nativeDisplayName": "日本語",
+        "emoji": "🇯🇵"
+    },
+    "common": {
+        "documentation": "ドキュメント",
+        "loading": "ロード中",
+        "download": "ダウンロード",
+        "releases": "バージョン ",
+        "allVersions": "すべてのバージョン",
+        "sourceCode": "ソースコード",
+        "faq": "よくある質問",
+        "error": "エラー",
+        "contributors": "コントリビューター"
+    },
+    "downloads": {
+        "macOS": "macOS",
+        "linux": "Linux",
+        "windowsSetup": "Windows セットアップ",
+        "windowsStandalone": "Windows スタンドアロン",
+        "unsuportedOS": "非対応のOS"
+    },
+    "releases": {
+        "viewOnGitHub": "GitHub で見る",
+        "assets": "アセット",
+        "noChangelogMessage": "変更ログはありません"
+    },
+    "home": {
+        "productPage": "製品ページ ",
+        "alcomDescription": "アルコムは高速なオープンソースの VRChat Creator Companion の代替ツールです",
+        "cliDescription": "アルコムは高速なオープンソースの VRChat Package Manager の代替ツールです"
+    },
+    "alcom": {
+        "hero": "アルコムは高速なオープンソースの VRChat Creator Companion の代替ツールです",
+        "faq": {
+            "fullName": {
+                "question": "アルコムの正式名称は何でしょうか？",
+                "answer": "ALCOM は ALCOM であり、他の正式名称の略語ではありません。"
+            },
+            "nameOrigin": {
+                "question": "アルコムという言葉の由来は何ですか？",
+                "answer": "アルコムはもともと <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion から来ています。ただし、<code>alternative companion</code> はこのツールの名前ではなく、説明です。"
+            },
+            "vrcGetRelationship": {
+                "question": "vrc-get-gui や vrc-get との関係は何ですか？",
+                "answer": "vrc-get は私たちが作成したオープンソースの vpm クライアントであり、ALCOM は vrc-get を本に作られています。ALCOM は vrc-get の GUI フロントエンドとして開発されているため、以前は vrc-get-gui と呼ばれていました。"
+            }
+        }
+    },
+    "cli": {
+        "hero": "アルコムは高速なオープンソースの VRChat Package Manager の代替ツールです",
+        "installation": {
+            "title": "インストール",
+            "os": {
+                "windows": "Windows",
+                "mac": "macOS",
+                "arch": "Arch Linux",
+                "universal": "ユニバーサル"
+            },
+            "using": {
+                "homebrew": {
+                    "title": "Homebrew を使用して",
+                    "content": "Homebrew を使用している場合は、vrc-get を簡単にインストールできます。<a href=\"https://brew.sh\">Homebrew</a> を参照してください。"
+                },
+                "macPorts": {
+                    "title": "MacPorts を使用して",
+                    "content": "MacPorts を使用している場合は、MacPorts で vrc-get を簡単にインストールできます。<a href=\"https://macports.org/\">MacPorts</a> を参照してください。"
+                },
+                "winget": {
+                    "title": "winget を使用して",
+                    "content": "最新の Windows を使用している場合は、<a href=\"https://learn.microsoft.com/windows/package-manager/\">winget</a> で vrc-get をインストールできます。"
+                },
+                "scoop": {
+                    "title": "scoop を使用して",
+                    "content": "scoop を使用している場合は、scoop バケットから vrc-get をインストールできます。<a href=\"https://scoop.sh/\">scoop</a> を参照してください。"
+                },
+                "aur": {
+                    "title": "AUR から PKGBUILD を使用して",
+                    "content": "Arch Linux を使用している場合は、Arch ユーザーリポジトリから vrc-get をインストールできます。お気に入りの AUR ヘルパーを使用してください。"
+                },
+                "cargoBinstall": {
+                    "title": "cargo binstall を使用して",
+                    "content": "cargo binstall を使用している場合は、cargo binstall でのインストールは vrc-get をインストールする簡単で高速な方法です。cargo binstall は GitHub からプリビルドされた vrc-get をダウンロードしてインストールします。<a href=\"https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall\">cargo binstall</a> を参照してください。"
+                },
+                "cargo": {
+                    "title": "cargo を使用して",
+                    "content": "cargo を使用している場合は、cargo でのインストールは vrc-get をインストールする簡単な方法です。<a href=\"https://github.com/rust-lang/cargo/\">cargo</a> を参照してください。"
+                }
+            }
+        }
+    }
+}
