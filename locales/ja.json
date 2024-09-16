@@ -19,7 +19,7 @@
     "downloads": {
         "macOS": "macOS",
         "linux": "Linux",
-        "windowsSetup": "Windows セットアップ",
+        "windowsSetup": "Windows インストーラー",
         "windowsStandalone": "Windows スタンドアロン",
         "unsuportedOS": "非対応のOS"
     },
