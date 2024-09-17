@@ -7,7 +7,7 @@
     },
     "common": {
         "documentation": "Documentation",
-        "loading": "Loading",
+        "loading": "Loading...",
         "download": "Download",
         "releases": "Releases",
         "allVersions": "All Versions",
@@ -17,9 +17,9 @@
         "contributors": "Contributors"
     },
     "downloads": {
-        "macOS": "macOS",
+        "macOS": "macOS DiskImage",
         "linux": "Linux",
-        "windowsSetup": "Windows Setup",
+        "windowsSetup": "Windows Installer",
         "windowsStandalone": "Windows Standalone",
         "unsuportedOS": "Unsupported OS"
     },
@@ -46,7 +46,7 @@
             },
             "vrcGetRelationship": {
                 "question": "What's the relationship with vrc-get-gui and vrc-get?",
-                "answer": "ALCOM is a graphical user interface designed for managing VRChat packages. It's built on top of the open-source command-line tool <a href=\"/cli\">vrc-get</a>. Previously known as <code>vrc-get-gui</code>, ALCOM offers a more user-friendly way to install, update, and manage VRChat assets."
+                "answer": "ALCOM is a graphical user interface designed for managing VRChat packages.<br>It's built on top of the open-source command-line tool <a href=\"/cli\">vrc-get</a>.<br>Previously known as <code>vrc-get-gui</code>, ALCOM offers a more user-friendly way to install, update, and manage VRChat assets."
             }
         }
     },
@@ -62,32 +62,32 @@
             },
             "using": {
                 "homebrew": {
-                    "title": "Using homebrew",
-                    "content": "If you're using <a href=\"https://brew.sh\">Homebrew</a>, you can easily install vrc-get."
+                    "title": "Using Homebrew",
+                    "content": "You can install vrc-get with the following commands.<br>For more details, please see <a href=\"https://brew.sh\">Homebrew</a>."
                 },
                 "macPorts": {
                     "title": "Using MacPorts",
-                    "content": "If you're using <a href=\"https://macports.org/\">MacPorts</a>, you can easily install vrc-get with MacPorts."
+                    "content": "You can install vrc-get with the following commands.<br>For more details, please see <a href=\"https://macports.org/\">MacPorts</a>."
                 },
                 "winget": {
-                    "title": "Using winget",
-                    "content": "If you're using modern versions of Windows 10 or 11, you can install vrc-get with <a href=\"https://learn.microsoft.com/windows/package-manager/\">winget</a>."
+                    "title": "Using WinGet",
+                    "content": "If you're using modern versions of Windows 10 or 11, you can install vrc-get with <a href=\"https://learn.microsoft.com/windows/package-manager/\">WinGet</a>."
                 },
                 "scoop": {
-                    "title": "Using scoop",
-                    "content": "If you're using <a href=\"https://scoop.sh/\">scoop</a>, you can install vrc-get from a scoop bucket."
+                    "title": "Using Scoop",
+                    "content": "If you're using <a href=\"https://scoop.sh/\">Scoop</a>, you can install vrc-get from xrtools Bucket."
                 },
                 "aur": {
                     "title": "Using PKGBUILD from AUR",
-                    "content": "If you're using Arch Linux, you can install vrc-get from Arch User Repository. Please use your favorite AUR helpers."
+                    "content": "If you're using Arch Linux, you can install vrc-get with PKGBUILD from Arch User Repository.<br>We are using yay in the following commands, but you can use your favorite AUR helpers."
                 },
                 "cargoBinstall": {
-                    "title": "Using cargo binstall",
-                    "content": "If you have <a href=\"https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall\">cargo binstall</a>, installing with cargo binstall is an easy & fast way to install vrc-get. Cargo binstall will download & install prebuilt vrc-get from GitHub."
+                    "title": "Using Cargo Binstall",
+                    "content": "Cargo Binstall will download & install prebuilt vrc-get from GitHub.<br>For more details, please see <a href=\"https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall\">Cargo Binstall</a>."
                 },
                 "cargo": {
-                    "title": "Using cargo",
-                    "content": "If you have <a href=\"https://github.com/rust-lang/cargo/\">cargo</a>, installing with cargo is an easy way to install vrc-get."
+                    "title": "Using Cargo",
+                    "content": "You can install vrc-get with the following commands.<br>For more details, please see <a href=\"https://github.com/rust-lang/cargo/\">Cargo</a>."
                 }
             }
         }
