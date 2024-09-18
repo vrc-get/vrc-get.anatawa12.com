@@ -17,7 +17,7 @@
         "contributors": "コントリビューター"
     },
     "downloads": {
-        "macOS": "macOS",
+        "macOS": "macOS ディスクイメージ",
         "linux": "Linux",
         "windowsSetup": "Windows インストーラー",
         "windowsStandalone": "Windows スタンドアロン",
