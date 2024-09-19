@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.14.0.min.css" />
     <link rel="stylesheet" href="/resources/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="/{{locale.code}}/{{data.relativeURL}}" />
+    <!-- Alternative Locale URLs -->
+    {{#each data.locales}}
+        <link rel="alternate" hreflang="{{code}}" href="/{{code}}/{{../data.relativeURL}}" />
+    {{/each}}
     <!-- Social -->
     {{#if (contains with "social")}}
     {{> social}}

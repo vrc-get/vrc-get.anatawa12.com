@@ -310,9 +310,13 @@ async function build() {
             './' + path.join(config.templatesDir, 'api', 'gui', 'tauri-updater.json')
           )
         ).version;
+        const relativePath = path.relative(config.templatesDir, templateFile);
+        let url = path.dirname(relativePath);
+        if (url === '.') url = '';
+        else url = url + '/';
+        resources.data.relativeURL = url;
         const htmlContent = template(resources);
 
-        const relativePath = path.relative(config.templatesDir, templateFile);
         let outputPath = path.join(config.outputDir, locale, relativePath);
         if (outputPath.endsWith(".hbs")) {
           outputPath = outputPath.replace(/\.hbs$/, ".html");
