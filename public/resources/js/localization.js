@@ -47,7 +47,7 @@ function _redirectToLocale(newLocale) {
 
 async function _checkIfWeShouldRedirect() {
     const customLocale = _getCustomLocaleCookie();
-    let browserLocale = (navigator.language || navigator.languages[0]).slice(0, 2);
+    let browserLocales = Array.from(_getBrowserLocale())
 
     if (customLocale !== null) {
         if (customLocale != locale) {
@@ -59,11 +59,22 @@ async function _checkIfWeShouldRedirect() {
                 document.cookie = "customLocale=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             }
         }
-    } else if (browserLocale != locale) {
+    } else if (browserLocales.all(l => l !== locale)) {
         await waitUntilLocaleIsLoaded();
-        if (window.S.data.locales[browserLocale]) {
-            _redirectToLocale(browserLocale);
-            return;
+        for (let browserLocale of browserLocales) {
+            if (window.S.data.locales[browserLocale]) {
+                _redirectToLocale(browserLocale);
+                return;
+            }
+        }
+    }
+}
+
+function * _getBrowserLocale() {
+    for (let language of navigator.languages) {
+        for (let length = language.length; length > 0; length = language.lastIndexOf('-')) {
+            language = language.slice(0, length);
+            yield language;
         }
     }
 }
