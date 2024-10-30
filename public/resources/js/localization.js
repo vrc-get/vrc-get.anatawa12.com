@@ -38,7 +38,8 @@ function _getCustomLocaleCookie() {
 function _redirectToLocale(newLocale) {
     let endpoint = window.location.pathname;
     if (endpoint == `/${locale}` || endpoint.startsWith(`/${locale}/`)) {
-        endpoint = endpoint.slice(3);
+        const endOfLocale = endpoint.indexOf('/', 1);
+        endpoint = endOfLocale === -1 ? '' : endpoint.slice(endOfLocale);
     }
     endpoint = '/' + newLocale + endpoint;
     window.location.replace(endpoint);
