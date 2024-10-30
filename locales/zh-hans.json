@@ -1,0 +1,95 @@
+{
+    "locale": {
+        "code": "zh-hans",
+        "displayName": "Simplified Chinese",
+        "nativeDisplayName": "简体中文",
+        "emoji": "🇨🇳"
+    },
+    "common": {
+        "documentation": "文档",
+        "loading": "加载中...",
+        "download": "下载",
+        "releases": "发行版",
+        "allVersions": "历史版本",
+        "sourceCode": "源码",
+        "faq": "常见问题",
+        "error": "错误",
+        "contributors": "贡献者们"
+    },
+    "downloads": {
+        "macOS": "macOS DiskImage",
+        "linux": "Linux",
+        "windowsSetup": "Windows 安装包",
+        "windowsStandalone": "Windows 便携版",
+        "unsuportedOS": "不受支持的操作系统"
+    },
+    "releases": {
+        "viewOnGitHub": "在 GitHub 上查看",
+        "assets": "资源",
+        "noChangelogMessage": "没有更新日志"
+    },
+    "home": {
+        "productPage": "详情",
+        "alcomDescription": "快速、开源的 VRChat Creator Companion 替代软件",
+        "cliDescription": "快速、开源的命令行 VRChat 软件包管理器"
+    },
+    "alcom": {
+        "hero": "快速、开源的 VRChat Creator Companion 替代软件",
+        "faq": {
+            "fullName": {
+                "question": "ALCOM 是什么意思？",
+                "answer": "ALCOM 是应用程序的完整名称，它不是缩写。"
+            },
+            "nameOrigin": {
+                "question": "ALCOM 这个词从何而来？",
+                "answer": "ALCOM 最初来源于 <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion 这个术语。<br/>不过，<code>alternative companion</code> 并不是这个工具的名称，而是对其用途的描述。"
+            },
+            "vrcGetRelationship": {
+                "question": "vrc-get-gui 和 vrc-get 是什么关系？",
+                "answer": "ALCOM 是一个图形用户界面，用于管理 VRChat 软件包。<br>它建立在开源命令行工具 <a href=\"/cli\">vrc-get</a> 的基础之上。<br>ALCOM 的前身是 <code>vrc-get-gui</code>，它提供了一种更友好的方式来安装、更新和管理 VRChat 资产。"
+            }
+        }
+    },
+    "cli": {
+        "hero": "快速、开源的命令行 VRChat 软件包管理器",
+        "installation": {
+            "title": "如何安装",
+            "os": {
+                "windows": "Windows",
+                "mac": "macOS",
+                "arch": "Arch Linux",
+                "universal": "Universal"
+            },
+            "using": {
+                "homebrew": {
+                    "title": "使用 Homebrew",
+                    "content": "您可以使用以下命令安装 vrc-get。<br>更多详情，请参阅 <a href=\"https://brew.sh\">Homebrew</a>。"
+                },
+                "macPorts": {
+                    "title": "使用 MacPorts",
+                    "content": "您可以使用以下命令安装 vrc-get。<br>更多详情，请参阅 <a href=\"https://macports.org/\">MacPorts</a>。"
+                },
+                "winget": {
+                    "title": "使用 WinGet",
+                    "content": "如果您使用的是高版本的 Windows 10 或 11，您可以通过 <a href=\"https://learn.microsoft.com/windows/package-manager/\">WinGet</a> 安装 vrc-get。"
+                },
+                "scoop": {
+                    "title": "使用 Scoop",
+                    "content": "如果您使用 <a href=\"https://scoop.sh/\">Scoop</a>，您可以通过 xrtools Bucket 安装 vrc-get。"
+                },
+                "aur": {
+                    "title": "使用来自 AUR 的 PKGBUILD",
+                    "content": "如果您使用 Arch Linux，您可以通过来自 Arch 用户仓库的 PKGBUILD。<br>以下的命令使用了 yay，但是您仍然可以使用您喜欢的 AUR 助手。"
+                },
+                "cargoBinstall": {
+                    "title": "使用 Cargo Binstall",
+                    "content": "Cargo Binstall 会从 GitHub 下载并安装 vrc-get 的预构建版。<br>更多详情，请参阅 <a href=\"https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall\">Cargo Binstall</a>。"
+                },
+                "cargo": {
+                    "title": "使用 Cargo",
+                    "content": "您可以使用以下命令安装 vrc-get。<br>更多详情，请参阅 <a href=\"https://github.com/rust-lang/cargo/\">Cargo</a>。"
+                }
+            }
+        }
+    }
+}

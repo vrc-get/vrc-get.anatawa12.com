@@ -38,7 +38,8 @@ function _getCustomLocaleCookie() {
 function _redirectToLocale(newLocale) {
     let endpoint = window.location.pathname;
     if (endpoint == `/${locale}` || endpoint.startsWith(`/${locale}/`)) {
-        endpoint = endpoint.slice(3);
+        const endOfLocale = endpoint.indexOf('/', 1);
+        endpoint = endOfLocale === -1 ? '' : endpoint.slice(endOfLocale);
     }
     endpoint = '/' + newLocale + endpoint;
     window.location.replace(endpoint);
@@ -46,7 +47,7 @@ function _redirectToLocale(newLocale) {
 
 async function _checkIfWeShouldRedirect() {
     const customLocale = _getCustomLocaleCookie();
-    let browserLocale = (navigator.language || navigator.languages[0]).slice(0, 2);
+    let browserLocales = Array.from(_getBrowserLocale())
 
     if (customLocale !== null) {
         if (customLocale != locale) {
@@ -58,11 +59,32 @@ async function _checkIfWeShouldRedirect() {
                 document.cookie = "customLocale=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             }
         }
-    } else if (browserLocale != locale) {
+    } else {
         await waitUntilLocaleIsLoaded();
-        if (window.S.data.locales[browserLocale]) {
-            _redirectToLocale(browserLocale);
-            return;
+        for (let browserLocale of browserLocales) {
+            browserLocale = browserLocale.toLowerCase();
+            browserLocale = _localeMapping[browserLocale] || browserLocale;
+            if (browserLocale === locale) {
+                return;
+            }
+            if (window.S.data.locales[browserLocale]) {
+                _redirectToLocale(browserLocale);
+                return;
+            }
+        }
+    }
+}
+
+const _localeMapping = {
+    "zh-tw": "zh-hant",
+    "zh-cn": "zh-hans",
+}
+
+function * _getBrowserLocale() {
+    for (let language of navigator.languages) {
+        for (let length = language.length; length > 0; length = language.lastIndexOf('-')) {
+            language = language.slice(0, length);
+            yield language;
         }
     }
 }
