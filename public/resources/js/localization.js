@@ -59,15 +59,25 @@ async function _checkIfWeShouldRedirect() {
                 document.cookie = "customLocale=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             }
         }
-    } else if (browserLocales.all(l => l !== locale)) {
+    } else {
         await waitUntilLocaleIsLoaded();
         for (let browserLocale of browserLocales) {
+            browserLocale = browserLocale.toLowerCase();
+            browserLocale = _localeMapping[browserLocale] || browserLocale;
+            if (browserLocale === locale) {
+                return;
+            }
             if (window.S.data.locales[browserLocale]) {
                 _redirectToLocale(browserLocale);
                 return;
             }
         }
     }
+}
+
+const _localeMapping = {
+    "zh-tw": "zh-hant",
+    "zh-cn": "zh-hans",
 }
 
 function * _getBrowserLocale() {
