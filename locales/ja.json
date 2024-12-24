@@ -34,7 +34,7 @@
         "cliDescription": "vrc-get は VRChat Package Manager(VPMCLI) の非公式代替ツールです。"
     },
     "alcom": {
-        "hero": "ALCOM は VRChat Creator Companion (VCC) のオープンソースな非公式代替ツールです。<br>ALCOM はクラスプラットフォームアプリケーションで、 Windows macOS Linux のいずれでもで利用可能です。",
+        "hero": "ALCOM は VRChat Creator Companion (VCC) のオープンソースな非公式代替ツールです。<br>Windows、macOS、Linux のいずれでも利用できます。",
         "faq": {
             "fullName": {
                 "question": "ALCOMの正式名称は何でしょうか？",
