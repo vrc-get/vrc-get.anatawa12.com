@@ -34,7 +34,7 @@
         "cliDescription": "快速、开源的命令行 VRChat 软件包管理器"
     },
     "alcom": {
-        "hero": "快速、开源的 VRChat Creator Companion 替代软件",
+        "hero": "快速、开源的 VRChat Creator Companion (VCC) 替代软件",
         "faq": {
             "fullName": {
                 "question": "ALCOM 是什么意思？",
