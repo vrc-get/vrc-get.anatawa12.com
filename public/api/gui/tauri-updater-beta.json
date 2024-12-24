@@ -1,6 +1,6 @@
 {
   "version": "1.0.0-rc.0",
-  "notes": "",
+  "notes": "Version Bump and update dependencies.",
   "pub_date": "2024-12-24T15:28:38Z",
   "platforms": {
     "darwin-x86_64": {
