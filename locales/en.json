@@ -34,7 +34,7 @@
         "cliDescription": "A fast and open-source command line client of the VRChat Package Manager"
     },
     "alcom": {
-        "hero": "A fast open-source alternative of VRChat Creator Companion (VCC)",
+        "hero": "A fast open-source alternative of VRChat Creator Companion (VCC)<br>ALCOM is a cross-platform application available on Windows, macOS, and Linux.",
         "faq": {
             "fullName": {
                 "question": "What does ALCOM stand for?",
