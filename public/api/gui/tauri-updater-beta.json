@@ -1,23 +1,23 @@
 {
-  "version": "0.1.17",
-  "notes": "",
-  "pub_date": "2024-12-22T16:35:56Z",
+  "version": "1.0.0-rc.0",
+  "notes": "Version Bump and update dependencies.",
+  "pub_date": "2024-12-24T15:28:38Z",
   "platforms": {
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3RibndvVWpsUlh3c21pVWZoVXU3YUdZYlRlNCtFZkFqb1N4dnczalNxbnpTdlNqMWJ4bTNScXBJRGI2VDdhWWczdm9vMUxjMWJ3cXNNWXJUMFA1QkFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM0ODg1MzE0CWZpbGU6QUxDT00uYXBwLnRhci5negp5Q3RUZEZpK1VseGltMkhrYnJkbFI2Vy9lZC9NVWZ4a0hQeDYzdVozVkVPYjc0UWhuckEwTmo5NWFPdkkyR2t6QkdRVHc4eitsa3lOamJSWkVFdzREUT09Cg==",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.17/ALCOM-0.1.17-universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna21lUGpmM1FzT2JaTFdzUlRwQzRpVGlqdWw4ZUJZemo0bzBrNmoxMG9LNC9WS1VPMUtqWTRXSzM0TUU4QkJjZnQ2aGcrQXRqd3VKMTBFdkhOT0xobVEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM1MDUzNjk1CWZpbGU6QUxDT00uYXBwLnRhci5negpWZ3FmVnJPeGxjbjk5dTRqOWFxcnozdDdPcUttUERWWGd1VWJJL1hGeVQxZS94bWdFbFZhbWpQSlRaMmRlR3gxVStVUGc3OXBGU0VMUGt1UTJwOHlEdz09Cg==",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v1.0.0-rc.0/ALCOM-1.0.0-rc.0-universal.app.tar.gz"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3RibndvVWpsUlh3c21pVWZoVXU3YUdZYlRlNCtFZkFqb1N4dnczalNxbnpTdlNqMWJ4bTNScXBJRGI2VDdhWWczdm9vMUxjMWJ3cXNNWXJUMFA1QkFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM0ODg1MzE0CWZpbGU6QUxDT00uYXBwLnRhci5negp5Q3RUZEZpK1VseGltMkhrYnJkbFI2Vy9lZC9NVWZ4a0hQeDYzdVozVkVPYjc0UWhuckEwTmo5NWFPdkkyR2t6QkdRVHc4eitsa3lOamJSWkVFdzREUT09Cg==",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.17/ALCOM-0.1.17-universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna21lUGpmM1FzT2JaTFdzUlRwQzRpVGlqdWw4ZUJZemo0bzBrNmoxMG9LNC9WS1VPMUtqWTRXSzM0TUU4QkJjZnQ2aGcrQXRqd3VKMTBFdkhOT0xobVEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM1MDUzNjk1CWZpbGU6QUxDT00uYXBwLnRhci5negpWZ3FmVnJPeGxjbjk5dTRqOWFxcnozdDdPcUttUERWWGd1VWJJL1hGeVQxZS94bWdFbFZhbWpQSlRaMmRlR3gxVStVUGc3OXBGU0VMUGt1UTJwOHlEdz09Cg==",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v1.0.0-rc.0/ALCOM-1.0.0-rc.0-universal.app.tar.gz"
     },
     "linux-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3J5UVNzQ3MveDZPRjNCNGpmNVdDMGFEYjRZc1VrK1FJYmtueTRZTGZGeHRTS3pJNUVGMFQ3UEsvdnVmYUF5Tk5MZ1R2Q291RmJrRjBXTDdWdFVIV0FvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM0ODgxMzQxCWZpbGU6QUxDT01fMC4xLjE3X2FtZDY0LkFwcEltYWdlLnRhci5negpHWGxiSTNaanpQL0FsMkZiYjJpSFY2WmpZUTJOZXJsK1pmWWZ0UEdPMWtPMmRJWXRyQ1pDRlRKMGZuaWFIZGpBUWpEbWFzOHVYUEdoNmtRaVRSak1Cdz09Cg==",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.17/alcom-0.1.17-x86_64.AppImage.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna21IQUlFeS9CUDBEaVlrUStHc1NZYlEyL3paWTFQZXh3WFJ5VkpqNGwzYngvMzZ3dzloUmoxZGdjbDRKTDBrUlR6NHZEMzMvanQvcldvL2Y3T3NMYndjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM1MDUzNjQzCWZpbGU6QUxDT01fMS4wLjAtcmMuMF9hbWQ2NC5BcHBJbWFnZS50YXIuZ3oKY2t1VEc5K3dIcGp2b2c0d3ROL1BDUkhGSk1obEVvREtKbzMzb0xHdHlteWxBSytPZWJlZTAza0laR3JVR1diaHBZTlg2RmphQTdRN3orZHVWbUdaQnc9PQo=",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v1.0.0-rc.0/alcom-1.0.0-rc.0-x86_64.AppImage.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna2liY1NCSWtlaGtUSW1LWkFuL3dDUjNIanhWYi84bHQrUGhVMEZaU29aUm00cG5lV0xKR3pURzZ1SGV1YW4wWS9sbjJSQnhpOHZ2QzRiNWtkUjRmVHdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM0ODgxNjIxCWZpbGU6QUxDT01fMC4xLjE3X3g2NC1zZXR1cC5uc2lzLnppcApjRzZXcEh4ZXJDSUNkdllHN040WE43SWhZSi9Mb0tRaGZWRmVMK0pKeDY0MG9JRVJzTUdYeS8vYVp3bFhnSkRQQkpUMG80a0oycVdnKzZPaWswdXpCUT09Cg==",
-      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v0.1.17/ALCOM-0.1.17-x86_64-setup.nsis.zip"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRbVJQdlA1aklna3BsK2xVTFdYRGtTMytUV1FMNENXN3ZxV3lOT0d5ZmZkZkk5VmtVOHlEZ0MxckNHcklXZm9hTGdDWGV4aFNSS1JqOXV2dlYwUFlmS3NWNFZXZjN4N2dNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzM1MDUzOTk3CWZpbGU6QUxDT01fMS4wLjAtcmMuMF94NjQtc2V0dXAubnNpcy56aXAKL01EKzdLNGNYVTB3UUVuaUlVNmR4NGNpUFdRQnZ6ellNQ1JHakUvdW4zYmxtd2Y4Z1NCcWNTZE9MbEExZytUVjg4SEtNcktnRnNYaXBtNjVEek56QlE9PQo=",
+      "url": "https://github.com/vrc-get/vrc-get/releases/download/gui-v1.0.0-rc.0/ALCOM-1.0.0-rc.0-x86_64-setup.nsis.zip"
     }
   }
 }
