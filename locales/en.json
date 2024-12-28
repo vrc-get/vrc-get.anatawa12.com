@@ -48,6 +48,11 @@
             "usableWithVCC": {
                 "title": "Can be used with VCC",
                 "content": "<p>You can use ALCOM and VCC together. You don't have to uninstall VCC to use ALCOM.</p><p>Nothing to do migrating from VCC to ALCOM.</p><p>Except for bug on the VCC*, changes in VCC would affect ALCOM immediately, and vice versa.</p><small>* The bug <a href=\"https://github.com/vrchat-community/creator-companion/issues/111\" target=\"_blank\">VCC ignores & restores changes to settings.json</a> would ignore changes in ALCOM to settings.json like adding repositories.</small>"
+            },
+            "internationalized": {
+                "title": "Multi-Language Support",
+                "__comment for translators": "List of locale can be reordered, and you can use something like 'and others' for future language addition and localization delay. You may remove 'as of writing' if you use 'and others'",
+                "content": "<p>ALCOM is available in multiple languages. You can use ALCOM in English, Japanese, French, French, German, Simplified Chinese, and Traditional Chinese as of writing.</p>"
             }
         },
         "faq": {
