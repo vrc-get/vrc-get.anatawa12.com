@@ -14,7 +14,8 @@
         "sourceCode": "ソースコード",
         "faq": "よくある質問",
         "error": "エラー",
-        "contributors": "コントリビューター"
+        "contributors": "コントリビューター",
+        "contributorsDescription": "vrc-get と ALCOM は多くの開発者による貢献によるオープンソースプロジェクトです。以下はプロジェクトへの貢献者の一部です。"
     },
     "downloads": {
         "macOS": "macOS ディスクイメージ",
