@@ -35,6 +35,20 @@
     },
     "alcom": {
         "hero": "ALCOM は VRChat Creator Companion (VCC) のオープンソースな非公式代替ツールです。<br>Windows、macOS、Linux のいずれでも利用できます。",
+        "promotions": {
+            "fastInstallation": {
+                "title": "パッケージのインストールに長時間待たされることはありません",
+                "content": "<p>各パッケージをインストールするのに何十秒も待つ必要はもうありません。複数のパッケージを一度にインストールすることができ、パッケージのアップグレードもほとんどの場合数秒で済みます</p>"
+            },
+            "accessToChangelog": {
+                "title": "変更履歴への容易なアクセス",
+                "content": "<p>更新内容を確認するためにウェブサイトを探す必要はもうありません。パッケージが指定している場合、 ALCOM はパッケージのインストール時に CHANGELOG へのリンクを表示します。</p>"
+            },
+            "usableWithVCC": {
+                "title": "VCC と併用可能",
+                "content": "<p>ALCOM と VCC は同時に使えます。 ALCOM をインストールするのに VCC をアンインストールする必要はありません。</p><p>VCC から ALCOM への移行は何も必要ありません。.</p><p>VCC のバグ*によるものを除き、 VCC による変更は即時に ALCOM に適用され、 ALCOM によるものは VCC に適用されます。</p><small>*  <a href=\"https://github.com/vrchat-community/creator-companion/issues/111\" target=\"_blank\">VCC ignores & restores changes to settings.json</a> というバグにより、 VCC は ALCOM による変更を無視することがあります。</small>"
+            }
+        },
         "faq": {
             "fullName": {
                 "question": "ALCOMの正式名称は何でしょうか？",
@@ -47,6 +61,10 @@
             "vrcGetRelationship": {
                 "question": "vrc-get-gui や vrc-get との関係は何ですか？",
                 "answer": "vrc-get は私たちが作成したオープンソースの vpm クライアントであり、ALCOM は vrc-get を元に作られています。<br>ALCOM は vrc-get のGUIフロントエンドとして開発されているため、以前まで vrc-get-gui と呼ばれていました。"
+            },
+            "migrationFromVCC": {
+                "question": "VCCからの移行には何が必要でしょうか？",
+                "answer": "なにもいりません。 ALCOM は VCC と共有した設定を必要であれば使用します。<br/>また、 ALCOM を使用するのに VCC を使用する必要はありません。 ALCOM は VCC と競合しないように作られています。"
             }
         }
     },

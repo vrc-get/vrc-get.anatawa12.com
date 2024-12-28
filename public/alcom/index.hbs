@@ -18,7 +18,8 @@
 <script src="/resources/js/alcom-versions-loader.js"></script>
 {{/inline}}
 
-{{#*inline "content"}}<div class="p-media-object--large">
+{{#*inline "content"}}
+<div class="p-media-object--large">
     <img src="/resources/alcom.svg" class="p-media-object__image" alt="">
     <div class="p-media-object__details">
         <h1 class="p-media-object__title">ALCOM</h1>
@@ -85,14 +86,75 @@
     <span>{{common.sourceCode}}</span>
 </a>
 
+<section class="p-section u-no-padding--bottom">
+    <div class="row--50-50">
+        <div class="col">
+            <div class="p-section--shallow">
+                <h2>
+                    {{alcom.promotions.fastInstallation.title}}
+                </h2>
+            </div>
+            <div class="p-section--shallow">
+                {{safe alcom.promotions.fastInstallation.content}}
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-image-container--16-9 is-cover u-hide--small">
+                <video autoplay loop muted playsinline>
+                    <source src="/resources/alcom-assets/installing-packages.webm" type="video/webm">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
 
-<h2>{{common.faq}}</h2>
+<section class="p-section u-no-padding--bottom">
+    <div class="row--50-50">
+        <div class="col">
+            <div class="p-image-container--3-2 is-cover u-hide--small">
+                <img class="p-image-container__image" src="/resources/alcom-assets/changelog-shown.png" alt="ALCOM showing SEE CHANGELOG button">
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-section--shallow">
+                <h2>
+                    {{alcom.promotions.accessToChangelog.title}}
+                </h2>
+            </div>
+            <div class="p-section--shallow">
+                {{safe alcom.promotions.accessToChangelog.content}}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="p-section u-no-padding--bottom">
+    <div class="row--50-50">
+        <div class="col">
+            <div class="p-section--shallow">
+                <h2>
+                    {{alcom.promotions.usableWithVCC.title}}
+                </h2>
+            </div>
+            <div class="p-section--shallow">
+                {{safe alcom.promotions.usableWithVCC.content}}
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-image-container--3-2 is-cover u-hide--small">
+                <img class="p-image-container__image" src="/resources/alcom-assets/alcom-and-vcc.png" alt="Image launching VCC and ALCOM at same time">
+            </div>
+        </div>
+    </div>
+</section>
+
+<h3>{{common.faq}}</h3>
 <aside class="p-accordion">
     <ul class="p-accordion__list">
         <li class="p-accordion__group">
             <h4 role="heading" aria-level="3" class="p-accordion__heading">
                 <button type="button" class="p-accordion__tab" id="tab1" aria-controls="tab1-section"
-                    aria-expanded="false">{{alcom.faq.fullName.question}}</button>
+                        aria-expanded="false">{{alcom.faq.fullName.question}}</button>
             </h4>
             <section class="p-accordion__panel" id="tab1-section" aria-hidden="true" aria-labelledby="tab1">
                 <p>{{safe alcom.faq.fullName.answer}}</p>
@@ -101,7 +163,7 @@
         <li class="p-accordion__group">
             <h4 role="heading" aria-level="3" class="p-accordion__heading">
                 <button type="button" class="p-accordion__tab" id="tab2" aria-controls="tab2-section"
-                    aria-expanded="false">{{alcom.faq.nameOrigin.question}}</button>
+                        aria-expanded="false">{{alcom.faq.nameOrigin.question}}</button>
             </h4>
             <section class="p-accordion__panel" id="tab2-section" aria-hidden="true" aria-labelledby="tab2">
                 <p>{{safe alcom.faq.nameOrigin.answer}}</p>
@@ -110,10 +172,19 @@
         <li class="p-accordion__group">
             <h4 role="heading" aria-level="3" class="p-accordion__heading">
                 <button type="button" class="p-accordion__tab" id="tab3" aria-controls="tab3-section"
-                    aria-expanded="false">{{alcom.faq.vrcGetRelationship.question}}</button>
+                        aria-expanded="false">{{alcom.faq.vrcGetRelationship.question}}</button>
             </h4>
             <section class="p-accordion__panel" id="tab3-section" aria-hidden="true" aria-labelledby="tab3">
                 <p>{{safe alcom.faq.vrcGetRelationship.answer}}</p>
+            </section>
+        </li>
+        <li class="p-accordion__group">
+            <h4 role="heading" aria-level="3" class="p-accordion__heading">
+                <button type="button" class="p-accordion__tab" id="tab3" aria-controls="tab3-section"
+                        aria-expanded="false">{{alcom.faq.migrationFromVCC.question}}</button>
+            </h4>
+            <section class="p-accordion__panel" id="tab3-section" aria-hidden="true" aria-labelledby="tab3">
+                <p>{{safe alcom.faq.migrationFromVCC.answer}}</p>
             </section>
         </li>
     </ul>
