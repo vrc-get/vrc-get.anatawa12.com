@@ -37,6 +37,7 @@
     "alcom": {
         "hero": "A fast open-source alternative of VRChat Creator Companion (VCC)<br>ALCOM is a cross-platform application available on Windows, macOS, and Linux.",
         "promotions": {
+            "__comment for translators": "There is no need to translate the each promotion exactly. You can translate it in a way that makes sense in your language as long as matches with image / video. Especially for internationalized, you can say 'Your Language is supported'. (I actually do for Japanese)",
             "fastInstallation": {
                 "title": "Swift package installation",
                 "content": "<p>Experience significantly faster package installation times. Install multiple packages simultaneously and enjoy rapid updates, often completing in just seconds.</p>"
