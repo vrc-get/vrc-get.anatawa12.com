@@ -54,7 +54,7 @@
                 "image": "/resources/alcom-assets/alcom-and-vcc.png",
                 "imageAlt": "Using VCC and ALCOM at same time",
                 "title": "Designed to work alongside VCC",
-                "content": "<p>It uses the same settings file as VCC wherever possible to keep the projects, repositories, and other shared settings in sync.</p><small>* Note that due to an oversight, <a href=\"https://github.com/vrchat-community/creator-companion/issues/111\" target=\"_blank\">VCC ignores changes to the settings file while it's running</a>, which may cause VCC to revert changes made by ALCOM, like adding repositories, while VCC is running.</small>"
+                "content": "<p>It uses the same settings file as VCC wherever possible to keep the projects, repositories, and other shared settings in sync. Nothing is needed for migration from VCC!</p>"
             },
             "internationalized": {
                 "image": "/resources/alcom-assets/language-selector.png",

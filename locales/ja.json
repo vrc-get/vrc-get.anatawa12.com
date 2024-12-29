@@ -47,7 +47,7 @@
             },
             "usableWithVCC": {
                 "title": "VCC と併用可能",
-                "content": "<p>ALCOM と VCC は同時に使えます。 ALCOM をインストールするのに VCC をアンインストールする必要はありません。</p><p>VCC から ALCOM への移行は何も必要ありません。.</p><p>VCC のバグ*によるものを除き、 VCC による変更は即時に ALCOM に適用され、 ALCOM によるものは VCC に適用されます。</p><small>*  <a href=\"https://github.com/vrchat-community/creator-companion/issues/111\" target=\"_blank\">VCC ignores & restores changes to settings.json</a> というバグにより、 VCC は ALCOM による変更を無視することがあります。</small>"
+                "content": "<p>可能な限りVCCと同じ設定ファイルを使用し、プロジェクト、リポジトリ、その他の設定は共有しています。 VCC から ALCOM への移行は何も必要ありません！</p>"
             },
             "internationalized": {
                 "title": "多言語・日本語対応",
