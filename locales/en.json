@@ -38,19 +38,27 @@
         "hero": "A fast open-source alternative of VRChat Creator Companion (VCC)<br>ALCOM is a cross-platform application available on Windows, macOS, and Linux.",
         "promotions": {
             "__comment for translators": "There is no need to translate the each promotion exactly. You can translate it in a way that makes sense in your language as long as matches with image / video. Especially for internationalized, you can say 'Your Language is supported'. (I actually do for Japanese)",
+            "__comment for translators2": "You don't have to create new image / video for each language, you can use english. (I use english version for Japanese). When you add, please add to `/resources/alcom-assets/<language>/<same-name.png>`.",
             "fastInstallation": {
+                "video": "/resources/alcom-assets/installing-packages.webm",
                 "title": "Swift package installation",
                 "content": "<p>Experience significantly faster package installation times. Install multiple packages simultaneously and enjoy rapid updates, often completing in just seconds.</p>"
             },
             "accessToChangelog": {
+                "image": "/resources/alcom-assets/changelog-shown.png",
+                "imageAlt": "ALCOM showing SEE CHANGELOG button",
                 "title": "Quick access to the changelog",
                 "content": "<p>Want to know what's new and what changed when updating a package?</p><p>ALCOM provides direct access to the CHANGELOG when available, eliminating the need to search for it on the package's website.</p>"
             },
             "usableWithVCC": {
+                "image": "/resources/alcom-assets/alcom-and-vcc.png",
+                "imageAlt": "Using VCC and ALCOM at same time",
                 "title": "Designed to work alongside VCC",
                 "content": "<p>It uses the same settings file as VCC wherever possible to keep the projects, repositories, and other shared settings in sync.</p><small>* Note that due to an oversight, <a href=\"https://github.com/vrchat-community/creator-companion/issues/111\" target=\"_blank\">VCC ignores changes to the settings file while it's running</a>, which may cause VCC to revert changes made by ALCOM, like adding repositories, while VCC is running.</small>"
             },
             "internationalized": {
+                "image": "/resources/alcom-assets/language-selector.png",
+                "imageAlt": "Image of language selector of ALCOM",
                 "title": "Multi-Language Support",
                 "__comment for translators": "List of locale can be reordered, and you can use something like 'and others' for future language addition and localization delay. You may remove 'as of writing' if you use 'and others'",
                 "content": "<p>ALCOM is available in multiple languages, including English, Japanese, French, German, Simplified Chinese, and Traditional Chinese. We are continuously expanding language support.</p>"
