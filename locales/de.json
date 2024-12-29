@@ -14,7 +14,9 @@
         "sourceCode": "Quellcode",
         "faq": "FAQ",
         "error": "Fehler",
-        "contributors": "Mitwirkende"
+        "contributors": "Mitwirkende",
+        "contributorsDescription": "vrc-get und ALCOM sind quelloffene Projekte, die durch die Beiträge vieler engagierter Entwickler entstanden sind und stetig weiterentwickelt werden. Wir möchten uns herzlich bei allen Mitwirkenden bedanken!",
+        "__comment by translator @foxscore": "Instead of saying 'Here are some contributors to the project', I instead thank the contributors for their work, as mentioning the list sounds weird and I couldn't think of a better way to translate it."
     },
     "downloads": {
         "macOS": "macOS",
@@ -35,6 +37,35 @@
     },
     "alcom": {
         "hero": "Eine schnelle und quelloffene Alternative zum VRChat Creator Companion (VCC)",
+        "promotions": {
+            "__comment for translators": "There is no need to translate the each promotion exactly. You can translate it in a way that makes sense in your language as long as matches with image / video. Especially for internationalized, you can say 'Your Language is supported'. (I actually do for Japanese)",
+            "__comment for translators2": "You don't have to create new image / video for each language, you can use english. (I use english version for Japanese). When you add, please add to `/resources/alcom-assets/<language>/<same-name.png>`.",
+            "fastInstallation": {
+                "video": "/resources/alcom-assets/installing-packages.webm",
+                "title": "Schnelle Paketinstallation",
+                "content": "<p>Erleben Sie deutlich schnellere Paketinstallationszeiten. Installieren Sie mehrere Pakete gleichzeitig und genießen Sie schnelle Updates, die oft in Sekundenschnelle abgeschlossen sind.</p>"
+            },
+            "accessToChangelog": {
+                "image": "/resources/alcom-assets/changelog-shown.png",
+                "imageAlt": "ALCOM zeigt Schaltfläche „Änderungsprotokoll anzeigen“",
+                "title": "Schneller Zugriff auf das Änderungsprotokoll",
+                "content": "<p>Möchten Sie wissen, was neu ist und was sich beim Aktualisieren eines Pakets geändert hat?</p><p>ALCOM bietet direkten Zugriff auf das Änderungsprotokoll, sofern verfügbar, sodass Sie nicht mehr auf der Website des Pakets danach suchen müssen.</p>"
+            },
+            "usableWithVCC": {
+                "image": "/resources/alcom-assets/alcom-and-vcc.png",
+                "imageAlt": "Gleichzeitige Verwendung von VCC und ALCOM",
+                "title": "Nahtlose Integrierung mit VCC",
+                "content": "<p>Es verwendet dieselbe Einstellungsdatei wie VCC, wo immer möglich, um Projekte, Repositorys und andere gemeinsam genutzte Einstellungen synchron zu halten. Ein Wechsel von VCC zu ALCOM ist somit unkompliziert.</p>"
+            },
+            "internationalized": {
+                "image": "/resources/alcom-assets/language-selector.png",
+                "imageAlt": "Bild der Sprachwahl von ALCOM",
+                "title": "Spricht mehr nur Englisch",
+                "__comment by translator @foxscore": "I wrote something like 'Can speak in more languages than just Englisch'; It doesn't user the word 'language', but it's also not required.",
+                "__comment for translators": "List of locale can be reordered, and you can use something like 'and others' for future language addition and localization delay. You may remove 'as of writing' if you use 'and others'",
+                "content": "<p>ALCOM ist in vielen Sprachen verfügbar, darunter Englisch, Japanisch, Französisch, Deutsch, vereinfachtes Chinesisch und traditionelles Chinesisch. Wir erweitern die Sprachunterstützung kontinuierlich.</p>"
+            }
+        },
         "faq": {
             "fullName": {
                 "question": "Wofür steht ALCOM?",
@@ -47,6 +78,10 @@
             "vrcGetRelationship": {
                 "question": "Was hat es mit vrc-get-gui und vrc-get zu tun?",
                 "answer": "ALCOM ist eine grafische Benutzeroberfläche zur Verwaltung von VRChat-Paketen. Sie basiert auf dem quelloffenen Befehlszeilenwerkzeug <a href=\"/cli\">vrc-get</a>. Früher bekannt als <code>vrc-get-gui</code> bietet ALCOM eine benutzerfreundlichere Möglichkeit zum Installieren, Aktualisieren, und Verwalten von VRChat-Assets."
+            },
+            "migrationFromVCC": {
+                "question": "Was ist nötig um von VCC zu migrieren?",
+                "answer": "Gar nichts! ALCOM nutzt die gleichen Einstellungen wie VCC wo immer möglich. VCC kann auch weiterhin verwendet werden ohne dass Probleme entstehen."
             }
         }
     },
