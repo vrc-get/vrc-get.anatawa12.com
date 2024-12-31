@@ -14,7 +14,8 @@
         "sourceCode": "源码",
         "faq": "常见问题",
         "error": "错误",
-        "contributors": "贡献者们"
+        "contributors": "贡献者们",
+        "contributorsDescription": "vrc-get 和 ALCOM 是由众多开发者所构建的开源项目，这些是参与了该项目的贡献者们："
     },
     "downloads": {
         "macOS": "macOS DiskImage",
@@ -35,6 +36,34 @@
     },
     "alcom": {
         "hero": "快速、开源的 VRChat Creator Companion (VCC) 替代软件",
+        "promotions": {
+            "__comment for translators": "There is no need to translate the each promotion exactly. You can translate it in a way that makes sense in your language as long as matches with image / video. Especially for internationalized, you can say 'Your Language is supported'. (I actually do for Japanese)",
+            "__comment for translators2": "You don't have to create new image / video for each language, you can use english. (I use english version for Japanese). When you add, please add to `/resources/alcom-assets/<language>/<same-name.png>`.",
+            "fastInstallation": {
+                "video": "/resources/alcom-assets/installing-packages.webm",
+                "title": "快速安装",
+                "content": "<p>更快的安装速度，可同时安装多个软件包，而这些通常只需几秒钟即可完成，享受快速更新。</p>"
+            },
+            "accessToChangelog": {
+                "image": "/resources/alcom-assets/changelog-shown.png",
+                "imageAlt": "ALCOM 可以快速展示软件包更新日志",
+                "title": "软件包更新日志",
+                "content": "<p>想了解软件包更新了那些内容？</p><p>ALCOM 提供了直达更新日志页面的按钮，让您无需翻阅复杂的软件包官网来查询更新日志。</p>"
+            },
+            "usableWithVCC": {
+                "image": "/resources/alcom-assets/alcom-and-vcc.png",
+                "imageAlt": "ALCOM 可以与 VCC 共存",
+                "title": "与 VCC 兼容",
+                "content": "<p>ALCOM 与 VCC 共享设置文件，让您无需为迁移做任何工作。</p>"
+            },
+            "internationalized": {
+                "image": "/resources/alcom-assets/language-selector.png",
+                "imageAlt": "ALCOM 的语言选择器",
+                "title": "多语言支持",
+                "__comment for translators": "List of locale can be reordered, and you can use something like 'and others' for future language addition and localization delay. You may remove 'as of writing' if you use 'and others'",
+                "content": "<p>ALCOM 现已支持英语、日语、法语、德语、简体中文和繁体中文，未来还会有更多语言支持。</p>"
+            }
+        },
         "faq": {
             "fullName": {
                 "question": "ALCOM 是什么意思？",
