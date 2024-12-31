@@ -14,7 +14,8 @@
         "sourceCode": "ソースコード",
         "faq": "よくある質問",
         "error": "エラー",
-        "contributors": "コントリビューター"
+        "contributors": "コントリビューター",
+        "contributorsDescription": "vrc-get と ALCOM は多くの開発者の貢献によって成り立っているオープンソースプロジェクトです。 以下は貢献してくださった開発者の一覧(一部)です。"
     },
     "downloads": {
         "macOS": "macOS ディスクイメージ",
@@ -35,6 +36,24 @@
     },
     "alcom": {
         "hero": "ALCOM は VRChat Creator Companion (VCC) のオープンソースな非公式代替ツールです。<br>Windows、macOS、Linux のいずれでも利用できます。",
+        "promotions": {
+            "fastInstallation": {
+                "title": "パッケージを素早くインストール",
+                "content": "<p>使いたいパッケージをインストールするために何十秒も待たされることはもうありません！複数のパッケージを一度にインストール・更新することができ、ほとんどの場合は数秒待つだけで済みます。</p>"
+            },
+            "accessToChangelog": {
+                "title": "更新内容を簡単に閲覧",
+                "content": "<p>パッケージの更新内容を確認するために、公式サイトや配布ページを探す必要はありません。パッケージ側で設定されたCHANGELOG(更新履歴)へのリンクを、パッケージのインストール・更新時に表示します。</p>"
+            },
+            "usableWithVCC": {
+                "title": "VCCと併用可能",
+                "content": "<p>できるだけ VCC と同じ設定ファイルを使用するようになっています。プロジェクト、VPMリポジトリなどの設定は共通で、VCC から ALCOM に移行するために特別な操作は必要ありません！</p>"
+            },
+            "internationalized": {
+                "title": "多言語・日本語対応",
+                "content": "<p>ALCOM は日本語を含むさまざまな言語に対応しています。<br>現在、日本語、英語、フランス語、ドイツ語、簡体字中国語、繁体字中国語などに対応しています。</p>"
+            }
+        },
         "faq": {
             "fullName": {
                 "question": "ALCOMの正式名称は何でしょうか？",
@@ -47,6 +66,10 @@
             "vrcGetRelationship": {
                 "question": "vrc-get-gui や vrc-get との関係は何ですか？",
                 "answer": "vrc-get は私たちが作成したオープンソースの vpm クライアントであり、ALCOM は vrc-get を元に作られています。<br>ALCOM は vrc-get のGUIフロントエンドとして開発されているため、以前まで vrc-get-gui と呼ばれていました。"
+            },
+            "migrationFromVCC": {
+                "question": "VCCから移行するには何が必要でしょうか？",
+                "answer": "何も必要ありません！ ALCOM は設定内容を VCC と共有しています。<br>また、ALCOM は VCC と競合しないように作られているため、アンインストールする必要もありません。"
             }
         }
     },
