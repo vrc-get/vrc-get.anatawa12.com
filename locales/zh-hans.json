@@ -45,7 +45,7 @@
                 "content": "<p>更快的安装速度，可同时安装多个软件包，而这些通常只需几秒钟即可完成，享受快速更新。</p>"
             },
             "accessToChangelog": {
-                "image": "/resources/alcom-assets/changelog-shown.png",
+                "image": "/resources/alcom-assets/zh-hans/changelog-shown.png",
                 "imageAlt": "ALCOM 可以快速展示软件包更新日志",
                 "title": "软件包更新日志",
                 "content": "<p>想了解软件包更新了那些内容？</p><p>ALCOM 提供了直达更新日志页面的按钮，让您无需翻阅复杂的软件包官网来查询更新日志。</p>"
