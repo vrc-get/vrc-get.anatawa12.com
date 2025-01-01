@@ -46,7 +46,7 @@
                 "content": "<p>Erleben Sie deutlich schnellere Paketinstallationszeiten. Installieren Sie mehrere Pakete gleichzeitig und genießen Sie schnelle Updates, die oft in Sekundenschnelle abgeschlossen sind.</p>"
             },
             "accessToChangelog": {
-                "image": "/resources/alcom-assets/changelog-shown.png",
+                "image": "/resources/alcom-assets/de/changelog-shown.png",
                 "imageAlt": "ALCOM zeigt Schaltfläche „Änderungsprotokoll anzeigen“",
                 "title": "Schneller Zugriff auf das Änderungsprotokoll",
                 "content": "<p>Möchten Sie wissen, was neu ist und was sich beim Aktualisieren eines Pakets geändert hat?</p><p>ALCOM bietet direkten Zugriff auf das Änderungsprotokoll, sofern verfügbar, sodass Sie nicht mehr auf der Website des Pakets danach suchen müssen.</p>"
