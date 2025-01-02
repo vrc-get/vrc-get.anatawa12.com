@@ -1,0 +1,128 @@
+{
+    "locale": {
+        "code": "fr",
+        "displayName": "French",
+        "nativeDisplayName": "Français",
+        "emoji": "🇫🇷"
+    },
+    "common": {
+        "documentation": "Documentation",
+        "loading": "Chargement ...",
+        "download": "Téléchargement",
+        "releases": "Versions",
+        "allVersions": "Toutes les Versions",
+        "sourceCode": "Code Source",
+        "faq": "FAQ",
+        "error": "Erreur",
+        "contributors": "Contributeurs",
+        "contributorsDescription": "vrc-get et ALCOM sont des projets open-source crées grace aux contributions de nombreux développeurs. Voici quelques contributeurs du project :"
+    },
+    "downloads": {
+        "macOS": "DiskImage macOS",
+        "linux": "Linux",
+        "windowsSetup": "Windows Installer",
+        "windowsStandalone": "Windows Standalone",
+        "unsuportedOS": "OS non supporté"
+    },
+    "releases": {
+        "viewOnGitHub": "Voir sur GitHub",
+        "assets": "Assets",
+        "noChangelogMessage": "Pas de changelog"
+    },
+    "home": {
+        "productPage": "Page Produit",
+        "alcomDescription": "Une alternative rapide et open-source au VRChat Creator Companion",
+        "cliDescription": "Une ligne de commande rapide et open-source, client pour le VRChat Package Manager"
+    },
+    "alcom": {
+        "hero": "Une alternative rapide et open-source au VRChat Creator Companion (VCC)<br>ALCOM est une application cross-platform disponible sur Windows, macOS, et Linux.",
+        "promotions": {
+            "__comment for translators": "There is no need to translate the each promotion exactly. You can translate it in a way that makes sense in your language as long as matches with image / video. Especially for internationalized, you can say 'Your Language is supported'. (I actually do for Japanese)",
+            "__comment for translators2": "You don't have to create new image / video for each language, you can use english. (I use english version for Japanese). When you add, please add to `/resources/alcom-assets/<language>/<same-name.png>`.",
+            "fastInstallation": {
+                "video": "/resources/alcom-assets/installing-packages.webm",
+                "title": "Installation fluide et rapide",
+                "content": "<p>Profitez d'une installation significativement plus rapide de vos packages. Installez plusieurs packages simultanément et profitez de mises a jour rapides en quelques clics.</p>"
+            },
+            "accessToChangelog": {
+                "image": "/resources/alcom-assets/fr/changelog-shown.png",
+                "imageAlt": "ALCOM montrant le boutton CHANGELOG",
+                "title": "Accès rapide aux changelog",
+                "content": "<p>Vous voulez plus de détails sur le fonctionnement d'un package avant de l'installer ou de le mettre a jour ? Profitez d'un affichage intégré du Changelog sans avoir besoin d'accéder au site du développeur."
+            },
+            "usableWithVCC": {
+                "image": "/resources/alcom-assets/alcom-and-vcc.png",
+                "imageAlt": "Utiliser VCC et ALCOM en même temps",
+                "title": "Conçu pour fonctionner en même temps que VCC",
+                "content": "<p>ALCOM utilise les même fichiers de réglage (dans la mesure du possible) que VCC pour conserver la listes des projets, dépôts, packages et autres réglages partagés synchronisés. Aucune migration n'est nécessaire depuis VCC, tout le processus est intégré.</p>"
+            },
+            "internationalized": {
+                "image": "/resources/alcom-assets/language-selector.png",
+                "imageAlt": "Sélection de la langue dans ALCOM",
+                "title": "Support Multilingue",
+                "__comment for translators": "List of locale can be reordered, and you can use something like 'and others' for future language addition and localization delay. You may remove 'as of writing' if you use 'and others'",
+                "content": "<p>ALCOM est disponible en plusieurs langues, notamment le Français, le Japonais (Langue d'origine), l'anglais, l'allemand, le Chinois Simplifié, le Chinois Traditionnel, etc. Nous travaillons continuellement à étendre la localisation du projet pour améliorer son adoption par le plus grand nombre.</p>"
+            }
+        },
+        "faq": {
+            "fullName": {
+                "question": "Que veux dire ALCOM ?",
+                "answer": "ALCOM est le nom complet de l'application, ce n'est pas un acronyme."
+            },
+            "nameOrigin": {
+                "question": "D'où viens le nom ALCOM ?",
+                "answer": "ALCOM est originalement dérivé de <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion.<br/>Cependant, <code>alternative companion</code> n'est pas le nom du projet, Il s'agit de son but premier."
+            },
+            "vrcGetRelationship": {
+                "question": "Quel est le lien entre ALCOM (vrc-get-gui) et vrc-get ?",
+                "answer": "ALCOM est une interface utilisateur graphique pour gérer les packages VRCHAT.<br>Il est conçu en tant qu'interface au dessus de l'outil en ligne de commande <a href=\"/cli\">vrc-get</a>.<br>Précédemment connu sous le nom de <code>vrc-get-gui</code>, ALCOM offre une interface plus agréable et intuitive afin d'installer, mettre à jour, et gérer les composants VRChat."
+            },
+            "migrationFromVCC": {
+                "question": "Quelles sont les étapes pour migrer depuis VCC ?",
+                "answer": "Aucune action n'est nécessaire. ALCOM charge, utilise, et enregistrer des réglages partagés avec VCC dans la mesure du possible. Cela permet a la majorité de vos réglages d'être synchronisés entre les deux outils.<br/>Vous n'avez même pas besoin d'installer VCC en premier lieu pour utiliser ALCOM. ALCOM s'occupera de toute migration ou configuration nécessaire."
+            }
+        }
+    },
+    "cli": {
+        "hero": "Une ligne de commande rapide et open-source, client pour le VRChat Package Manager",
+        "installation": {
+            "title": "Installation",
+            "os": {
+                "windows": "Windows",
+                "mac": "macOS",
+                "arch": "Arch Linux",
+                "universal": "Universelle"
+            },
+            "using": {
+                "homebrew": {
+                    "title": "Utiliser Homebrew",
+                    "content": "Vous pouvez installer vrc-get avec les commandes suivantes.<br>Pour plus de détails, visitez le site <a href=\"https://brew.sh\">Homebrew</a>."
+                },
+                "macPorts": {
+                    "title": "Utiliser MacPorts",
+                    "content": "Vousp pouvez installer vrc-get avec les commandes suivantes.<br>Pour plus de détails, visitez le site <a href=\"https://macports.org/\">MacPorts</a>."
+                },
+                "winget": {
+                    "title": "Utiliser WinGet",
+                    "content": "Si vous utilisez une version récente de Windows comme Windows 10 ou 11, vous pouvez installer vrc-get avec <a href=\"https://learn.microsoft.com/windows/package-manager/\">WinGet</a>."
+                },
+                "scoop": {
+                    "title": "Utiliser Scoop",
+                    "content": "Si vous utilisez <a href=\"https://scoop.sh/\">Scoop</a>, vous pouvez installer vrc-get avec le xrtools Bucket."
+                },
+                "aur": {
+                    "title": "Utiliser le PKGBUILD depuis les dépôts AUR",
+                    "content": "Si vous utilisez Arch Linux, vous pouvez installer vrc-get avec le PKGBUILD depuis le Arch User Repository.<br>Nous utilisons <b>yay</b> avec les commandes suivantes, mais vous pouvez utiliser votre utilisateir AUR favoris."
+                },
+                "cargoBinstall": {
+                    "title": "Utiliser Cargo Binstall",
+                    "content": "Cargo Binstall ira télécharger et installer le prebuilt de vrc-get depuis GitHub.<br>Pour plus de détails, visitez le site <a href=\"https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall\">Cargo Binstall</a>."
+                },
+                "cargo": {
+                    "title": "Utiliser Cargo",
+                    "content": "Vous pouvez installer vrc-get avec les commandes suivantes.<br>Pour plus de détails, visitez le site <a href=\"https://github.com/rust-lang/cargo/\">Cargo</a>."
+                }
+            }
+        }
+    }
+}
