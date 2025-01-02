@@ -45,7 +45,7 @@
                 "content": "<p>Profitez d'une installation significativement plus rapide de vos packages. Installez plusieurs packages simultanément et profitez de mises a jour rapides en quelques clics.</p>"
             },
             "accessToChangelog": {
-                "image": "/resources/alcom-assets/changelog-shown.png",
+                "image": "/resources/alcom-assets/fr/changelog-shown.png",
                 "imageAlt": "ALCOM montrant le boutton CHANGELOG",
                 "title": "Accès rapide aux changelog",
                 "content": "<p>Vous voulez plus de détails sur le fonctionnement d'un package avant de l'installer ou de le mettre a jour ? Profitez d'un affichage intégré du Changelog sans avoir besoin d'accéder au site du développeur."
