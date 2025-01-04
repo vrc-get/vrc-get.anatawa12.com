@@ -1,6 +1,6 @@
 {
   "version": "1.0.1-beta.1",
-  "notes": "",
+  "notes": "Added Korean and small bugfixes.",
   "pub_date": "2025-01-04T17:12:13Z",
   "platforms": {
     "darwin-x86_64": {
