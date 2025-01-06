@@ -60,7 +60,7 @@
             "internationalized": {
                 "image": "/resources/alcom-assets/language-selector.png",
                 "imageAlt": "Bild der Sprachwahl von ALCOM",
-                "title": "Spricht mehr nur Englisch",
+                "title": "Spricht mehr als nur Englisch",
                 "__comment by translator @foxscore": "I wrote something like 'Can speak in more languages than just Englisch'; It doesn't user the word 'language', but it's also not required.",
                 "__comment for translators": "List of locale can be reordered, and you can use something like 'and others' for future language addition and localization delay. You may remove 'as of writing' if you use 'and others'",
                 "content": "<p>ALCOM ist in vielen Sprachen verfügbar, darunter Englisch, Japanisch, Französisch, Deutsch, vereinfachtes Chinesisch und traditionelles Chinesisch. Wir erweitern die Sprachunterstützung kontinuierlich.</p>"
