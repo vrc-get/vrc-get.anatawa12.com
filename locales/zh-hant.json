@@ -1,0 +1,128 @@
+{
+    "locale": {
+        "code": "zh-hant",
+        "displayName": "Traditional Chinese",
+        "nativeDisplayName": "繁體中文",
+        "emoji": "🇹🇼"
+    },
+    "common": {
+        "documentation": "文檔",
+        "loading": "加載中...",
+        "download": "下載",
+        "releases": "發布版",
+        "allVersions": "歷史版本",
+        "sourceCode": "源碼",
+        "faq": "常見問題",
+        "error": "錯誤",
+        "contributors": "貢獻者",
+        "contributorsDescription": "vrc-get 和 ALCOM 是由許多開發人員一同貢獻的開源專案。以下是參與專案的貢獻者："
+    },
+    "downloads": {
+        "macOS": "macOS DiskImage",
+        "linux": "Linux",
+        "windowsSetup": "Windows 安裝包",
+        "windowsStandalone": "Windows 安裝程式",
+        "unsuportedOS": "不支援的作業系統"
+    },
+    "releases": {
+        "viewOnGitHub": "在 GitHub 上查看",
+        "assets": "資源",
+        "noChangelogMessage": "無變更日誌"
+    },
+    "home": {
+        "productPage": "詳細資訊",
+        "alcomDescription": "快速且開源的 VRChat Creator Companion 替代品",
+        "cliDescription": "快速且開源的命令行 VRChat 套件包管理器"
+    },
+    "alcom": {
+        "hero": "快速且開源的 VRChat Creator Companion (VCC) 替代品<br>可在 Windows、macOS 和 Linux 上使用。",
+        "promotions": {
+            "__comment for translators": "There is no need to translate the each promotion exactly. You can translate it in a way that makes sense in your language as long as matches with image / video. Especially for internationalized, you can say 'Your Language is supported'. (I actually do for Japanese)",
+            "__comment for translators2": "You don't have to create new image / video for each language, you can use english. (I use english version for Japanese). When you add, please add to `/resources/alcom-assets/<language>/<same-name.png>`.",
+            "fastInstallation": {
+                "video": "/resources/alcom-assets/installing-packages.webm",
+                "title": "快速安裝",
+                "content": "<p>不再浪費大量時間，快速安裝 / 更新套件！<br/>支援一次安裝多個套件、通常幾秒內即可完成！</p>"
+            },
+            "accessToChangelog": {
+                "image": "/resources/alcom-assets/zh-hant/changelog-shown.png",
+                "imageAlt": "ALCOM可快速查看變更日誌",
+                "title": "查看變更日誌",
+                "content": "<p>想在更新前知道套件有哪些變化嗎？</p><p>ALCOM 提供快捷按鈕，無需再特地到官網查詢！</p>"
+            },
+            "usableWithVCC": {
+                "image": "/resources/alcom-assets/alcom-and-vcc.png",
+                "imageAlt": "可以同時使用 VCC 和 ALCOM",
+                "title": "兼容 VCC",
+                "content": "<p>ALCOM 和 VCC 使用同個設定檔，無論是專案、儲存庫或其他設定都將同步。無需進行任何額外的遷移操作！</p>"
+            },
+            "internationalized": {
+                "image": "/resources/alcom-assets/language-selector.png",
+                "imageAlt": "ALCOM 有多種語言可供選擇",
+                "title": "多語言支援",
+                "__comment for translators": "List of locale can be reordered, and you can use something like 'and others' for future language addition and localization delay. You may remove 'as of writing' if you use 'and others'",
+                "content": "<p>ALCOM 提供多種語言，包含英文、法文、德文、日文、韓文、簡體中文和繁體中文。未來將有更多語言！</p>"
+            }
+        },
+        "faq": {
+            "fullName": {
+                "question": "ALCOM 是什麼的縮寫嗎？",
+                "answer": "ALCOM 為此應用程式的完整名稱，並非縮寫。"
+            },
+            "nameOrigin": {
+                "question": "ALCOM 一詞從何而來？",
+                "answer": "ALCOM 一詞最初來自 <b>AL</b>ternative (VRChat Creator) <b>COM</b>panion.<br/>然而，<code>alternative companion</code> 並不是這個工具的名字，而是對其用途的描述。"
+            },
+            "vrcGetRelationship": {
+                "question": "vrc-get-gui 和 vrc-get 之間的關係是？",
+                "answer": "ALCOM 是一個用於管理 VRChat 套件包的圖形化使用者介面，<br>基於開源命令行工具 <a href=\"/cli\">vrc-get</a> 開發。<br>ALCOM 前身名為 <code>vrc-get-gui</code>，提供了更友好的操作方式來安裝、更新及管理 VRChat 資源。"
+            },
+            "migrationFromVCC": {
+                "question": "從 VCC 遷移時需要做什麼？",
+                "answer": "什麼都不用做。ALCOM 在需要時會載入、使用並寫入與 VCC 共用的設定，<br/>也不需要移除 VCC 就能使用 ALCOM，我們能夠避免與 VCC 發生衝突。"
+            }
+        }
+    },
+    "cli": {
+        "hero": "快速且開源的命令行 VRChat 套件包管理器",
+        "installation": {
+            "title": "如何安裝",
+            "os": {
+                "windows": "Windows",
+                "mac": "macOS",
+                "arch": "Arch Linux",
+                "universal": "Universal"
+            },
+            "using": {
+                "homebrew": {
+                    "title": "使用 Homebrew",
+                    "content": "你可以使用以下命令安裝 vrc-get。<br>更多資訊請查看 <a href=\"https://brew.sh\">Homebrew</a>."
+                },
+                "macPorts": {
+                    "title": "使用 MacPorts",
+                    "content": "你可以使用以下命令安裝 vrc-get。<br>更多資訊請查看 <a href=\"https://macports.org/\">MacPorts</a>."
+                },
+                "winget": {
+                    "title": "使用 WinGet",
+                    "content": "如果你使用的是近代版本的 Windows 10 或 11，可以透過 <a href=\"https://learn.microsoft.com/windows/package-manager/\">WinGet</a> 安裝 vrc-get。"
+                },
+                "scoop": {
+                    "title": "使用 Scoop",
+                    "content": "如果你使用的是 <a href=\"https://scoop.sh/\">Scoop</a>，可以透過 xrtools Bucket 安裝 vrc-get。"
+                },
+                "aur": {
+                    "title": "使用 PKGBUILD from AUR",
+                    "content": "如果你使用的是 Arch Linux，可以透過 Arch 使用者軟體庫 (AUR) 以 PKGBUILD 安裝 vrc-get。<br>我們在以下命令中使用 yay，但你也可以使用你喜歡的 AUR 助手。"
+                },
+                "cargoBinstall": {
+                    "title": "使用 Cargo Binstall",
+                    "content": "Cargo Binstall 會從 GitHub 下載並安裝預先建置的 vrc-get。<br>更多資訊請查看 <a href=\"https://github.com/cargo-bins/cargo-binstall#cargo-binaryinstall\">Cargo Binstall</a>."
+                },
+                "cargo": {
+                    "title": "使用 Cargo",
+                    "content": "你可以使用以下命令安裝 vrc-get。<br>更多資訊請查看 <a href=\"https://github.com/rust-lang/cargo/\">Cargo</a>."
+                }
+            }
+        }
+    }
+}
