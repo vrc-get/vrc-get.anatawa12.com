@@ -30,7 +30,7 @@ const config = {
   outputDir: "./dist",
   excludePatterns: ["**/*.html", "**/*.hbs"],
   defaultLanguage: "en",
-  safeTags: ["b", "i", "br", "code"],
+  safeTags: ["b", "i", "br", "code", "ruby", "rp", "rt"],
   safeAttributes: [],
 };
 
