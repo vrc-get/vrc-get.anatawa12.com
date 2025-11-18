@@ -21,7 +21,7 @@
         "macOS": "macOS DiskImage",
         "linux": "Linux",
         "windowsSetup": "Windows 安裝包",
-        "windowsStandalone": "Windows 安裝程式",
+        "windowsStandalone": "Windows 免安裝包",
         "unsuportedOS": "不支援的作業系統"
     },
     "releases": {
