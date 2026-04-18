@@ -14,6 +14,8 @@
         "sourceCode": "ソースコード",
         "faq": "よくある質問",
         "error": "エラー",
+        "codeSiningPolicy": "コード署名ポリシー",
+        "codeSiningPolicyDescription": "Windows のバイナリは、<a href='https://signpath.org/'>SignPath Foundation</a> が提供するコード署名証明書を使用し、<a href='https://about.signpath.io/'>SignPath.io</a> を使用して署名されています。Windows 向けの署名付きバイナリを継続的に提供できるよう支援してくださっている SignPath Foundation および SignPath.io に深く感謝します。",
         "contributors": "コントリビューター",
         "contributorsDescription": "vrc-get と ALCOM は多くの開発者の貢献によって成り立っているオープンソースプロジェクトです。 以下は貢献してくださった開発者の一覧(一部)です。"
     },
