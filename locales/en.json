@@ -14,6 +14,8 @@
         "sourceCode": "Source Code",
         "faq": "FAQ",
         "error": "Error",
+        "windowsCodeSigning": "About Windows Code Signing",
+        "windowsCodeSigningDescription": "Windows binaries are signed with a free code signing certificate provided by <a href='https://signpath.org/'>SignPath Foundation</a> and signed on <a href='https://about.signpath.io/'>SignPath.io</a>. We sincerely appreciate their generous support, which makes it possible for us to continue providing signed Windows binaries sustainably.",
         "contributors": "Contributors",
         "contributorsDescription": "vrc-get and ALCOM are an open-source project made with contributions from many developers. Here are some contributors to the project:"
     },
