@@ -53,13 +53,17 @@
             </button>
             <span class="p-contextual-menu__dropdown" id="menu-3" aria-hidden="true">
                 <span class="p-contextual-menu__group">
-                    <a class="p-contextual-menu__link" id="btn-download-windowsSetup" href="https://github.com/vrc-get/vrc-get/releases/download/gui-v{{data.latestAlcomVersion}}/ALCOM-{{data.latestAlcomVersion}}-x86_64-setup.exe.zip">
+                    <a class="p-contextual-menu__link" id="btn-download-windowsSetup" href="https://github.com/vrc-get/vrc-get/releases/download/gui-v{{data.latestAlcomVersion}}/ALCOM-{{data.latestAlcomVersion}}-setup.exe.zip">
                         <i class="p-icon ri-windows-line me-1"></i>
                         {{downloads.windowsSetup}} <code class="ms-1">.zip</code>
                     </a>
                     <a class="p-contextual-menu__link" id="btn-download-windowsStandalone" href="https://github.com/vrc-get/vrc-get/releases/download/gui-v{{data.latestAlcomVersion}}/ALCOM-{{data.latestAlcomVersion}}-x86_64.exe">
                         <i class="p-icon ri-windows-line me-1"></i>
-                        {{downloads.windowsStandalone}} <code class="ms-1">.exe</code>
+                        {{downloads.windowsStandalone}} <code class="ms-1">.exe</code> (x64)
+                    </a>
+                    <a class="p-contextual-menu__link" id="btn-download-windowsStandalone" href="https://github.com/vrc-get/vrc-get/releases/download/gui-v{{data.latestAlcomVersion}}/ALCOM-{{data.latestAlcomVersion}}-aarch64.exe">
+                        <i class="p-icon ri-windows-line me-1"></i>
+                        {{downloads.windowsStandalone}} <code class="ms-1">.exe</code> (arm)
                     </a>
                     <a class="p-contextual-menu__link" id="btn-download-macOS" href="https://github.com/vrc-get/vrc-get/releases/download/gui-v{{data.latestAlcomVersion}}/ALCOM-{{data.latestAlcomVersion}}-universal.dmg">
                         <i class="p-icon ri-apple-line me-1"></i>
@@ -67,7 +71,11 @@
                     </a>
                     <a class="p-contextual-menu__link" id="btn-download-linux" href="https://github.com/vrc-get/vrc-get/releases/download/gui-v{{data.latestAlcomVersion}}/alcom-{{data.latestAlcomVersion}}-x86_64.AppImage">
                         <i class="p-icon ri-ubuntu-line me-1"></i>
-                        {{downloads.linux}} <code class="ms-1">.AppImage</code>
+                        {{downloads.linux}} <code class="ms-1">.AppImage</code> (x64)
+                    </a>
+                    <a class="p-contextual-menu__link" id="btn-download-linux" href="https://github.com/vrc-get/vrc-get/releases/download/gui-v{{data.latestAlcomVersion}}/alcom-{{data.latestAlcomVersion}}-aarch64.AppImage">
+                        <i class="p-icon ri-ubuntu-line me-1"></i>
+                        {{downloads.linux}} <code class="ms-1">.AppImage</code> (arm)
                     </a>
                 </span>
             </span>
